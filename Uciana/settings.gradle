@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Uciana"
+include ':app'
+include ':andEngine'
+include ':andEngineAugmentedRealityExtension'
+include ':andEngineTexturePackerExtension'
+include ':andEngineSVGTextureRegionExtension'
+include ':andEngineScriptingExtension'
+include ':andEngineTMXTiledMapExtension'
+include ':andEngineLiveWallpaperExtension'
+include ':andEnginePhysicsBox2DExtension'
+include ':andEngineMultiplayerExtension'
+include ':andEngineMODPlayerExtension'

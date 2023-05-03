@@ -1,0 +1,20 @@
+package com.birdshel.Uciana.Players;
+
+/* compiled from: MyApplication */
+/* loaded from: classes.dex */
+public enum RaceAttributeType {
+    FOOD_PER_FARMER,
+    PRODUCTION_PER_WORKER,
+    SCIENCE_PER_SCIENTIST,
+    COMMAND_POINTS_PER_COLONY,
+    GROUND_COMBAT,
+    STARTING_TROOPS_FOR_COLONY,
+    BIRTHRATE_INCREASE,
+    MAX_POPULATION_INCREASE,
+    CREDITS_INCREASE,
+    BEAM_ACCURACY,
+    BEAM_EVASION,
+    HAPPINESS,
+    ASSIMILATION_RATE_BONUS,
+    DEFENDING_GROUND_COMBAT
+}
