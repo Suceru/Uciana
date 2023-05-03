@@ -13,12 +13,12 @@ public class ProductionItem {
         constructProductionItem(manufacturingType, str, str2, i, false);
     }
 
-    private void constructProductionItem(ManufacturingType manufacturingType, String str, String str2, int i, boolean z) {
-        this.type = manufacturingType;
-        this.id = str;
-        this.name = str2;
-        this.requiredProduction = i;
-        this.isRepeatOn = z;
+    private void constructProductionItem(ManufacturingType type, String id, String name, int requiredProduction, boolean isRepeatOn) {
+        this.type = type;
+        this.id = id;
+        this.name = name;
+        this.requiredProduction = requiredProduction;
+        this.isRepeatOn = isRepeatOn;
     }
 
     public String getID() {
@@ -41,8 +41,8 @@ public class ProductionItem {
         return this.isRepeatOn;
     }
 
-    public void setRepeatOn(boolean z) {
-        this.isRepeatOn = z;
+    public void setRepeatOn(boolean isRepeatOn) {
+        this.isRepeatOn = isRepeatOn;
     }
 
     public ProductionItem(ManufacturingType manufacturingType, String str, String str2, int i, boolean z) {

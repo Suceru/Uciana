@@ -14,8 +14,6 @@ import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class EmpireSelectControl extends ExtendedScene {
     private final TiledSprite customEmpireBackground;
     private final List<Sprite> emperorImages = new ArrayList();
@@ -28,7 +26,7 @@ public class EmpireSelectControl extends ExtendedScene {
 
     public EmpireSelectControl(Game game, VertexBufferObjectManager vertexBufferObjectManager) {
         setBackgroundEnabled(false);
-        this.B = game;
+        this.game = game;
         Sprite E = E(0.0f, 0.0f, game.graphics.selectColonyTexture, vertexBufferObjectManager, false);
         this.pressSprite = E;
         E.setSize(125.0f, 150.0f);
@@ -82,27 +80,27 @@ public class EmpireSelectControl extends ExtendedScene {
     private void checkActionUp(Point point) {
         for (int i = 0; i < 7; i++) {
             if (isClicked(this.empireBackgrounds.get(i), point)) {
-                this.B.playerCreationScene.setSelected(this.empireBackgrounds.get(i).getCurrentTileIndex());
-                this.B.sounds.playBoxPressSound();
-                Game game = this.B;
+                this.game.playerCreationScene.setSelected(this.empireBackgrounds.get(i).getCurrentTileIndex());
+                this.game.sounds.playBoxPressSound();
+                Game game = this.game;
                 game.vibrate(game.BUTTON_VIBRATE);
             } else if (A(this.empireBackgrounds.get(i), point, 0.0f, 0.0f)) {
-                this.B.playerCreationScene.showPlayerAlreadySelectedMessage();
-                this.B.sounds.playBoxPressSound();
-                Game game2 = this.B;
+                this.game.playerCreationScene.showPlayerAlreadySelectedMessage();
+                this.game.sounds.playBoxPressSound();
+                Game game2 = this.game;
                 game2.vibrate(game2.BUTTON_VIBRATE);
             }
         }
         if (isClicked(this.randomEmpireBackground, point)) {
-            this.B.playerCreationScene.randomEmpireSelected();
-            this.B.sounds.playBoxPressSound();
-            Game game3 = this.B;
+            this.game.playerCreationScene.randomEmpireSelected();
+            this.game.sounds.playBoxPressSound();
+            Game game3 = this.game;
             game3.vibrate(game3.BUTTON_VIBRATE);
         }
         if (isClicked(this.customEmpireBackground, point)) {
-            this.B.playerCreationScene.customEmpireSelected();
-            this.B.sounds.playBoxPressSound();
-            Game game4 = this.B;
+            this.game.playerCreationScene.customEmpireSelected();
+            this.game.sounds.playBoxPressSound();
+            Game game4 = this.game;
             game4.vibrate(game4.BUTTON_VIBRATE);
         }
     }
@@ -177,8 +175,12 @@ public class EmpireSelectControl extends ExtendedScene {
                 this.selectedSprite.setHeight(150.0f);
                 this.selectedSprite2.setHeight(150.0f);
             }
-            this.emperorImages.get(i2).setTiledTextureRegion(this.B.graphics.ambassadorIcons[createEmpireInfoArr[i3].getRaceID()]);
-            this.empireBackgrounds.get(i2).setCurrentTileIndex(i3);
+            this.emperorImages.set(i2, this.game.graphics.ambassadorIcons[createEmpireInfoArr[i3].getRaceID()]);//.get(i2).setTiledTextureRegion(this.game.graphics.ambassadorIcons[createEmpireInfoArr[i3].getRaceID()]);
+
+            //this.emperorImages.get(i2).setTiledTextureRegion(this.game.graphics.ambassadorIcons[createEmpireInfoArr[i3].getRaceID()]);
+            this.empireBackgrounds.set(i2,CurrentTileIndex(i3));//.get(i2).setCurrentTileIndex(i3);
+           // this.empireBackgrounds.get(i2).setCurrentTileIndex(i3);
+
             this.empireBanners.get(i2).setCurrentTileIndex(GameIconEnum.getEmpireBannerNonEmpireLookup(createEmpireInfoArr[i3].getBannerID()));
             float f3 = 1.0f;
             if (createEmpireInfoArr[i3].getEmpireType() == EmpireType.HUMAN) {

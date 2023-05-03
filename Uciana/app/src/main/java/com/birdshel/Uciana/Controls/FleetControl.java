@@ -22,7 +22,7 @@ import org.andengine.entity.particle.emitter.RectangleParticleEmitter;
 import org.andengine.entity.particle.initializer.ScaleParticleInitializer;
 import org.andengine.entity.particle.initializer.VelocityParticleInitializer;
 import org.andengine.entity.particle.modifier.AlphaParticleModifier;
-import org.andengine.entity.particle.modifier.ExpireParticleInitializer;
+import org.andengine.entity.particle.initializer.ExpireParticleInitializer;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.sprite.UncoloredSprite;
@@ -57,7 +57,7 @@ public class FleetControl extends ExtendedScene {
 
     public FleetControl(Game game, VertexBufferObjectManager vertexBufferObjectManager, float f2) {
         setBackgroundEnabled(false);
-        this.B = game;
+        this.game = game;
         this.bufferManager = vertexBufferObjectManager;
         this.xOffset = f2;
         createControlBackground();
@@ -74,7 +74,7 @@ public class FleetControl extends ExtendedScene {
         if (isClicked(this.shipSelectButton, point)) {
             shipSelectButtonPressed();
             return true;
-        } else if (this.B.getCurrentPlayer() == this.B.fleets.get(this.fleetID).empireID && point.getX() > 70.0f && point.getX() < getWidth() - 180.0f) {
+        } else if (this.game.getCurrentPlayer() == this.game.fleets.get(this.fleetID).empireID && point.getX() > 70.0f && point.getX() < getWidth() - 180.0f) {
             shipTypePressed(point);
             return true;
         } else if (isClicked(this.close, point)) {
@@ -86,21 +86,21 @@ public class FleetControl extends ExtendedScene {
     }
 
     private void closeButtonPressed() {
-        this.B.sounds.playButtonPressSound();
-        Game game = this.B;
+        this.game.sounds.playButtonPressSound();
+        Game game = this.game;
         game.vibrate(game.BUTTON_VIBRATE);
-        this.B.getCurrentEmpire().setSelectedFleetID("none");
-        this.B.galaxyScene.selectFleet(this.fleetID);
+        this.game.getCurrentEmpire().setSelectedFleetID("none");
+        this.game.galaxyScene.selectFleet(this.fleetID);
     }
 
     private void createButtons() {
-        this.G = H(0.0f, 0.0f, this.B.graphics.buttonsTexture, this.bufferManager, ButtonsEnum.PRESSED.ordinal(), false);
-        TiledSprite tiledSprite = new TiledSprite(0.0f, 32.0f, this.B.graphics.buttonsTexture, this.bufferManager);
+        this.G = H(0.0f, 0.0f, this.game.graphics.buttonsTexture, this.bufferManager, ButtonsEnum.PRESSED.ordinal(), false);
+        TiledSprite tiledSprite = new TiledSprite(0.0f, 32.0f, this.game.graphics.buttonsTexture, this.bufferManager);
         this.shipSelectButton = tiledSprite;
         tiledSprite.setCurrentTileIndex(ButtonsEnum.SHIP_SELECT.ordinal());
         attachChild(this.shipSelectButton);
         this.F.add(this.shipSelectButton);
-        TiledSprite tiledSprite2 = new TiledSprite(0.0f, 50.0f, this.B.graphics.gameIconsTexture, this.bufferManager);
+        TiledSprite tiledSprite2 = new TiledSprite(0.0f, 50.0f, this.game.graphics.gameIconsTexture, this.bufferManager);
         this.close = tiledSprite2;
         tiledSprite2.setCurrentTileIndex(GameIconEnum.CLOSE.ordinal());
         this.close.setScaleCenter(0.0f, 0.0f);
@@ -109,11 +109,11 @@ public class FleetControl extends ExtendedScene {
     }
 
     private void createControlBackground() {
-        TiledSprite tiledSprite = new TiledSprite(0.0f, 0.0f, this.B.graphics.empireColors, this.bufferManager);
+        TiledSprite tiledSprite = new TiledSprite(0.0f, 0.0f, this.game.graphics.empireColors, this.bufferManager);
         this.fleetEmpireColorBackground = tiledSprite;
         tiledSprite.setHeight(150.0f);
         attachChild(this.fleetEmpireColorBackground);
-        Sprite sprite = new Sprite(0.0f, 0.0f, this.B.graphics.blackenedBackgroundTexture, this.bufferManager);
+        Sprite sprite = new Sprite(0.0f, 0.0f, this.game.graphics.blackenedBackgroundTexture, this.bufferManager);
         this.fleetBlackBackground = sprite;
         sprite.setHeight(150.0f);
         this.fleetBlackBackground.setAlpha(0.8f);
@@ -121,18 +121,18 @@ public class FleetControl extends ExtendedScene {
     }
 
     private void createFleetStatuses() {
-        Text text = new Text(5.0f, 8.0f, this.B.fonts.smallInfoFont, this.D, this.bufferManager);
+        Text text = new Text(5.0f, 8.0f, this.game.fonts.smallInfoFont, this.D, this.bufferManager);
         this.eta = text;
         attachChild(text);
-        TiledSprite tiledSprite = new TiledSprite(0.0f, 5.0f, this.B.graphics.infoIconsTexture, this.bufferManager);
+        TiledSprite tiledSprite = new TiledSprite(0.0f, 5.0f, this.game.graphics.infoIconsTexture, this.bufferManager);
         this.turnsIcon = tiledSprite;
         tiledSprite.setSize(25.0f, 25.0f);
         this.turnsIcon.setCurrentTileIndex(InfoIconEnum.TURN.ordinal());
         attachChild(this.turnsIcon);
-        Text text2 = new Text(0.0f, 8.0f, this.B.fonts.smallInfoFont, this.D, this.bufferManager);
+        Text text2 = new Text(0.0f, 8.0f, this.game.fonts.smallInfoFont, this.D, this.bufferManager);
         this.destination = text2;
         attachChild(text2);
-        Text text3 = new Text(5.0f, 107.0f, this.B.fonts.smallInfoFont, this.D, this.bufferManager);
+        Text text3 = new Text(5.0f, 107.0f, this.game.fonts.smallInfoFont, this.D, this.bufferManager);
         this.status = text3;
         text3.setColor(Color.RED);
         this.status.setAlpha(0.8f);
@@ -140,7 +140,7 @@ public class FleetControl extends ExtendedScene {
     }
 
     private void createMoveIcon() {
-        TiledSprite tiledSprite = new TiledSprite(10.0f, 50.0f, this.B.graphics.gameIconsTexture, this.bufferManager);
+        TiledSprite tiledSprite = new TiledSprite(10.0f, 50.0f, this.game.graphics.gameIconsTexture, this.bufferManager);
         tiledSprite.setCurrentTileIndex(GameIconEnum.MOVE.ordinal());
         tiledSprite.setScaleCenter(0.0f, 0.0f);
         tiledSprite.setSize(25.0f, 50.0f);
@@ -149,17 +149,17 @@ public class FleetControl extends ExtendedScene {
     }
 
     private void createShipCounts() {
-        Text text = new Text(70.0f, 0.0f, this.B.fonts.smallInfoFont, this.D, this.bufferManager);
+        Text text = new Text(70.0f, 0.0f, this.game.fonts.smallInfoFont, this.D, this.bufferManager);
         this.selectedShipCount = text;
         attachChild(text);
-        Text text2 = new Text(0.0f, 0.0f, this.B.fonts.smallInfoFont, this.D, this.bufferManager);
+        Text text2 = new Text(0.0f, 0.0f, this.game.fonts.smallInfoFont, this.D, this.bufferManager);
         this.totalShipCount = text2;
         attachChild(text2);
     }
 
     private void createShipsAndCounts() {
         for (int i = 0; i < 8; i++) {
-            this.fleetControlElements[i] = new FleetControlElement(this.B, this.bufferManager);
+            this.fleetControlElements[i] = new FleetControlElement(this.game, this.bufferManager);
             this.fleetControlElements[i].setX((i * 100) + 45);
             attachChild(this.fleetControlElements[i]);
         }
@@ -167,7 +167,7 @@ public class FleetControl extends ExtendedScene {
 
     private void createWarpEffect() {
         this.particleEmitter = new RectangleParticleEmitter(100.0f, 100.0f, 200.0f, 200.0f);
-        BatchedSpriteParticleSystem batchedSpriteParticleSystem = new BatchedSpriteParticleSystem(this.particleEmitter, 50.0f, 100.0f, 400, this.B.graphics.particleTexture, this.bufferManager);
+        BatchedSpriteParticleSystem batchedSpriteParticleSystem = new BatchedSpriteParticleSystem(this.particleEmitter, 50.0f, 100.0f, 400, this.game.graphics.particleTexture, this.bufferManager);
         this.particleSystem = batchedSpriteParticleSystem;
         batchedSpriteParticleSystem.addParticleInitializer(new ExpireParticleInitializer(2.0f));
         this.particleSystem.addParticleInitializer(new ScaleParticleInitializer(3.0f, 5.0f));
@@ -191,17 +191,17 @@ public class FleetControl extends ExtendedScene {
     private void setControlPlacement(Fleet fleet, boolean z, float f2) {
         if (!z) {
             float f3 = f2 / 2.0f;
-            setX(((this.B.getWidth() - 120) / 2.0f) - f3);
-            this.currentPosition.setX(((this.B.getWidth() - 120) / 2.0f) - f3);
+            setX(((this.game.getWidth() - 120) / 2.0f) - f3);
+            this.currentPosition.setX(((this.game.getWidth() - 120) / 2.0f) - f3);
             setY(0.0f);
             this.currentPosition.setY(0.0f);
             if (fleet.getPosition().getY() < 360.0f) {
                 setY(525.0f);
                 this.currentPosition.setY(525.0f);
             }
-        } else if (this.B.galaxyScene.fleetControl.getX() + getWidth() > this.B.getWidth() - 120) {
-            setX((this.B.getWidth() - 120) - getWidth());
-            this.currentPosition.setX((this.B.getWidth() - 120) - getWidth());
+        } else if (this.game.galaxyScene.fleetControl.getX() + getWidth() > this.game.getWidth() - 120) {
+            setX((this.game.getWidth() - 120) - getWidth());
+            this.currentPosition.setX((this.game.getWidth() - 120) - getWidth());
         }
     }
 
@@ -254,15 +254,15 @@ public class FleetControl extends ExtendedScene {
     }
 
     private void shipSelectButtonPressed() {
-        this.B.sounds.playButtonPressSound();
-        Game game = this.B;
+        this.game.sounds.playButtonPressSound();
+        Game game = this.game;
         game.vibrate(game.BUTTON_VIBRATE);
-        this.B.galaxyScene.showShipSelectMenu();
+        this.game.galaxyScene.showShipSelectMenu();
     }
 
     private void shipTypePressed(Point point) {
         int x = ((int) (point.getX() - 70.0f)) / 100;
-        Game game = this.B;
+        Game game = this.game;
         List<String> list = game.galaxyScene.selectedShipIDs;
         ShipType shipType = ShipType.SCOUT;
         Fleet fleet = game.fleets.get(this.fleetID);
@@ -289,18 +289,18 @@ public class FleetControl extends ExtendedScene {
                 arrayList.add(str);
             }
         }
-        GalaxyScene galaxyScene = this.B.galaxyScene;
+        GalaxyScene galaxyScene = this.game.galaxyScene;
         galaxyScene.selectedShipIDs = arrayList;
         galaxyScene.showShipCount();
         setControl(this.fleetID, true);
-        this.B.sounds.playBoxPressSound();
-        Game game2 = this.B;
+        this.game.sounds.playBoxPressSound();
+        Game game2 = this.game;
         game2.vibrate(game2.BUTTON_VIBRATE);
     }
 
     private void showSelectedShipCount(int i) {
         this.selectedShipCount.setVisible(true);
-        this.selectedShipCount.setText(this.B.getActivity().getString(R.string.fleet_control_ship_selected_count, new Object[]{Integer.valueOf(i)}));
+        this.selectedShipCount.setText(this.game.getActivity().getString(R.string.fleet_control_ship_selected_count, new Object[]{Integer.valueOf(i)}));
         this.selectedShipCount.setX((this.shipSelectButton.getX() + 60.0f) - (this.selectedShipCount.getWidthScaled() / 2.0f));
         Text text = this.selectedShipCount;
         text.setY(134.0f - (text.getHeightScaled() / 2.0f));
@@ -319,7 +319,7 @@ public class FleetControl extends ExtendedScene {
         if (i == 9) {
             engineSpeed = 1;
         } else {
-            engineSpeed = i == 8 ? 4 : this.B.empires.get(i).getTech().getEngineSpeed() - 2;
+            engineSpeed = i == 8 ? 4 : this.game.empires.get(i).getTech().getEngineSpeed() - 2;
         }
         if (fleet.getDirection() == 1) {
             int i2 = engineSpeed * (-100);
@@ -403,8 +403,8 @@ public class FleetControl extends ExtendedScene {
     public void setControl(String str, boolean z) {
         int i;
         this.fleetID = str;
-        Fleet fleet = this.B.fleets.get(str);
-        List<String> list = this.B.galaxyScene.selectedShipIDs;
+        Fleet fleet = this.game.fleets.get(str);
+        List<String> list = this.game.galaxyScene.selectedShipIDs;
         setElementsInvisible();
         setShipTypeIcons(fleet, list);
         float f2 = (this.shipTypeCount * 100) + 70 + 180;
@@ -412,15 +412,15 @@ public class FleetControl extends ExtendedScene {
         this.fleetEmpireColorBackground.setWidth(i - 1);
         this.fleetEmpireColorBackground.setCurrentTileIndex(fleet.empireID);
         this.shipSelectButton.setX(i - 180);
-        if (fleet.empireID == this.B.getCurrentPlayer()) {
+        if (fleet.empireID == this.game.getCurrentPlayer()) {
             if (fleet.getSize() != list.size()) {
                 showSelectedShipCount(list.size());
             }
             if (!fleet.canCommunicate()) {
-                setStatus(this.B.getActivity().getString(R.string.fleet_control_comm_range));
+                setStatus(this.game.getActivity().getString(R.string.fleet_control_comm_range));
             }
         }
-        this.totalShipCount.setText(this.B.getActivity().getString(R.string.fleet_control_ship_total_count, new Object[]{Integer.valueOf(fleet.getSize())}));
+        this.totalShipCount.setText(this.game.getActivity().getString(R.string.fleet_control_ship_total_count, new Object[]{Integer.valueOf(fleet.getSize())}));
         this.totalShipCount.setX((this.shipSelectButton.getX() + 60.0f) - (this.totalShipCount.getWidthScaled() / 2.0f));
         Text text = this.totalShipCount;
         text.setY(20.0f - (text.getHeightScaled() / 2.0f));

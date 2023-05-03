@@ -1,7 +1,5 @@
 package com.birdshel.Uciana.Colonies;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public enum SortType {
     OLDEST_TO_NEWEST,
     NEWEST_TO_OLDEST,

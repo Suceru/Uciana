@@ -1,6 +1,6 @@
 package com.birdshel.Uciana.Elements.Buildings;
 
-import androidx.constraintlayout.core.motion.utils.TypedValues;
+import androidx.constraintlayout.motion.utils.*;//.TypedValues;
 import com.birdshel.Uciana.Colonies.Buildings.Building;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Resources.InfoIconEnum;

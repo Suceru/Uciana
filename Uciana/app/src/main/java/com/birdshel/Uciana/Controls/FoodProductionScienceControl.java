@@ -38,7 +38,7 @@ public class FoodProductionScienceControl extends ExtendedScene {
         this.sliderButtons = arrayList;
         this.pressedSlider = -1;
         setBackgroundEnabled(false);
-        this.B = game;
+        this.game = game;
         Sprite E = E(80.0f, 35.0f, game.graphics.farmingBarTexture, vertexBufferObjectManager, true);
         this.farmingBar = E;
         E.setHeight(60.0f);
@@ -88,7 +88,7 @@ public class FoodProductionScienceControl extends ExtendedScene {
             if (moveSlider(point)) {
                 float x = this.pressedX - point.getX();
                 if (x > 5.0f || x < -5.0f) {
-                    Game game = this.B;
+                    Game game = this.game;
                     game.vibrate(game.SLIDER_VIBRATE);
                 }
             }
@@ -100,8 +100,8 @@ public class FoodProductionScienceControl extends ExtendedScene {
 
     private boolean checkActionUp() {
         if (this.pressedSlider != -1) {
-            this.B.planetScene.updateColonyInfo();
-            this.B.planetScene.updatePopulationInfo();
+            this.game.planetScene.updateColonyInfo();
+            this.game.planetScene.updatePopulationInfo();
             this.pressedSlider = -1;
             return true;
         }
@@ -204,7 +204,7 @@ public class FoodProductionScienceControl extends ExtendedScene {
         text2.setPosition((x4 - text2.getWidth()) - 5.0f, this.perTurnScience.getY());
         TiledSprite tiledSprite = this.perTurnScienceIcon;
         tiledSprite.setPosition(x4, tiledSprite.getY());
-        this.B.planetScene.updateColony();
+        this.game.planetScene.updateColony();
     }
 
     @Override // com.birdshel.Uciana.Scenes.ExtendedScene
