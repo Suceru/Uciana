@@ -23,68 +23,7 @@ import java.util.Map;
 public class ColonyAchievements extends BaseAchievements {
     private final Climate[] homeWorlds;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    /* compiled from: MyApplication */
-    /* renamed from: com.birdshel.Uciana.Achievements.ColonyAchievements$1  reason: invalid class name */
-    /* loaded from: classes.dex */
-    public static /* synthetic */ class AnonymousClass1 {
 
-        /* renamed from: a  reason: collision with root package name */
-        static final /* synthetic */ int[] f1350a;
-
-        static {
-            int[] iArr = new int[Climate.values().length];
-            f1350a = iArr;
-            try {
-                iArr[Climate.TROPICAL_OCEAN.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                f1350a[Climate.SUPER_ACIDIC.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                f1350a[Climate.PLAGUE.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
-            try {
-                f1350a[Climate.METALLIC.ordinal()] = 4;
-            } catch (NoSuchFieldError unused4) {
-            }
-            try {
-                f1350a[Climate.VOLCANIC.ordinal()] = 5;
-            } catch (NoSuchFieldError unused5) {
-            }
-            try {
-                f1350a[Climate.METHANE.ordinal()] = 6;
-            } catch (NoSuchFieldError unused6) {
-            }
-            try {
-                f1350a[Climate.PLAINS.ordinal()] = 7;
-            } catch (NoSuchFieldError unused7) {
-            }
-            try {
-                f1350a[Climate.BOREAL.ordinal()] = 8;
-            } catch (NoSuchFieldError unused8) {
-            }
-            try {
-                f1350a[Climate.APHOTIC_OCEAN.ordinal()] = 9;
-            } catch (NoSuchFieldError unused9) {
-            }
-            try {
-                f1350a[Climate.BOG.ordinal()] = 10;
-            } catch (NoSuchFieldError unused10) {
-            }
-            try {
-                f1350a[Climate.STAGNANT.ordinal()] = 11;
-            } catch (NoSuchFieldError unused11) {
-            }
-            try {
-                f1350a[Climate.GARDEN.ordinal()] = 12;
-            } catch (NoSuchFieldError unused12) {
-            }
-        }
-    }
 
     /* JADX INFO: Access modifiers changed from: package-private */
     public ColonyAchievements(Game game, Activity activity) {
@@ -213,10 +152,69 @@ public class ColonyAchievements extends BaseAchievements {
             }
         }
     }
+    /*   *//* JADX INFO: Access modifiers changed from: package-private *//*
+     *//* compiled from: MyApplication *//*
+     *//* renamed from: com.birdshel.Uciana.Achievements.ColonyAchievements$1  reason: invalid class name *//*
+     *//* loaded from: classes.dex *//*
+    public static *//* synthetic *//* class AnonymousClass1 {
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    public void j(Planet planet) {
-        switch (AnonymousClass1.f1350a[planet.getTerraformedClimate().ordinal()]) {
+     *//* renamed from: a  reason: collision with root package name *//*
+        static final *//* synthetic *//* int[] f1350a;
+
+        static {
+            int[] iArr = new int[Climate.values().length];
+            f1350a = iArr;
+            try {
+                iArr[Climate.TROPICAL_OCEAN.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f1350a[Climate.SUPER_ACIDIC.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f1350a[Climate.PLAGUE.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f1350a[Climate.METALLIC.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f1350a[Climate.VOLCANIC.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f1350a[Climate.METHANE.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f1350a[Climate.PLAINS.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
+            try {
+                f1350a[Climate.BOREAL.ordinal()] = 8;
+            } catch (NoSuchFieldError unused8) {
+            }
+            try {
+                f1350a[Climate.APHOTIC_OCEAN.ordinal()] = 9;
+            } catch (NoSuchFieldError unused9) {
+            }
+            try {
+                f1350a[Climate.BOG.ordinal()] = 10;
+            } catch (NoSuchFieldError unused10) {
+            }
+            try {
+                f1350a[Climate.STAGNANT.ordinal()] = 11;
+            } catch (NoSuchFieldError unused11) {
+            }
+            try {
+                f1350a[Climate.GARDEN.ordinal()] = 12;
+            } catch (NoSuchFieldError unused12) {
+            }
+        }
+    }*/
+          /*  switch (AnonymousClass1.f1350a[planet.getTerraformedClimate().ordinal()]) {
             case 1:
                 b(AchievementID.TROPICAL_OCEAN_TERRAFORM);
                 break;
@@ -257,7 +255,53 @@ public class ColonyAchievements extends BaseAchievements {
             case 12:
                 b(AchievementID.GARDEN_TERRAFORM);
                 break;
+        }*/
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public void j(Planet planet) {
+        switch (planet.getTerraformedClimate()){
+
+            case SUPER_ACIDIC:
+                b(AchievementID.SUPER_ACIDIC_TERRAFORM);
+                break;
+            case METALLIC:
+                b(AchievementID.METALLIC_TERRAFORM);
+                if (planet.getMineralRichness() == MineralRichness.ULTRA_RICH) {
+                    b(AchievementID.ULTRA_RICH);
+                    break;
+                }
+                break;
+            case VOLCANIC:
+                b(AchievementID.VOLCANIC_TERRAFORM);
+                break;
+            case METHANE:
+                b(AchievementID.METHANE_TERRAFORM);
+                break;
+            case PLAINS:
+                b(AchievementID.PLAINS_TERRAFORM);
+                break;
+            case APHOTIC_OCEAN:
+                b(AchievementID.APHOTIC_TERRAFORM);
+                break;
+            case TROPICAL_OCEAN:
+                b(AchievementID.TROPICAL_OCEAN_TERRAFORM);
+                break;
+            case BOG:
+                b(AchievementID.BOG_TERRAFORM);
+                break;
+            case PLAGUE:
+                b(AchievementID.PLAGUE_TERRAFORM);
+                break;
+            case BOREAL:
+                b(AchievementID.BORALE_TERRAFORM);
+                break;
+            case STAGNANT:
+                b(AchievementID.STAGNANT_TERRAFORM);
+                break;
+            case GARDEN:
+                b(AchievementID.GARDEN_TERRAFORM);
+                break;
         }
+
         if (planet.hasColony()) {
             i(planet.getColony().getEmpireID());
         }

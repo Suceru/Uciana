@@ -1,7 +1,5 @@
 package com.birdshel.Uciana.Achievements;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public enum AchievementID {
     TARLISH_VICTORY("CgkIiouT94EKEAIQAQ"),
     HUMAN_VICTORY("CgkIiouT94EKEAIQAg"),

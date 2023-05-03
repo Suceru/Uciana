@@ -39,8 +39,7 @@ public class BaseAchievements {
         a(achievementID);
     }
 
-    /* JADX INFO: Access modifiers changed from: protected */
-    public boolean c(AchievementID achievementID) {
+    public boolean c(AchievementID achievementID) {//    public boolean c(AchievementID achievementID)
         return this.achievements.getInt(achievementID.getID(), 0) == 1;
     }
 }
