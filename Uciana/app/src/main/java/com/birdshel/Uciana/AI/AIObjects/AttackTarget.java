@@ -1,7 +1,5 @@
 package com.birdshel.Uciana.AI.AIObjects;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AttackTarget {
     private final AttackTargetType attackTargetType;
     private int empireID;
@@ -9,12 +7,12 @@ public class AttackTarget {
     private int systemID;
     private int value;
 
-    public AttackTarget(int i, int i2, int i3, int i4) {
+    public AttackTarget(int systemID, int orbit, int empireID, int value) {
         this.attackTargetType = AttackTargetType.SYSTEM_OBJECT;
-        this.systemID = i;
-        this.orbit = i2;
-        this.empireID = i3;
-        this.value = i4;
+        this.systemID = systemID;
+        this.orbit = orbit;
+        this.empireID = empireID;
+        this.value = value;
     }
 
     public AttackTargetType getAttackTargetType() {
@@ -49,11 +47,11 @@ public class AttackTarget {
         return this.attackTargetType == AttackTargetType.SYSTEM_OBJECT;
     }
 
-    public AttackTarget(int i, int i2, int i3) {
+    public AttackTarget(int systemID, int empireID, int value) {
         this.attackTargetType = AttackTargetType.FLEET;
-        this.systemID = i;
-        this.empireID = i2;
-        this.value = i3;
+        this.systemID = systemID;
+        this.empireID = empireID;
+        this.value = value;
     }
 
     public AttackTarget() {

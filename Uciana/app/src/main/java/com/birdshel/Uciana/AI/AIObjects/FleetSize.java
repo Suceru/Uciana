@@ -1,29 +1,33 @@
 package com.birdshel.Uciana.AI.AIObjects;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public enum FleetSize {
-    TINY,
-    SMALL,
-    MEDIUM,
-    LARGE,
-    HUGE,
-    MAXED;
+    TINY, // 舰队规模为微小
+    SMALL, // 舰队规模为小型
+    MEDIUM, // 舰队规模为中型
+    LARGE, // 舰队规模为大型
+    HUGE, // 舰队规模为巨型
+    MAXED; // 舰队规模为最大
 
-    public static FleetSize getFleetSize(int i, int i2) {
-        if (i <= 0) {
+    /**
+     * 根据舰队的数量和舰队的最大容量计算舰队规模
+     * @param fleetCount 舰队数量
+     * @param maxCapacity 舰队最大容量
+     * @return 舰队规模
+     */
+    public static FleetSize getFleetSize(int fleetCount, int maxCapacity) {
+        if (fleetCount <= 0) { // 如果舰队数量小于等于0，返回最大舰队规模
             return MAXED;
         }
-        if (i <= 4) {
+        if (fleetCount <= 4) { // 如果舰队数量小于等于4，返回巨型舰队规模
             return HUGE;
         }
-        int i3 = i / i2;
-        if (i3 < 0 || i3 >= 0.2f) {
-            float f2 = i3;
-            if (f2 < 0.2f || f2 >= 0.4f) {
-                if (f2 < 0.4f || f2 >= 0.6f) {
-                    if (f2 < 0.6f || f2 >= 0.8f) {
-                        if (f2 >= 0.8f && f2 < 0.95f) {
+        int fleetCapacityRatio = fleetCount / maxCapacity; // 计算舰队数量与舰队最大容量的比例
+        if (fleetCapacityRatio < 0 || fleetCapacityRatio >= 0.2f) {
+            float ratio = fleetCapacityRatio;
+            if (ratio < 0.2f || ratio >= 0.4f) {
+                if (ratio < 0.4f || ratio >= 0.6f) {
+                    if (ratio < 0.6f || ratio >= 0.8f) {
+                        if (ratio >= 0.8f && ratio < 0.95f) {
                             return HUGE;
                         }
                         return MAXED;
@@ -37,3 +41,4 @@ public enum FleetSize {
         return TINY;
     }
 }
+

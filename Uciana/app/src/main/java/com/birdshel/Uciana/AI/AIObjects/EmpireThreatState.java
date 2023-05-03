@@ -2,8 +2,6 @@ package com.birdshel.Uciana.AI.AIObjects;
 
 import com.birdshel.Uciana.Players.Empire;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public enum EmpireThreatState {
     NO_CONTACT,
     PEACE,
