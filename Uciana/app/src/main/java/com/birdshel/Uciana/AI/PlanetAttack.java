@@ -18,8 +18,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class PlanetAttack {
     private SystemObjectAttackAction action;
     private final int attackerID;
@@ -38,55 +36,6 @@ public class PlanetAttack {
     private int buildingLosses = 0;
     private int militaryLosses = 0;
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    /* compiled from: MyApplication */
-    /* renamed from: com.birdshel.Uciana.AI.PlanetAttack$1  reason: invalid class name */
-    /* loaded from: classes.dex */
-    public static /* synthetic */ class AnonymousClass1 {
-
-        /* renamed from: a  reason: collision with root package name */
-        static final /* synthetic */ int[] f1348a;
-        static final /* synthetic */ int[] b;
-
-        static {
-            int[] iArr = new int[BombingTarget.values().length];
-            b = iArr;
-            try {
-                iArr[BombingTarget.POPULATION.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                b[BombingTarget.BUILDING.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                b[BombingTarget.MILITARY.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
-            int[] iArr2 = new int[SystemObjectAttackAction.values().length];
-            f1348a = iArr2;
-            try {
-                iArr2[SystemObjectAttackAction.BOMBARD.ordinal()] = 1;
-            } catch (NoSuchFieldError unused4) {
-            }
-            try {
-                f1348a[SystemObjectAttackAction.INVADE.ordinal()] = 2;
-            } catch (NoSuchFieldError unused5) {
-            }
-            try {
-                f1348a[SystemObjectAttackAction.DESTROY.ordinal()] = 3;
-            } catch (NoSuchFieldError unused6) {
-            }
-            try {
-                f1348a[SystemObjectAttackAction.NO_ACTION.ordinal()] = 4;
-            } catch (NoSuchFieldError unused7) {
-            }
-            try {
-                f1348a[SystemObjectAttackAction.BOMB.ordinal()] = 5;
-            } catch (NoSuchFieldError unused8) {
-            }
-        }
-    }
 
     public PlanetAttack(int i, int i2, int i3) {
         this.attackerID = i;
@@ -115,7 +64,24 @@ public class PlanetAttack {
         }
         int i4 = i - i2;
         this.structureHitPoints = this.structureArmor;
-        int i5 = AnonymousClass1.b[bombingTarget.ordinal()];
+        switch (bombingTarget){
+
+            case NONE:
+                break;
+            case POPULATION:
+                colony.populationBombed();
+                this.populationLosses++;
+                break;
+            case BUILDING:
+                colony.buildingBombed();
+                this.buildingLosses++;
+                break;
+            case MILITARY:
+                colony.militaryBombed();
+                this.militaryLosses++;
+                break;
+        }
+ /*       int i5 = AnonymousClass1.b[bombingTarget.ordinal()];
         if (i5 == 1) {
             colony.populationBombed();
             this.populationLosses++;
@@ -125,11 +91,13 @@ public class PlanetAttack {
         } else if (i5 == 3) {
             colony.militaryBombed();
             this.militaryLosses++;
-        }
+        }*/
         if (colony.isAlive()) {
             bombColony(colony, weapon, i4, getTargetHit(colony, weapon, false));
         }
     }
+
+
 
     private void bombPlanet(ShipComponentID shipComponentID) {
         int intValue = this.availableBombs.get(shipComponentID).intValue() - 1;
@@ -245,7 +213,24 @@ public class PlanetAttack {
         if (!GameData.fleets.isFleetInSystem(this.attackerID, this.systemID)) {
             this.action = SystemObjectAttackAction.NO_ACTION;
         }
-        int i = AnonymousClass1.f1348a[this.action.ordinal()];
+        switch (this.action){
+            case BOMBARD:
+                this.structureArmor = (int) (GameData.empires.get(this.systemObject.getOccupier()).getTech().getArmorMultiplier() * 50.0f);
+                bombardPlanet();
+                return true;
+            case INVADE:
+                invadePlanet();
+                return true;
+            case DESTROY:
+                if (GameData.outposts.isOutpost(this.systemID, this.orbit)) {
+                    GameData.outposts.removeOutpost(this.systemObject.getOutpost());
+                }
+                this.outpostDestroyed = true;
+                return true;
+            default:
+                return false;
+        }
+     /*   int i = AnonymousClass1.f1348a[this.action.ordinal()];
         if (i == 1) {
             this.structureArmor = (int) (GameData.empires.get(this.systemObject.getOccupier()).getTech().getArmorMultiplier() * 50.0f);
             bombardPlanet();
@@ -261,11 +246,79 @@ public class PlanetAttack {
             }
             this.outpostDestroyed = true;
             return true;
-        }
+        }*/
     }
+    /*   *//* JADX INFO: Access modifiers changed from: package-private *//*
+     *//* compiled from: MyApplication *//*
+     *//* renamed from: com.birdshel.Uciana.AI.PlanetAttack$1  reason: invalid class name *//*
+     *//* loaded from: classes.dex *//*
+    public static *//* synthetic *//* class AnonymousClass1 {
 
+     *//* renamed from: a  reason: collision with root package name *//*
+        static final *//* synthetic *//* int[] f1348a;
+        static final *//* synthetic *//* int[] b;
+
+        static {
+            int[] iArr = new int[BombingTarget.values().length];
+            b = iArr;
+            try {
+                iArr[BombingTarget.POPULATION.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                b[BombingTarget.BUILDING.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                b[BombingTarget.MILITARY.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            int[] iArr2 = new int[SystemObjectAttackAction.values().length];
+            f1348a = iArr2;
+            try {
+                iArr2[SystemObjectAttackAction.BOMBARD.ordinal()] = 1;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f1348a[SystemObjectAttackAction.INVADE.ordinal()] = 2;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f1348a[SystemObjectAttackAction.DESTROY.ordinal()] = 3;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f1348a[SystemObjectAttackAction.NO_ACTION.ordinal()] = 4;
+            } catch (NoSuchFieldError unused7) {
+            }
+            try {
+                f1348a[SystemObjectAttackAction.BOMB.ordinal()] = 5;
+            } catch (NoSuchFieldError unused8) {
+            }
+        }
+    }*/
     public String getActionString() {
-        int i = AnonymousClass1.f1348a[this.action.ordinal()];
+        switch (this.action){
+
+            case BOMB:
+                if (!this.colonyDestroyed && !this.outpostDestroyed) {
+                    return GameData.activity.getString(R.string.planet_attack_bombed);
+                }
+                return GameData.activity.getString(R.string.planet_attack_destroyed);
+            case BOMBARD:
+                if (!this.colonyDestroyed && !this.outpostDestroyed) {
+                    return GameData.activity.getString(R.string.planet_attack_bombed);
+                }
+                return GameData.activity.getString(R.string.planet_attack_destroyed);
+            case INVADE:
+                if (this.invasion.hasPlanetBeenTaken()) {
+                    return GameData.activity.getString(R.string.planet_attack_invaded);
+                }
+                return GameData.activity.getString(R.string.planet_attack_repelled_invasion);
+            default:
+                return this.outpostDestroyed ? GameData.activity.getString(R.string.planet_attack_destroyed) : "";
+        }
+/*        int i = AnonymousClass1.f1348a[this.action.ordinal()];
         if (i != 1) {
             if (i == 2) {
                 if (this.invasion.hasPlanetBeenTaken()) {
@@ -279,7 +332,7 @@ public class PlanetAttack {
         if (!this.colonyDestroyed && !this.outpostDestroyed) {
             return GameData.activity.getString(R.string.planet_attack_bombed);
         }
-        return GameData.activity.getString(R.string.planet_attack_destroyed);
+        return GameData.activity.getString(R.string.planet_attack_destroyed);*/
     }
 
     public int getBuildingLosses() {

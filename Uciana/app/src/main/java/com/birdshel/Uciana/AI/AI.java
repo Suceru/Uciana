@@ -6,8 +6,6 @@ import com.birdshel.Uciana.Ships.Fleet;
 import java.util.ArrayList;
 import java.util.List;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AI {
     public static List<Integer> getRoute(int i, int i2, int i3) {
         ArrayList arrayList = new ArrayList();

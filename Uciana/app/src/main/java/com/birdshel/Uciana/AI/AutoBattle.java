@@ -20,8 +20,6 @@ import com.birdshel.Uciana.Ships.Torpedo;
 import com.birdshel.Uciana.Utility.Log;
 import java.util.ArrayList;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AutoBattle implements BattleCallBack {
     private BattleAI attackerBattleAI;
     private int attackerID;
@@ -34,32 +32,6 @@ public class AutoBattle implements BattleCallBack {
     private int systemID;
     private final BattleLosses attackerLosses = new BattleLosses();
     private final BattleLosses defenderLosses = new BattleLosses();
-
-    /* compiled from: MyApplication */
-    /* renamed from: com.birdshel.Uciana.AI.AutoBattle$1  reason: invalid class name */
-    /* loaded from: classes.dex */
-    static /* synthetic */ class AnonymousClass1 {
-
-        /* renamed from: a  reason: collision with root package name */
-        static final /* synthetic */ int[] f1336a;
-
-        static {
-            int[] iArr = new int[WeaponType.values().length];
-            f1336a = iArr;
-            try {
-                iArr[WeaponType.BEAM.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                f1336a[WeaponType.TORPEDO.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                f1336a[WeaponType.SPACIAL_CHARGE.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
-        }
-    }
 
     public AutoBattle(Game game, boolean z) {
         this.game = game;
@@ -403,18 +375,58 @@ public class AutoBattle implements BattleCallBack {
         Ship selectedShip = this.battleGrid.getSelectedShip();
         Ship ship = this.battleGrid.getShip(point);
         while (weapon.getAvailableCount() != 0 && ship.isAlive()) {
-            int i = AnonymousClass1.f1336a[weapon.getType().ordinal()];
-            if (i == 1) {
-                beamAttack(weapon, selectedShip, ship);
-            } else if (i == 2) {
-                torpedoAttack(weapon, point);
-            } else if (i == 3) {
-                spacialChargeAttack(weapon, point);
+            switch (weapon.getType()){
+                case NONE:
+                    break;
+                case BEAM:
+                    beamAttack(weapon, selectedShip, ship);
+                    break;
+                case BOMB:
+                    break;
+                case TORPEDO:
+                    torpedoAttack(weapon, point);
+                    break;
+                case SPACIAL_CHARGE:
+                    spacialChargeAttack(weapon, point);
+                    break;
             }
+
         }
         AIMoveDone(selectedShip);
     }
+/*    *//* compiled from: MyApplication *//*
+    *//* renamed from: com.birdshel.Uciana.AI.AutoBattle$1  reason: invalid class name *//*
+    *//* loaded from: classes.dex *//*
+    static *//* synthetic *//* class AnonymousClass1 {
 
+        *//* renamed from: a  reason: collision with root package name *//*
+        static final *//* synthetic *//* int[] f1336a;
+
+        static {
+            int[] iArr = new int[WeaponType.values().length];
+            f1336a = iArr;
+            try {
+                iArr[WeaponType.BEAM.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f1336a[WeaponType.TORPEDO.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f1336a[WeaponType.SPACIAL_CHARGE.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+        }
+    }
+    int i = AnonymousClass1.f1336a[weapon.getType().ordinal()];
+            if (i == 1) {
+        beamAttack(weapon, selectedShip, ship);
+    } else if (i == 2) {
+        torpedoAttack(weapon, point);
+    } else if (i == 3) {
+        spacialChargeAttack(weapon, point);
+    }*/
     @Override // com.birdshel.Uciana.Elements.Battle.BattleCallBack
     public void moveShip(Point point) {
         Log.message("AutoBattle", "Move ship: " + this.battleGrid.getSelectedShip().getID());

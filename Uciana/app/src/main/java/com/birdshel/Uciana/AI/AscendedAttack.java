@@ -14,22 +14,20 @@ import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import java.util.Iterator;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AscendedAttack {
     private final Game game;
     private final boolean spaceBattle = spaceBattleNeeded();
     private final int systemID;
     private final AttackTarget target;
+/*    AttackTargetType attackTargetType=new AttackTargetType1,2,3);
+    *//* JADX INFO: Access modifiers changed from: package-private *//*
+    *//* compiled from: MyApplication *//*
+    *//* renamed from: com.birdshel.Uciana.AI.AscendedAttack$1  reason: invalid class name *//*
+    *//* loaded from: classes.dex *//*
+    public static *//* synthetic *//* class AnonymousClass1 {
 
-    /* JADX INFO: Access modifiers changed from: package-private */
-    /* compiled from: MyApplication */
-    /* renamed from: com.birdshel.Uciana.AI.AscendedAttack$1  reason: invalid class name */
-    /* loaded from: classes.dex */
-    public static /* synthetic */ class AnonymousClass1 {
-
-        /* renamed from: a  reason: collision with root package name */
-        static final /* synthetic */ int[] f1335a;
+        *//* renamed from: a  reason: collision with root package name *//*
+        static final *//* synthetic *//* int[] attackTargetType;//f1335a
 
         static {
             int[] iArr = new int[AttackTargetType.values().length];
@@ -47,7 +45,7 @@ public class AscendedAttack {
             } catch (NoSuchFieldError unused3) {
             }
         }
-    }
+    }*/
 
     public AscendedAttack(Game game, int i) {
         this.game = game;
@@ -131,9 +129,33 @@ public class AscendedAttack {
             this.game.getCurrentScene().changeScene(this.game.attackScene, new AttackSceneData(2, 8, this.target.getEmpireID(), this.target.getSystemID(), this.target.getOrbit(), false));
         }
     }
-
     private boolean spaceBattleNeeded() {
-        int i = AnonymousClass1.f1335a[this.target.getAttackTargetType().ordinal()];
+        switch (this.target.getAttackTargetType()){
+            case SYSTEM_OBJECT:
+                if (this.game.colonies.isColony(this.systemID, this.target.getOrbit())) {
+                    Colony colony = this.game.colonies.getColony(this.systemID, this.target.getOrbit());
+                    if (colony.hasDefences()) {
+                        return true;
+                    }
+                    if (this.game.fleets.isFleetInSystem(colony.getEmpireID(), this.systemID)) {
+                        return this.game.fleets.getFleetInSystem(colony.getEmpireID(), this.target.getSystemID()).hasCombatShips();
+                    }
+                } else if (this.game.outposts.isOutpost(this.systemID, this.target.getOrbit())) {
+                    Outpost outpost = this.game.outposts.getOutpost(this.systemID, this.target.getOrbit());
+                    if (this.game.fleets.isFleetInSystem(outpost.getEmpireID(), this.systemID)) {
+                        return this.game.fleets.getFleetInSystem(outpost.getEmpireID(), this.target.getSystemID()).hasCombatShips();
+                    }
+                }
+                return false;
+            case FLEET:
+                return true;
+            case NONE:
+            default:
+                return false;
+        }
+    }
+    /*private boolean spaceBattleNeeded() {
+        int i =this.target.getAttackTargetType().ordinal();//attackTargetType[this.target.getAttackTargetType()];// AnonymousClass1.f1335a[this.target.getAttackTargetType().ordinal()];
         if (i != 1) {
             if (i != 2) {
                 return false;
@@ -155,7 +177,7 @@ public class AscendedAttack {
             return false;
         }
         return true;
-    }
+    }*/
 
     public void execute() {
         if (this.target.isNone()) {

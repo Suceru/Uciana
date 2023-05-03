@@ -1,7 +1,5 @@
 package com.birdshel.Uciana.AI;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AIValues {
     public static final int AI_COLONIZE_MIN_EXPLORED_SYSTEMS = 3;
     public static final int AI_COLONIZE_WAIT_TURNS = 8;

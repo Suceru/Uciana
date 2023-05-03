@@ -2,7 +2,7 @@ package com.birdshel.Uciana.AI.Managers;
 
 import android.os.Build;
 import androidx.annotation.RequiresApi;
-import androidx.constraintlayout.core.motion.utils.a;
+import androidx.constraintlayout.motion.utils.a;
 import com.birdshel.Uciana.Elements.Battle.BattleCallBack;
 import com.birdshel.Uciana.Elements.Battle.BattleGrid;
 import com.birdshel.Uciana.Math.Functions;

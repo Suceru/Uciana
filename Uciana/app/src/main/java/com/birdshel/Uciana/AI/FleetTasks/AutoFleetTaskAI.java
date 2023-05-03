@@ -13,16 +13,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AutoFleetTaskAI {
     private static Empire empire;
     private static List<SystemOrbit> explorationTasks;
     private static Map<String, String> scoutShips;
     private static List<Integer> scoutingTasks;
 
-    private static void checkSystem(int i) {
-        for (SystemObject systemObject : GameData.galaxy.getStarSystem(i).getSystemObjects()) {
+    private static void checkSystem(int index) {
+        for (SystemObject systemObject : GameData.galaxy.getStarSystem(index).getSystemObjects()) {
             if (!systemObject.isNothing() && systemObject.isPlanet() && !systemObject.hasBeenExploredByEmpire(empire.id)) {
                 explorationTasks.add(new SystemOrbit(systemObject.getSystemID(), systemObject.getOrbit()));
             }

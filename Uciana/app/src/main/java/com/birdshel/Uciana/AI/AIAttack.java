@@ -9,8 +9,6 @@ import com.birdshel.Uciana.GameProperties;
 import com.birdshel.Uciana.Players.Empire;
 import com.birdshel.Uciana.Scenes.AttackSceneData;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class AIAttack {
     private final Empire empire;
     private final Game game;

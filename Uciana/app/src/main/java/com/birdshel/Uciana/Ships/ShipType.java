@@ -9,8 +9,6 @@ import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Resources.OptionID;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public enum ShipType {
     SCOUT(new Builder().z(2).w(0.32f).x(32.0f).p(26.0f).q(new int[]{R.string.scout_name_0, R.string.scout_name_1, R.string.scout_name_2, R.string.scout_name_3, R.string.scout_name_4, R.string.scout_name_5, R.string.scout_name_6, R.string.scout_name_7, R.string.scout_name_8, R.string.scout_name_9}).o(125).s(R.string.ship_description_scout)),
     DESTROYER(new Builder().z(4).w(0.49f).x(49.0f).p(40.0f).q(new int[]{R.string.destroyer_name_0, R.string.destroyer_name_1, R.string.destroyer_name_2, R.string.destroyer_name_3, R.string.destroyer_name_4, R.string.destroyer_name_5, R.string.destroyer_name_6, R.string.destroyer_name_7, R.string.destroyer_name_8, R.string.destroyer_name_9}).r(2).u().o(WeaponStats.SPACIAL_CHARGE_SPEED).n(125).v(2).y(2).t(4)),

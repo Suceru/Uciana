@@ -11,8 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public class ScoutExploreTasks {
     private static List<TaskDoerScore> scoutingExplorationTaskDoerScores;
 

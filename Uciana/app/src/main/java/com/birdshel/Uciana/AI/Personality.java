@@ -3,8 +3,6 @@ package com.birdshel.Uciana.AI;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Math.Point;
 
-/* compiled from: MyApplication */
-/* loaded from: classes.dex */
 public enum Personality {
     RUTHLESS(new Builder().d(new Point(20.0f, 35.0f)).f(30).e(20)),
     ERRATIC(new Builder().d(new Point(20.0f, 45.0f)).f(20).e(20)),
@@ -17,8 +15,6 @@ public enum Personality {
     private final int minTurnsAfterPeaceToGoToWar;
     private final int minTurnsAskForPeace;
 
-    /* compiled from: MyApplication */
-    /* loaded from: classes.dex */
     private static class Builder {
         private Point minGoToWarRange;
         private int minTurnsAfterPeaceToGoToWar;
