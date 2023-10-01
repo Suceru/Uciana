@@ -1,16 +1,20 @@
 package com.birdshel.Uciana.Resources;
 
 import android.os.Environment;
+
 import com.birdshel.Uciana.Utility.Log;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
 import java.io.File;
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

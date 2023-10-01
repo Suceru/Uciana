@@ -7,6 +7,7 @@ import com.birdshel.Uciana.Planets.Climate;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;

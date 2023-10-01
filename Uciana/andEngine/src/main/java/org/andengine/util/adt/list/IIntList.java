@@ -7,20 +7,27 @@ package org.andengine.util.adt.list;
  * @since 19:21:53 - 03.05.2012
  */
 public interface IIntList {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public boolean isEmpty();
-	public int get(final int pIndex) throws ArrayIndexOutOfBoundsException;
-	public void add(final int pItem);
-	public void add(final int pIndex, final int pItem) throws ArrayIndexOutOfBoundsException;
-	public int remove(final int pIndex) throws ArrayIndexOutOfBoundsException;
-	public int size();
-	public void clear();
-	public int[] toArray();
+    public boolean isEmpty();
+
+    public int get(final int pIndex) throws ArrayIndexOutOfBoundsException;
+
+    public void add(final int pItem);
+
+    public void add(final int pIndex, final int pItem) throws ArrayIndexOutOfBoundsException;
+
+    public int remove(final int pIndex) throws ArrayIndexOutOfBoundsException;
+
+    public int size();
+
+    public void clear();
+
+    public int[] toArray();
 }

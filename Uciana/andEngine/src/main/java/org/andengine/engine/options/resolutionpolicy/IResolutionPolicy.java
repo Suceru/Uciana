@@ -9,29 +9,29 @@ package org.andengine.engine.options.resolutionpolicy;
  * @since 11:02:35 - 29.03.2010
  */
 public interface IResolutionPolicy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onMeasure(final IResolutionPolicy.Callback pResolutionPolicyCallback, final int pWidthMeasureSpec, final int pHeightMeasureSpec);
+    public void onMeasure(final IResolutionPolicy.Callback pResolutionPolicyCallback, final int pWidthMeasureSpec, final int pHeightMeasureSpec);
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-	public static interface Callback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public static interface Callback {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        // ===========================================================
+        // Methods
+        // ===========================================================
 
-		public void onResolutionChanged(final int pWidth, final int pHeight);
-	}
+        public void onResolutionChanged(final int pWidth, final int pHeight);
+    }
 }

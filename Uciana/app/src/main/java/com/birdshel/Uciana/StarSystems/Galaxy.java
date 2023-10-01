@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.StarSystems;
 
 import android.app.Activity;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.Math.Functions;
@@ -18,7 +19,7 @@ import com.birdshel.Uciana.Planets.SystemObject;
 import com.birdshel.Uciana.Players.Empire;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.OptionID;
-import com.birdshel.Uciana.StarSystems.StarSystem;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;

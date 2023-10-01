@@ -1,9 +1,9 @@
 package org.andengine.opengl.texture.atlas.bitmap.source.decorator.shape;
 
-import org.andengine.opengl.texture.atlas.bitmap.source.decorator.BaseBitmapTextureAtlasSourceDecorator.TextureAtlasSourceDecoratorOptions;
-
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
+import org.andengine.opengl.texture.atlas.bitmap.source.decorator.BaseBitmapTextureAtlasSourceDecorator.TextureAtlasSourceDecoratorOptions;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -13,58 +13,58 @@ import android.graphics.Paint;
  * @since 12:53:13 - 04.01.2011
  */
 public class CircleBitmapTextureAtlasSourceDecoratorShape implements IBitmapTextureAtlasSourceDecoratorShape {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private static CircleBitmapTextureAtlasSourceDecoratorShape sDefaultInstance;
+    private static CircleBitmapTextureAtlasSourceDecoratorShape sDefaultInstance;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public CircleBitmapTextureAtlasSourceDecoratorShape() {
+    public CircleBitmapTextureAtlasSourceDecoratorShape() {
 
-	}
+    }
 
-	public static CircleBitmapTextureAtlasSourceDecoratorShape getDefaultInstance() {
-		if (sDefaultInstance == null) {
-			sDefaultInstance = new CircleBitmapTextureAtlasSourceDecoratorShape();
-		}
-		return sDefaultInstance;
-	}
+    public static CircleBitmapTextureAtlasSourceDecoratorShape getDefaultInstance() {
+        if (sDefaultInstance == null) {
+            sDefaultInstance = new CircleBitmapTextureAtlasSourceDecoratorShape();
+        }
+        return sDefaultInstance;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void onDecorateBitmap(final Canvas pCanvas, final Paint pPaint, final TextureAtlasSourceDecoratorOptions pDecoratorOptions) {
-		final float width = pCanvas.getWidth() - pDecoratorOptions.getInsetLeft() - pDecoratorOptions.getInsetRight();
-		final float height = pCanvas.getHeight() - pDecoratorOptions.getInsetTop() - pDecoratorOptions.getInsetBottom();
+    @Override
+    public void onDecorateBitmap(final Canvas pCanvas, final Paint pPaint, final TextureAtlasSourceDecoratorOptions pDecoratorOptions) {
+        final float width = pCanvas.getWidth() - pDecoratorOptions.getInsetLeft() - pDecoratorOptions.getInsetRight();
+        final float height = pCanvas.getHeight() - pDecoratorOptions.getInsetTop() - pDecoratorOptions.getInsetBottom();
 
-		final float centerX = (pCanvas.getWidth() + pDecoratorOptions.getInsetLeft() - pDecoratorOptions.getInsetRight()) * 0.5f;
-		final float centerY = (pCanvas.getHeight() + pDecoratorOptions.getInsetTop() - pDecoratorOptions.getInsetBottom()) * 0.5f;
+        final float centerX = (pCanvas.getWidth() + pDecoratorOptions.getInsetLeft() - pDecoratorOptions.getInsetRight()) * 0.5f;
+        final float centerY = (pCanvas.getHeight() + pDecoratorOptions.getInsetTop() - pDecoratorOptions.getInsetBottom()) * 0.5f;
 
-		final float radius = Math.min(width * 0.5f, height * 0.5f);
+        final float radius = Math.min(width * 0.5f, height * 0.5f);
 
-		pCanvas.drawCircle(centerX, centerY, radius, pPaint);
-	}
+        pCanvas.drawCircle(centerX, centerY, radius, pPaint);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }
 

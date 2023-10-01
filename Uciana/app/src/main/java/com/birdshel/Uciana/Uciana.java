@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.WindowManager;
+
 import com.birdshel.Uciana.Colonies.Buildings.Buildings;
 import com.birdshel.Uciana.Planets.CityLights;
 import com.birdshel.Uciana.Resources.SupportedLocales;
@@ -21,7 +22,7 @@ import com.birdshel.Uciana.Utility.Log;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
-import java.util.Locale;
+
 import org.andengine.engine.camera.Camera;
 import org.andengine.engine.handler.timer.ITimerCallback;
 import org.andengine.engine.handler.timer.TimerHandler;
@@ -40,6 +41,8 @@ import org.andengine.opengl.texture.region.ITextureRegion;
 import org.andengine.opengl.view.RenderSurfaceView;
 import org.andengine.ui.IGameInterface;
 import org.andengine.ui.activity.BaseGameActivity;
+
+import java.util.Locale;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

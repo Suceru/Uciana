@@ -4,9 +4,11 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
+
 import com.birdshel.Uciana.Controls.VolumeControl;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
@@ -25,7 +27,7 @@ import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.Uciana;
 import com.birdshel.Uciana.Utility.Log;
 import com.google.android.gms.drive.DriveFile;
-import java.io.File;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.Sprite;
@@ -38,6 +40,8 @@ import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.level.constants.LevelConstants;
 import org.w3c.dom.Element;
+
+import java.io.File;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

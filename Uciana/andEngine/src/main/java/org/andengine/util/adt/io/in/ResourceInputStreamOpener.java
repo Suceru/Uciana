@@ -1,9 +1,9 @@
 package org.andengine.util.adt.io.in;
 
+import android.content.res.Resources;
+
 import java.io.IOException;
 import java.io.InputStream;
-
-import android.content.res.Resources;
 
 /**
  * (c) 2012 Zynga Inc.
@@ -12,44 +12,44 @@ import android.content.res.Resources;
  * @since 12:07:14 - 02.03.2012
  */
 public class ResourceInputStreamOpener implements IInputStreamOpener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final Resources mResources;
-	private final int mResourceID;
+    private final Resources mResources;
+    private final int mResourceID;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public ResourceInputStreamOpener(final Resources pResources, final int pResourceID) {
-		this.mResources = pResources;
-		this.mResourceID = pResourceID;
-	}
+    public ResourceInputStreamOpener(final Resources pResources, final int pResourceID) {
+        this.mResources = pResources;
+        this.mResourceID = pResourceID;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public InputStream open() throws IOException {
-		return this.mResources.openRawResource(this.mResourceID);
-	}
+    @Override
+    public InputStream open() throws IOException {
+        return this.mResources.openRawResource(this.mResourceID);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

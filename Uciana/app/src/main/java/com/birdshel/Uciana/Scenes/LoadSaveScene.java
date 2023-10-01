@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.os.Parcelable;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.FrameMetricsAggregator;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
+
 import com.birdshel.Uciana.Elements.LoadSaveScene.GameSavePreviewImage;
 import com.birdshel.Uciana.Elements.LoadSaveScene.GameSaveTile;
 import com.birdshel.Uciana.Game;
@@ -21,12 +23,7 @@ import com.birdshel.Uciana.SaveGameData.PreviewData;
 import com.birdshel.Uciana.SaveGameData.SavedGameDetails;
 import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.Utility.Log;
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
@@ -38,6 +35,13 @@ import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

@@ -1,10 +1,10 @@
 package org.andengine.ui;
 
-import java.io.IOException;
-
 import org.andengine.engine.Engine;
 import org.andengine.engine.options.EngineOptions;
 import org.andengine.entity.scene.Scene;
+
+import java.io.IOException;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -14,66 +14,73 @@ import org.andengine.entity.scene.Scene;
  * @since 12:03:08 - 14.03.2010
  */
 public interface IGameInterface {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public EngineOptions onCreateEngineOptions();
-	public Engine onCreateEngine(final EngineOptions pEngineOptions);
+    public EngineOptions onCreateEngineOptions();
 
-	public void onCreateResources(final OnCreateResourcesCallback pOnCreateResourcesCallback) throws IOException;
-	public void onCreateScene(final OnCreateSceneCallback pOnCreateSceneCallback) throws IOException;
-	public void onPopulateScene(final Scene pScene, final OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException;
+    public Engine onCreateEngine(final EngineOptions pEngineOptions);
 
-	public void onReloadResources() throws IOException;
-	public void onDestroyResources() throws IOException;
+    public void onCreateResources(final OnCreateResourcesCallback pOnCreateResourcesCallback) throws IOException;
 
-	public void onGameCreated();
-	public void onResumeGame();
-	public void onPauseGame();
-	public void onGameDestroyed();
+    public void onCreateScene(final OnCreateSceneCallback pOnCreateSceneCallback) throws IOException;
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    public void onPopulateScene(final Scene pScene, final OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException;
 
-	public static interface OnCreateResourcesCallback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public void onReloadResources() throws IOException;
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+    public void onDestroyResources() throws IOException;
 
-		public void onCreateResourcesFinished();
-	}
+    public void onGameCreated();
 
-	public static interface OnCreateSceneCallback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public void onResumeGame();
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+    public void onPauseGame();
 
-		public void onCreateSceneFinished(final Scene pScene);
-	}
+    public void onGameDestroyed();
 
-	public static interface OnPopulateSceneCallback {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+    public static interface OnCreateResourcesCallback {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		public void onPopulateSceneFinished();
-	}
+        // ===========================================================
+        // Methods
+        // ===========================================================
+
+        public void onCreateResourcesFinished();
+    }
+
+    public static interface OnCreateSceneCallback {
+        // ===========================================================
+        // Constants
+        // ===========================================================
+
+        // ===========================================================
+        // Methods
+        // ===========================================================
+
+        public void onCreateSceneFinished(final Scene pScene);
+    }
+
+    public static interface OnPopulateSceneCallback {
+        // ===========================================================
+        // Constants
+        // ===========================================================
+
+        // ===========================================================
+        // Methods
+        // ===========================================================
+
+        public void onPopulateSceneFinished();
+    }
 }

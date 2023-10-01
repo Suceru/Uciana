@@ -9,49 +9,49 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 20:37:53 - 09.11.2011
  */
 public class MusicException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = -3314204068618256639L;
+    private static final long serialVersionUID = -3314204068618256639L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public MusicException() {
-		super();
-	}
+    public MusicException() {
+        super();
+    }
 
-	public MusicException(final String pMessage) {
-		super(pMessage);
-	}
+    public MusicException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public MusicException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public MusicException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public MusicException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public MusicException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -19,9 +19,7 @@ import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.StarSystems.Nebulas;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.primitive.Line;
 import org.andengine.entity.scene.Scene;
@@ -32,6 +30,10 @@ import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 //import org.andengine.util.adt.color.Color;
 
 /* compiled from: MyApplication */

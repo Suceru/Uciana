@@ -1,67 +1,68 @@
 package org.andengine.ui.activity;
 
-import java.io.IOException;
-
 import org.andengine.entity.scene.Scene;
 import org.andengine.ui.IGameInterface;
+
+import java.io.IOException;
 
 
 /**
  * This class exists so that the callback parameters of the methods in {@link IGameInterface} get called automatically.
- *
+ * <p>
  * (c) 2011 Zynga Inc.
  *
  * @author Nicolas Gramlich <ngramlich@zynga.com>
  * @since 19:05:42 - 23.12.2011
  */
 public abstract class SimpleBaseGameActivity extends BaseGameActivity {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onCreateResources() throws IOException;
-	protected abstract Scene onCreateScene();
+    protected abstract void onCreateResources() throws IOException;
 
-	@Override
-	public final void onCreateResources(final OnCreateResourcesCallback pOnCreateResourcesCallback) throws IOException {
-		this.onCreateResources();
+    protected abstract Scene onCreateScene();
 
-		pOnCreateResourcesCallback.onCreateResourcesFinished();
-	}
+    @Override
+    public final void onCreateResources(final OnCreateResourcesCallback pOnCreateResourcesCallback) throws IOException {
+        this.onCreateResources();
 
-	@Override
-	public final void onCreateScene(final OnCreateSceneCallback pOnCreateSceneCallback) throws IOException {
-		final Scene scene = this.onCreateScene();
+        pOnCreateResourcesCallback.onCreateResourcesFinished();
+    }
 
-		pOnCreateSceneCallback.onCreateSceneFinished(scene);
-	}
+    @Override
+    public final void onCreateScene(final OnCreateSceneCallback pOnCreateSceneCallback) throws IOException {
+        final Scene scene = this.onCreateScene();
 
-	@Override
-	public final void onPopulateScene(final Scene pScene, final OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException {
-		pOnPopulateSceneCallback.onPopulateSceneFinished();
-	}
+        pOnCreateSceneCallback.onCreateSceneFinished(scene);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    @Override
+    public final void onPopulateScene(final Scene pScene, final OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException {
+        pOnPopulateSceneCallback.onPopulateSceneFinished();
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

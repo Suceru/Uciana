@@ -5,11 +5,11 @@ import android.graphics.Bitmap;
 
 import org.andengine.opengl.texture.atlas.source.BaseTextureAtlasSource;
 
-public class BitmapTextureAtlasSource extends BaseTextureAtlasSource implements IBitmapTextureAtlasSource{
+public class BitmapTextureAtlasSource extends BaseTextureAtlasSource implements IBitmapTextureAtlasSource {
     private final Bitmap mBitmap;
 
-    public BitmapTextureAtlasSource(Bitmap pBitmap){
-        super(0,0, pBitmap.getWidth(), pBitmap.getHeight());
+    public BitmapTextureAtlasSource(Bitmap pBitmap) {
+        super(0, 0, pBitmap.getWidth(), pBitmap.getHeight());
         mBitmap = pBitmap;
     }
 

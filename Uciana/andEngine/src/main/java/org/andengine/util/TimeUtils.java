@@ -10,54 +10,54 @@ import org.andengine.util.time.TimeConstants;
  * @since 22:48:49 - 04.04.2011
  */
 public final class TimeUtils implements TimeConstants {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private TimeUtils() {
+    private TimeUtils() {
 
-	}
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static final String formatSeconds(final int pSecondsTotal) {
-		return formatSeconds(pSecondsTotal, new StringBuilder());
-	}
+    public static final String formatSeconds(final int pSecondsTotal) {
+        return formatSeconds(pSecondsTotal, new StringBuilder());
+    }
 
-	public static final String formatSeconds(final int pSecondsTotal, final StringBuilder pStringBuilder) {
-		final int minutes = pSecondsTotal / SECONDS_PER_MINUTE;
-		final int seconds = pSecondsTotal % SECONDS_PER_MINUTE;
+    public static final String formatSeconds(final int pSecondsTotal, final StringBuilder pStringBuilder) {
+        final int minutes = pSecondsTotal / SECONDS_PER_MINUTE;
+        final int seconds = pSecondsTotal % SECONDS_PER_MINUTE;
 
-		pStringBuilder.append(minutes);
-		pStringBuilder.append(':');
+        pStringBuilder.append(minutes);
+        pStringBuilder.append(':');
 
-		if (seconds < 10) {
-			pStringBuilder.append('0');
-		}
-		pStringBuilder.append(seconds);
+        if (seconds < 10) {
+            pStringBuilder.append('0');
+        }
+        pStringBuilder.append(seconds);
 
-		return pStringBuilder.toString();
-	}
+        return pStringBuilder.toString();
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

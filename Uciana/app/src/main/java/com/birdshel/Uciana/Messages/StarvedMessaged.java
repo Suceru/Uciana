@@ -5,6 +5,7 @@ import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.Planets.Planet;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
+
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.SequenceEntityModifier;

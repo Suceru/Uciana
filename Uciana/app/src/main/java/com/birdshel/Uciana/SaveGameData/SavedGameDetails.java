@@ -4,7 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import androidx.constraintlayout.motion.widget.Key;
+
 import com.birdshel.Uciana.BuildConfig;
 import com.birdshel.Uciana.Difficulty;
 import com.birdshel.Uciana.Game;
@@ -20,12 +22,14 @@ import com.birdshel.Uciana.StarSystems.SpaceRift;
 import com.birdshel.Uciana.StarSystems.Star;
 import com.birdshel.Uciana.StarSystems.StarType;
 import com.birdshel.Uciana.StarSystems.SystemNameDisplay;
+
+import org.andengine.util.level.constants.LevelConstants;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-import org.andengine.util.level.constants.LevelConstants;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

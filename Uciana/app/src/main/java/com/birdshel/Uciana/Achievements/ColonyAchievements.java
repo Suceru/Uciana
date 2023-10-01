@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Achievements;
 
 import android.app.Activity;
+
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Game;
@@ -12,6 +13,7 @@ import com.birdshel.Uciana.Planets.Planet;
 import com.birdshel.Uciana.Planets.PlanetSize;
 import com.birdshel.Uciana.Planets.ResourceID;
 import com.birdshel.Uciana.Planets.SystemObject;
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;

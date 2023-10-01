@@ -14,9 +14,7 @@ import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
 import com.birdshel.Uciana.Ships.ShipType;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
@@ -24,6 +22,10 @@ import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

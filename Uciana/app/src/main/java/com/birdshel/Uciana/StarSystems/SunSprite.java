@@ -2,6 +2,7 @@ package com.birdshel.Uciana.StarSystems;
 
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.particle.BatchedPseudoSpriteParticleSystem;
 import org.andengine.entity.particle.emitter.CircleOutlineParticleEmitter;
@@ -12,7 +13,6 @@ import org.andengine.entity.particle.initializer.ScaleParticleInitializer;
 import org.andengine.entity.particle.initializer.VelocityParticleInitializer;
 import org.andengine.entity.particle.modifier.AlphaParticleModifier;
 import org.andengine.entity.particle.modifier.ColorParticleModifier;
-//import org.andengine.entity.particle.modifier.ExpireParticleInitializer;
 import org.andengine.entity.shape.IShape;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;

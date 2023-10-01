@@ -11,8 +11,7 @@ import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechID;
-import java.util.ArrayList;
-import java.util.Iterator;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
@@ -20,6 +19,9 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

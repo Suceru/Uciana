@@ -7,49 +7,49 @@ package org.andengine.util.exception;
  * @since 12:25:52 - 03.11.2011
  */
 public class MethodNotYetImplementedException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = -4308430823868086531L;
+    private static final long serialVersionUID = -4308430823868086531L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public MethodNotYetImplementedException() {
+    public MethodNotYetImplementedException() {
 
-	}
+    }
 
-	public MethodNotYetImplementedException(final String pMessage) {
-		super(pMessage);
-	}
+    public MethodNotYetImplementedException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public MethodNotYetImplementedException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public MethodNotYetImplementedException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public MethodNotYetImplementedException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public MethodNotYetImplementedException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

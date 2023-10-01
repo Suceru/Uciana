@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Players;
 
 import android.content.Context;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.Math.Functions;
@@ -10,9 +11,11 @@ import com.birdshel.Uciana.Planets.Planet;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.OptionID;
 import com.birdshel.Uciana.StarSystems.StarSystem;
+
+import org.andengine.util.adt.color.Color;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.andengine.util.adt.color.Color;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

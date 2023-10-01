@@ -15,16 +15,18 @@ import com.birdshel.Uciana.Planets.Moon;
 import com.birdshel.Uciana.Planets.Planet;
 import com.birdshel.Uciana.Planets.PlanetSprite;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

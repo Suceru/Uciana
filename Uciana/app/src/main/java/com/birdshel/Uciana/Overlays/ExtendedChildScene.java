@@ -4,10 +4,7 @@ import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Messages.Message;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
-import java.nio.CharBuffer;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.engine.Engine;
 import org.andengine.engine.handler.IUpdateHandler;
 import org.andengine.entity.Entity;
@@ -28,6 +25,11 @@ import org.andengine.opengl.texture.region.ITextureRegion;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

@@ -6,7 +6,7 @@ import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Scenes.PlanetScene;
 import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechType;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.TiledSprite;
@@ -15,6 +15,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.nio.CharBuffer;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

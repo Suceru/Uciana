@@ -11,53 +11,53 @@ import org.andengine.util.math.MathConstants;
  * @since 16:52:11 - 26.07.2010
  */
 public class EaseSineOut implements IEaseFunction {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private static EaseSineOut INSTANCE;
+    private static EaseSineOut INSTANCE;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private EaseSineOut() {
+    private EaseSineOut() {
 
-	}
+    }
 
-	public static EaseSineOut getInstance() {
-		if (INSTANCE == null) {
-			INSTANCE = new EaseSineOut();
-		}
-		return INSTANCE;
-	}
+    public static EaseSineOut getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new EaseSineOut();
+        }
+        return INSTANCE;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public float getPercentage(final float pSecondsElapsed, final float pDuration) {
-		return EaseSineOut.getValue(pSecondsElapsed / pDuration);
-	}
+    @Override
+    public float getPercentage(final float pSecondsElapsed, final float pDuration) {
+        return EaseSineOut.getValue(pSecondsElapsed / pDuration);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static float getValue(final float pPercentage) {
-		return (float) Math.sin(pPercentage * MathConstants.PI_HALF);
-	}
+    public static float getValue(final float pPercentage) {
+        return (float) Math.sin(pPercentage * MathConstants.PI_HALF);
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Achievements;
 
 import android.app.Activity;
+
 import com.birdshel.Uciana.Game;
 
 public class AttackAchievements extends BaseAchievements {

@@ -1,4 +1,5 @@
 package org.andengine.opengl.shader.exception;
+
 /**
  * (c) 2011 Zynga Inc.
  *
@@ -6,41 +7,41 @@ package org.andengine.opengl.shader.exception;
  * @since 02:31:54 - 07.08.2011
  */
 public class ShaderProgramLinkException extends ShaderProgramException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 5418521931032742504L;
+    private static final long serialVersionUID = 5418521931032742504L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public ShaderProgramLinkException(final String pMessage) {
-		super(pMessage);
-	}
+    public ShaderProgramLinkException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public ShaderProgramLinkException(final String pMessage, final ShaderProgramException pShaderProgramException) {
-		super(pMessage, pShaderProgramException);
-	}
+    public ShaderProgramLinkException(final String pMessage, final ShaderProgramException pShaderProgramException) {
+        super(pMessage, pShaderProgramException);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -8,14 +8,15 @@ package org.andengine.opengl.texture;
  * @since 11:25:58 - 05.04.2012
  */
 public interface ITextureStateListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onLoadedToHardware(final ITexture pTexture);
-	public void onUnloadedFromHardware(final ITexture pTexture);
+    public void onLoadedToHardware(final ITexture pTexture);
+
+    public void onUnloadedFromHardware(final ITexture pTexture);
 }

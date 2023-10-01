@@ -5,83 +5,84 @@ import org.andengine.util.modifier.ease.IEaseFunction;
 /**
  * (c) 2011 Zynga Inc.
  *
+ * @param <T>
  * @author Nicolas Gramlich
  * @since 10:58:32 - 02.08.2011
- * @param <T>
  */
 public abstract class BaseQuadrupelValueSpanModifier<T> extends BaseTripleValueSpanModifier<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private float mFromValueD;
-	private float mValueSpanD;
+    private float mFromValueD;
+    private float mValueSpanD;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BaseQuadrupelValueSpanModifier(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC, final float pFromValueD, final float pToValueD, final IEaseFunction pEaseFunction) {
-		this(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC, pFromValueD, pToValueD, null, pEaseFunction);
-	}
+    public BaseQuadrupelValueSpanModifier(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC, final float pFromValueD, final float pToValueD, final IEaseFunction pEaseFunction) {
+        this(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC, pFromValueD, pToValueD, null, pEaseFunction);
+    }
 
-	public BaseQuadrupelValueSpanModifier(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC, final float pFromValueD, final float pToValueD, final IModifierListener<T> pModifierListener, final IEaseFunction pEaseFunction) {
-		super(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC, pModifierListener, pEaseFunction);
+    public BaseQuadrupelValueSpanModifier(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC, final float pFromValueD, final float pToValueD, final IModifierListener<T> pModifierListener, final IEaseFunction pEaseFunction) {
+        super(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC, pModifierListener, pEaseFunction);
 
-		this.mFromValueD = pFromValueD;
-		this.mValueSpanD = pToValueD - pFromValueD;
-	}
+        this.mFromValueD = pFromValueD;
+        this.mValueSpanD = pToValueD - pFromValueD;
+    }
 
-	protected BaseQuadrupelValueSpanModifier(final BaseQuadrupelValueSpanModifier<T> pBaseTripleValueSpanModifier) {
-		super(pBaseTripleValueSpanModifier);
+    protected BaseQuadrupelValueSpanModifier(final BaseQuadrupelValueSpanModifier<T> pBaseTripleValueSpanModifier) {
+        super(pBaseTripleValueSpanModifier);
 
-		this.mFromValueD = pBaseTripleValueSpanModifier.mFromValueD;
-		this.mValueSpanD = pBaseTripleValueSpanModifier.mValueSpanD;
-	}
+        this.mFromValueD = pBaseTripleValueSpanModifier.mFromValueD;
+        this.mValueSpanD = pBaseTripleValueSpanModifier.mValueSpanD;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onSetInitialValues(final T pItem, final float pValueA, final float pValueB, final float pValueC, final float pValueD);
-	protected abstract void onSetValues(final T pItem, final float pPerctentageDone, final float pValueA, final float pValueB, final float pValueC, final float pValueD);
+    protected abstract void onSetInitialValues(final T pItem, final float pValueA, final float pValueB, final float pValueC, final float pValueD);
 
-	@Override
-	protected void onSetInitialValues(final T pItem, final float pValueA, final float pValueB, final float pValueC) {
-		this.onSetInitialValues(pItem, pValueA, pValueB, pValueC, this.mFromValueD);
-	}
+    protected abstract void onSetValues(final T pItem, final float pPerctentageDone, final float pValueA, final float pValueB, final float pValueC, final float pValueD);
 
-	@Override
-	protected void onSetValues(final T pItem, final float pPercentageDone, final float pValueA, final float pValueB, final float pValueC) {
-		this.onSetValues(pItem, pPercentageDone, pValueA, pValueB, pValueC, this.mFromValueD + pPercentageDone * this.mValueSpanD);
-	}
+    @Override
+    protected void onSetInitialValues(final T pItem, final float pValueA, final float pValueB, final float pValueC) {
+        this.onSetInitialValues(pItem, pValueA, pValueB, pValueC, this.mFromValueD);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    @Override
+    protected void onSetValues(final T pItem, final float pPercentageDone, final float pValueA, final float pValueB, final float pValueC) {
+        this.onSetValues(pItem, pPercentageDone, pValueA, pValueB, pValueC, this.mFromValueD + pPercentageDone * this.mValueSpanD);
+    }
 
-	@Override
-	@Deprecated
-	public void reset(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC) {
-		super.reset(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC);
-	}
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void reset(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC, final float pFromValueD, final float pToValueD) {
-		super.reset(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC);
+    @Override
+    @Deprecated
+    public void reset(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC) {
+        super.reset(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC);
+    }
 
-		this.mFromValueD = pFromValueD;
-		this.mValueSpanD = pToValueD - pFromValueD;
-	}
+    public void reset(final float pDuration, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromValueC, final float pToValueC, final float pFromValueD, final float pToValueD) {
+        super.reset(pDuration, pFromValueA, pToValueA, pFromValueB, pToValueB, pFromValueC, pToValueC);
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+        this.mFromValueD = pFromValueD;
+        this.mValueSpanD = pToValueD - pFromValueD;
+    }
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

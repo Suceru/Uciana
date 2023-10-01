@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Elements.LoadSaveScene;
 
 import android.util.SparseIntArray;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Math.Point;
@@ -16,10 +17,7 @@ import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.StarSystems.SpaceRift;
 import com.birdshel.Uciana.StarSystems.Star;
 import com.birdshel.Uciana.StarSystems.SystemNameDisplay;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.RotationModifier;
@@ -31,6 +29,11 @@ import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

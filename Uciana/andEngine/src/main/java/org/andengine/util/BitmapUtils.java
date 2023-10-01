@@ -9,50 +9,49 @@ import android.graphics.Bitmap;
  * @since 18:52:32 - 18.02.2013
  */
 public final class BitmapUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private BitmapUtils() {
+    private BitmapUtils() {
 
-	}
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	/**
-	 * @param pBitmap
-	 *
-	 * @return a {@link Bitmap} that is {@link Bitmap#isMutable()}. If <code>pBitmap</code> is {@link Bitmap#isMutable()} then <code>pBitmap</code> is returned, otherwise a new {@link Bitmap} instance is returned that is {@link Bitmap#isMutable()} and <code>pBitmap</code> is {@link Bitmap#recycle()}d.
-	 */
-	public static Bitmap ensureBitmapIsMutable(final Bitmap pBitmap) {
-		if (pBitmap.isMutable()) {
-			return pBitmap;
-		} else {
-			final Bitmap mutableBitmap = pBitmap.copy(pBitmap.getConfig(), true);
-			pBitmap.recycle();
-			return mutableBitmap;
-		}
-	}
+    /**
+     * @param pBitmap
+     * @return a {@link Bitmap} that is {@link Bitmap#isMutable()}. If <code>pBitmap</code> is {@link Bitmap#isMutable()} then <code>pBitmap</code> is returned, otherwise a new {@link Bitmap} instance is returned that is {@link Bitmap#isMutable()} and <code>pBitmap</code> is {@link Bitmap#recycle()}d.
+     */
+    public static Bitmap ensureBitmapIsMutable(final Bitmap pBitmap) {
+        if (pBitmap.isMutable()) {
+            return pBitmap;
+        } else {
+            final Bitmap mutableBitmap = pBitmap.copy(pBitmap.getConfig(), true);
+            pBitmap.recycle();
+            return mutableBitmap;
+        }
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

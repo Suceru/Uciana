@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.AI.Managers;
 
 import android.util.SparseIntArray;
+
 import com.birdshel.Uciana.AI.AIObjects.AttackTarget;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Colony;
@@ -13,6 +14,7 @@ import com.birdshel.Uciana.Players.Empire;
 import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.Ships.ShipType;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

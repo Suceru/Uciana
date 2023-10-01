@@ -11,50 +11,50 @@ import java.io.InputStream;
  * @since 15:51:10 - 16.03.2012
  */
 public class ByteArrayInputStreamOpener implements IInputStreamOpener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final byte[] mBytes;
-	private final int mOffset;
-	private final int mLength;
+    private final byte[] mBytes;
+    private final int mOffset;
+    private final int mLength;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public ByteArrayInputStreamOpener(final byte[] pBytes) {
-		this(pBytes, 0, pBytes.length);
-	}
+    public ByteArrayInputStreamOpener(final byte[] pBytes) {
+        this(pBytes, 0, pBytes.length);
+    }
 
-	public ByteArrayInputStreamOpener(final byte[] pBytes, final int pOffset, final int pLength) {
-		this.mBytes = pBytes;
-		this.mOffset = pOffset;
-		this.mLength = pLength;
-	}
+    public ByteArrayInputStreamOpener(final byte[] pBytes, final int pOffset, final int pLength) {
+        this.mBytes = pBytes;
+        this.mOffset = pOffset;
+        this.mLength = pLength;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public InputStream open() throws IOException {
-		return new ByteArrayInputStream(this.mBytes, this.mOffset, this.mLength);
-	}
+    @Override
+    public InputStream open() throws IOException {
+        return new ByteArrayInputStream(this.mBytes, this.mOffset, this.mLength);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

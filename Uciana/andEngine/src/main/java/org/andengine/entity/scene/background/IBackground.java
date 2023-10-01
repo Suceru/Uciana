@@ -13,22 +13,27 @@ import org.andengine.util.modifier.IModifier;
  * @since 13:47:41 - 19.07.2010
  */
 public interface IBackground extends IDrawHandler, IUpdateHandler {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void registerBackgroundModifier(final IModifier<IBackground> pBackgroundModifier);
-	public boolean unregisterBackgroundModifier(final IModifier<IBackground> pBackgroundModifier);
-	public void clearBackgroundModifiers();
+    public void registerBackgroundModifier(final IModifier<IBackground> pBackgroundModifier);
 
-	public boolean isColorEnabled();
-	public void setColorEnabled(final boolean pColorEnabled);
+    public boolean unregisterBackgroundModifier(final IModifier<IBackground> pBackgroundModifier);
 
-	public void setColor(final Color pColor);
-	public void setColor(final float pRed, final float pGreen, final float pBlue);
-	public void setColor(final float pRed, final float pGreen, final float pBlue, final float pAlpha);
+    public void clearBackgroundModifiers();
+
+    public boolean isColorEnabled();
+
+    public void setColorEnabled(final boolean pColorEnabled);
+
+    public void setColor(final Color pColor);
+
+    public void setColor(final float pRed, final float pGreen, final float pBlue);
+
+    public void setColor(final float pRed, final float pGreen, final float pBlue, final float pAlpha);
 }

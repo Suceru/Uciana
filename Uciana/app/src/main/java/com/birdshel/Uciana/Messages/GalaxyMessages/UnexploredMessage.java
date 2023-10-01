@@ -7,6 +7,7 @@ import com.birdshel.Uciana.Messages.MessageType;
 import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.StarSystems.StarType;
+
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;

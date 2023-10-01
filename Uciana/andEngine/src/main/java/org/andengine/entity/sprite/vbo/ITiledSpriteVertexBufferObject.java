@@ -9,15 +9,17 @@ import org.andengine.entity.sprite.TiledSprite;
  * @since 18:39:06 - 28.03.2012
  */
 public interface ITiledSpriteVertexBufferObject extends ISpriteVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onUpdateColor(final TiledSprite pTiledSprite);
-	public void onUpdateVertices(final TiledSprite pTiledSprite);
-	public void onUpdateTextureCoordinates(final TiledSprite pTiledSprite);
+    public void onUpdateColor(final TiledSprite pTiledSprite);
+
+    public void onUpdateVertices(final TiledSprite pTiledSprite);
+
+    public void onUpdateTextureCoordinates(final TiledSprite pTiledSprite);
 }

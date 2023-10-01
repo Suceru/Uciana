@@ -11,105 +11,105 @@ import org.andengine.opengl.util.criteria.IGLCriteria;
  * @since 16:30:12 - 10.10.2011
  */
 public class CriteriaShaderSource implements IShaderSource {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final CriteriaShaderSourceEntry[] mCriteriaShaderSourceEntries;
+    private final CriteriaShaderSourceEntry[] mCriteriaShaderSourceEntries;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public CriteriaShaderSource(final CriteriaShaderSourceEntry ... pCriteriaShaderSourceEntries) {
-		this.mCriteriaShaderSourceEntries = pCriteriaShaderSourceEntries;
-	}
+    public CriteriaShaderSource(final CriteriaShaderSourceEntry... pCriteriaShaderSourceEntries) {
+        this.mCriteriaShaderSourceEntries = pCriteriaShaderSourceEntries;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public String getShaderSource(final GLState pGLState) {
-		for (int i = 0; i < this.mCriteriaShaderSourceEntries.length; i++) {
-			final CriteriaShaderSourceEntry criteriaShaderSourceEntry = this.mCriteriaShaderSourceEntries[i];
-			if (criteriaShaderSourceEntry.isMet(pGLState)) {
-				return criteriaShaderSourceEntry.getShaderSource();
-			}
-		}
-		throw new ShaderProgramException("No " + CriteriaShaderSourceEntry.class.getSimpleName() + " met!");
-	}
+    @Override
+    public String getShaderSource(final GLState pGLState) {
+        for (int i = 0; i < this.mCriteriaShaderSourceEntries.length; i++) {
+            final CriteriaShaderSourceEntry criteriaShaderSourceEntry = this.mCriteriaShaderSourceEntries[i];
+            if (criteriaShaderSourceEntry.isMet(pGLState)) {
+                return criteriaShaderSourceEntry.getShaderSource();
+            }
+        }
+        throw new ShaderProgramException("No " + CriteriaShaderSourceEntry.class.getSimpleName() + " met!");
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-	public static class CriteriaShaderSourceEntry {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public static class CriteriaShaderSourceEntry {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
+        // ===========================================================
+        // Fields
+        // ===========================================================
 
-		private final String mShaderSource;
-		private final IGLCriteria[] mGLCriterias;
+        private final String mShaderSource;
+        private final IGLCriteria[] mGLCriterias;
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
+        // ===========================================================
+        // Constructors
+        // ===========================================================
 
-		public CriteriaShaderSourceEntry(final String pShaderSource) {
-			this(pShaderSource, (IGLCriteria[]) null);
-		}
+        public CriteriaShaderSourceEntry(final String pShaderSource) {
+            this(pShaderSource, (IGLCriteria[]) null);
+        }
 
-		public CriteriaShaderSourceEntry(final String pShaderSource, final IGLCriteria ... pCriterias) {
-			this.mGLCriterias = pCriterias;
-			this.mShaderSource = pShaderSource;
-		}
+        public CriteriaShaderSourceEntry(final String pShaderSource, final IGLCriteria... pCriterias) {
+            this.mGLCriterias = pCriterias;
+            this.mShaderSource = pShaderSource;
+        }
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
+        // ===========================================================
+        // Getter & Setter
+        // ===========================================================
 
-		public String getShaderSource() {
-			return this.mShaderSource;
-		}
+        public String getShaderSource() {
+            return this.mShaderSource;
+        }
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
+        // ===========================================================
+        // Methods for/from SuperClass/Interfaces
+        // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        // ===========================================================
+        // Methods
+        // ===========================================================
 
-		public boolean isMet(final GLState pGLState) {
-			if (this.mGLCriterias != null) {
-				for (IGLCriteria gLCriteria : this.mGLCriterias) {
-					if (!gLCriteria.isMet(pGLState)) {
-						return false;
-					}
-				}
-			}
-			return true;
-		}
+        public boolean isMet(final GLState pGLState) {
+            if (this.mGLCriterias != null) {
+                for (IGLCriteria gLCriteria : this.mGLCriterias) {
+                    if (!gLCriteria.isMet(pGLState)) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
-	}
+        // ===========================================================
+        // Inner and Anonymous Classes
+        // ===========================================================
+    }
 }

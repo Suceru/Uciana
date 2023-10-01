@@ -13,71 +13,72 @@ import org.andengine.util.modifier.ease.IEaseFunction;
  * @since 15:19:46 - 29.06.2010
  */
 public abstract class BaseDoubleValueSpanParticleModifier<T extends IEntity> extends BaseSingleValueSpanParticleModifier<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private float mFromValueB;
-	private float mValueSpanB;
+    private float mFromValueB;
+    private float mValueSpanB;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BaseDoubleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB) {
-		this(pFromTime, pToTime, pFromValueA, pToValueA, pFromValueB, pToValueB, EaseLinear.getInstance());
-	}
+    public BaseDoubleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB) {
+        this(pFromTime, pToTime, pFromValueA, pToValueA, pFromValueB, pToValueB, EaseLinear.getInstance());
+    }
 
-	public BaseDoubleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final IEaseFunction pEaseFunction) {
-		super(pFromTime, pToTime, pFromValueA, pToValueA, pEaseFunction);
+    public BaseDoubleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final IEaseFunction pEaseFunction) {
+        super(pFromTime, pToTime, pFromValueA, pToValueA, pEaseFunction);
 
-		this.mFromValueB = pFromValueB;
-		this.mValueSpanB = pToValueB - pFromValueB;
-	}
+        this.mFromValueB = pFromValueB;
+        this.mValueSpanB = pToValueB - pFromValueB;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onSetInitialValues(final Particle<T> pParticle, final float pValueA, final float pValueB);
-	protected abstract void onSetValues(final Particle<T> pParticle, final float pPercentageDone, final float pValueA, final float pValueB);
+    protected abstract void onSetInitialValues(final Particle<T> pParticle, final float pValueA, final float pValueB);
 
-	@Override
-	public void onSetInitialValue(final Particle<T> pParticle, final float pValueA) {
-		this.onSetInitialValues(pParticle, pValueA, this.mFromValueB);
-	}
+    protected abstract void onSetValues(final Particle<T> pParticle, final float pPercentageDone, final float pValueA, final float pValueB);
 
-	@Override
-	protected void onSetValue(final Particle<T> pParticle, final float pPercentageDone, final float pValueA) {
-		this.onSetValues(pParticle, pPercentageDone, pValueA, this.mFromValueB + pPercentageDone * this.mValueSpanB);
-	}
+    @Override
+    public void onSetInitialValue(final Particle<T> pParticle, final float pValueA) {
+        this.onSetInitialValues(pParticle, pValueA, this.mFromValueB);
+    }
 
-	@Override
-	@Deprecated
-	public void reset(final float pFromValue, final float pToValue, final float pFromTime, final float pToTime) {
-		super.reset(pFromValue, pToValue, pFromTime, pToTime);
-	}
+    @Override
+    protected void onSetValue(final Particle<T> pParticle, final float pPercentageDone, final float pValueA) {
+        this.onSetValues(pParticle, pPercentageDone, pValueA, this.mFromValueB + pPercentageDone * this.mValueSpanB);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    @Override
+    @Deprecated
+    public void reset(final float pFromValue, final float pToValue, final float pFromTime, final float pToTime) {
+        super.reset(pFromValue, pToValue, pFromTime, pToTime);
+    }
 
-	public void reset(final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromTime, final float pToTime) {
-		super.reset(pFromValueA, pToValueA, pFromTime, pToTime);
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-		this.mFromValueB = pFromValueB;
-		this.mValueSpanB = pToValueB - pFromValueB;
-	}
+    public void reset(final float pFromValueA, final float pToValueA, final float pFromValueB, final float pToValueB, final float pFromTime, final float pToTime) {
+        super.reset(pFromValueA, pToValueA, pFromTime, pToTime);
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+        this.mFromValueB = pFromValueB;
+        this.mValueSpanB = pToValueB - pFromValueB;
+    }
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -12,66 +12,66 @@ import org.andengine.util.modifier.ease.IEaseFunction;
  * @since 16:12:52 - 19.03.2010
  */
 public class RotationModifier extends SingleValueSpanEntityModifier {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation) {
-		this(pDuration, pFromRotation, pToRotation, null, EaseLinear.getInstance());
-	}
+    public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation) {
+        this(pDuration, pFromRotation, pToRotation, null, EaseLinear.getInstance());
+    }
 
-	public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation, final IEaseFunction pEaseFunction) {
-		this(pDuration, pFromRotation, pToRotation, null, pEaseFunction);
-	}
+    public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation, final IEaseFunction pEaseFunction) {
+        this(pDuration, pFromRotation, pToRotation, null, pEaseFunction);
+    }
 
-	public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation, final IEntityModifierListener pEntityModifierListener) {
-		super(pDuration, pFromRotation, pToRotation, pEntityModifierListener, EaseLinear.getInstance());
-	}
+    public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation, final IEntityModifierListener pEntityModifierListener) {
+        super(pDuration, pFromRotation, pToRotation, pEntityModifierListener, EaseLinear.getInstance());
+    }
 
-	public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation, final IEntityModifierListener pEntityModifierListener, final IEaseFunction pEaseFunction) {
-		super(pDuration, pFromRotation, pToRotation, pEntityModifierListener, pEaseFunction);
-	}
+    public RotationModifier(final float pDuration, final float pFromRotation, final float pToRotation, final IEntityModifierListener pEntityModifierListener, final IEaseFunction pEaseFunction) {
+        super(pDuration, pFromRotation, pToRotation, pEntityModifierListener, pEaseFunction);
+    }
 
-	protected RotationModifier(final RotationModifier pRotationModifier) {
-		super(pRotationModifier);
-	}
+    protected RotationModifier(final RotationModifier pRotationModifier) {
+        super(pRotationModifier);
+    }
 
-	@Override
-	public RotationModifier deepCopy() {
-		return new RotationModifier(this);
-	}
+    @Override
+    public RotationModifier deepCopy() {
+        return new RotationModifier(this);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void onSetInitialValue(final IEntity pEntity, final float pRotation) {
-		pEntity.setRotation(pRotation);
-	}
+    @Override
+    protected void onSetInitialValue(final IEntity pEntity, final float pRotation) {
+        pEntity.setRotation(pRotation);
+    }
 
-	@Override
-	protected void onSetValue(final IEntity pEntity, final float pPercentageDone, final float pRotation) {
-		pEntity.setRotation(pRotation);
-	}
+    @Override
+    protected void onSetValue(final IEntity pEntity, final float pPercentageDone, final float pRotation) {
+        pEntity.setRotation(pRotation);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

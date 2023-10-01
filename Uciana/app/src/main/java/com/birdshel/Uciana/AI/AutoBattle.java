@@ -14,10 +14,10 @@ import com.birdshel.Uciana.Planets.SystemObject;
 import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.Ships.ShipComponents.Weapon;
-import com.birdshel.Uciana.Ships.ShipComponents.WeaponType;
 import com.birdshel.Uciana.Ships.SpacialCharge;
 import com.birdshel.Uciana.Ships.Torpedo;
 import com.birdshel.Uciana.Utility.Log;
+
 import java.util.ArrayList;
 
 public class AutoBattle implements BattleCallBack {

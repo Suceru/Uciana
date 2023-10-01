@@ -16,13 +16,15 @@ import com.birdshel.Uciana.Resources.Options;
 import com.birdshel.Uciana.Resources.TutorialID;
 import com.birdshel.Uciana.StarSystems.Galaxy;
 import com.birdshel.Uciana.StarSystems.Nebulas;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

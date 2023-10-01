@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Achievements;
 
 import android.app.Activity;
+
 import com.birdshel.Uciana.Difficulty;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.GameData;
@@ -8,6 +9,7 @@ import com.birdshel.Uciana.Players.Empire;
 import com.birdshel.Uciana.Players.Empires;
 import com.birdshel.Uciana.Players.RaceAttribute;
 import com.birdshel.Uciana.Technology.TechProgressionType;
+
 import java.util.Arrays;
 import java.util.List;
 

@@ -2,17 +2,15 @@ package com.birdshel.Uciana.Resources;
 
 import android.content.res.AssetManager;
 import android.os.Environment;
+
 import androidx.constraintlayout.core.motion.utils.TypedValues;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.PointerIconCompat;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
 import com.birdshel.Uciana.Uciana;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Arrays;
+
 import org.andengine.opengl.texture.TextureManager;
 import org.andengine.opengl.texture.TextureOptions;
 import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlas;
@@ -24,6 +22,12 @@ import org.andengine.opengl.texture.region.TextureRegion;
 import org.andengine.opengl.texture.region.TextureRegionFactory;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.util.adt.io.in.IInputStreamOpener;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

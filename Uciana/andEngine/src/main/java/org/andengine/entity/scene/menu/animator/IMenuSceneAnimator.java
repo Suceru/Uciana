@@ -12,25 +12,35 @@ import org.andengine.util.adt.align.VerticalAlign;
  * @since 10:50:36 - 02.04.2010
  */
 public interface IMenuSceneAnimator {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public float getOffsetX();
-	public void setOffsetX(final float pOffsetX);
-	public float getOffsetY();
-	public void setOffsetY(final float pOffsetY);
-	public float getMenuItemSpacing();
-	public void setMenuItemSpacing(final float pMenuItemSpacing);
-	public HorizontalAlign getHorizontalAlign();
-	public void setHorizontalAlign(final HorizontalAlign pHorizontalAlign);
-	public VerticalAlign getVerticalAlign();
-	public void setVerticalAlign(final VerticalAlign pVerticalAlign);
+    public float getOffsetX();
 
-	public void buildMenuSceneAnimations(final MenuScene pMenuScene);
-	public void resetMenuSceneAnimations(final MenuScene pMenuScene);
+    public void setOffsetX(final float pOffsetX);
+
+    public float getOffsetY();
+
+    public void setOffsetY(final float pOffsetY);
+
+    public float getMenuItemSpacing();
+
+    public void setMenuItemSpacing(final float pMenuItemSpacing);
+
+    public HorizontalAlign getHorizontalAlign();
+
+    public void setHorizontalAlign(final HorizontalAlign pHorizontalAlign);
+
+    public VerticalAlign getVerticalAlign();
+
+    public void setVerticalAlign(final VerticalAlign pVerticalAlign);
+
+    public void buildMenuSceneAnimations(final MenuScene pMenuScene);
+
+    public void resetMenuSceneAnimations(final MenuScene pMenuScene);
 }

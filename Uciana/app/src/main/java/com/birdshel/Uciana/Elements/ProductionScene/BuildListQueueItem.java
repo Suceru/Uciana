@@ -2,6 +2,7 @@ package com.birdshel.Uciana.Elements.ProductionScene;
 
 import androidx.constraintlayout.core.motion.utils.TypedValues;
 import androidx.core.view.InputDeviceCompat;
+
 import com.birdshel.Uciana.Colonies.Buildings.Building;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Buildings.Buildings;
@@ -13,7 +14,7 @@ import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
@@ -22,6 +23,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: MyApplication */

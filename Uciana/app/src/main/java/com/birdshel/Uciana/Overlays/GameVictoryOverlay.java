@@ -6,6 +6,7 @@ import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Players.Empires;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
@@ -14,7 +15,6 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
-//import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
 

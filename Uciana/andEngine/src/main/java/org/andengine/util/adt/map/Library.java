@@ -6,67 +6,67 @@ import android.util.SparseArray;
  * (c) 2010 Nicolas Gramlich
  * (c) 2011 Zynga Inc.
  *
+ * @param <T>
  * @author Nicolas Gramlich
  * @since 11:51:29 - 20.08.2010
- * @param <T>
  */
 public class Library<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	protected final SparseArray<T> mItems;
+    protected final SparseArray<T> mItems;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public Library() {
-		this.mItems = new SparseArray<T>();
-	}
+    public Library() {
+        this.mItems = new SparseArray<T>();
+    }
 
-	public Library(final int pInitialCapacity) {
-		this.mItems = new SparseArray<T>(pInitialCapacity);
-	}
+    public Library(final int pInitialCapacity) {
+        this.mItems = new SparseArray<T>(pInitialCapacity);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public T get(final int pID) {
-		return this.mItems.get(pID);
-	}
+    public T get(final int pID) {
+        return this.mItems.get(pID);
+    }
 
-	public void put(final int pID, final T pItem) {
-		final T item = this.mItems.get(pID);
-		if (item == null) {
-			this.mItems.put(pID, pItem);
-		} else {
-			throw new IllegalArgumentException("ID: '" + pID + "' is already associated with item: '" + item.toString() + "'.");
-		}
-	}
+    public void put(final int pID, final T pItem) {
+        final T item = this.mItems.get(pID);
+        if (item == null) {
+            this.mItems.put(pID, pItem);
+        } else {
+            throw new IllegalArgumentException("ID: '" + pID + "' is already associated with item: '" + item.toString() + "'.");
+        }
+    }
 
-	public void remove(final int pID) {
-		this.mItems.remove(pID);
-	}
+    public void remove(final int pID) {
+        this.mItems.remove(pID);
+    }
 
-	public void clear() {
-		this.mItems.clear();
-	}
+    public void clear() {
+        this.mItems.clear();
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

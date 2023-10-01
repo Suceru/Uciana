@@ -7,16 +7,19 @@ package org.andengine.util.adt.bounds;
  * @since 7:42:02 AM - Oct 10, 2011
  */
 public interface IFloatBounds extends IBounds {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public float getXMin();
-	public float getYMin();
-	public float getXMax();
-	public float getYMax();
+    public float getXMin();
+
+    public float getYMin();
+
+    public float getXMax();
+
+    public float getYMax();
 }

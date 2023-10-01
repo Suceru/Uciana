@@ -7,74 +7,74 @@ package org.andengine.util.adt.data.operator;
  * @since 14:24:15 - 02.02.2012
  */
 public enum FloatOperator {
-	// ===========================================================
-	// Elements
-	// ===========================================================
+    // ===========================================================
+    // Elements
+    // ===========================================================
 
-	EQUALS() {
-		@Override
-		public boolean check(final float pFloatA, final float pFloatB) {
-			return pFloatA == pFloatB;
-		}
-	},
-	NOT_EQUALS() {
-		@Override
-		public boolean check(final float pFloatA, final float pFloatB) {
-			return pFloatA != pFloatB;
-		}
-	},
-	LESS_THAN() {
-		@Override
-		public boolean check(final float pFloatA, final float pFloatB) {
-			return pFloatA < pFloatB;
-		}
-	},
-	LESS_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final float pFloatA, final float pFloatB) {
-			return pFloatA <= pFloatB;
-		}
-	},
-	MORE_THAN() {
-		@Override
-		public boolean check(final float pFloatA, final float pFloatB) {
-			return pFloatA > pFloatB;
-		}
-	},
-	MORE_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final float pFloatA, final float pFloatB) {
-			return pFloatA >= pFloatB;
-		}
-	};
+    EQUALS() {
+        @Override
+        public boolean check(final float pFloatA, final float pFloatB) {
+            return pFloatA == pFloatB;
+        }
+    },
+    NOT_EQUALS() {
+        @Override
+        public boolean check(final float pFloatA, final float pFloatB) {
+            return pFloatA != pFloatB;
+        }
+    },
+    LESS_THAN() {
+        @Override
+        public boolean check(final float pFloatA, final float pFloatB) {
+            return pFloatA < pFloatB;
+        }
+    },
+    LESS_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final float pFloatA, final float pFloatB) {
+            return pFloatA <= pFloatB;
+        }
+    },
+    MORE_THAN() {
+        @Override
+        public boolean check(final float pFloatA, final float pFloatB) {
+            return pFloatA > pFloatB;
+        }
+    },
+    MORE_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final float pFloatA, final float pFloatB) {
+            return pFloatA >= pFloatB;
+        }
+    };
 
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public abstract boolean check(final float pFloatA, final float pFloatB);
+    public abstract boolean check(final float pFloatA, final float pFloatB);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -5,6 +5,7 @@ import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Messages.Message;
 import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.R;
+
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;

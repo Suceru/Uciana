@@ -63,7 +63,7 @@ public class SparseByteArray implements Cloneable {
      * if no such mapping has been made.
      */
     public byte get(int key) {
-        return get(key, (byte)0);
+        return get(key, (byte) 0);
     }
 
     /**

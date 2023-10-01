@@ -12,56 +12,56 @@ import org.andengine.opengl.texture.region.TiledTextureRegion;
  * @since 17:17:17 - 03.05.2012
  */
 public class AnimationPackTiledTextureRegion extends TiledTextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final String mAnimationName;
-	private final AnimationData mAnimationData;
+    private final String mAnimationName;
+    private final AnimationData mAnimationData;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AnimationPackTiledTextureRegion(final String pAnimationName, final long[] pFrameDurations, final int pLoopCount, final ITexture pTexture, final ITextureRegion ... pTextureRegions) {
-		super(pTexture, pTextureRegions);
+    public AnimationPackTiledTextureRegion(final String pAnimationName, final long[] pFrameDurations, final int pLoopCount, final ITexture pTexture, final ITextureRegion... pTextureRegions) {
+        super(pTexture, pTextureRegions);
 
-		this.mAnimationName = pAnimationName;
-		final int frameCount = pFrameDurations.length;
+        this.mAnimationName = pAnimationName;
+        final int frameCount = pFrameDurations.length;
 
-		final int[] frames = new int[frameCount];
-		for (int i = 0; i < frameCount; i++) {
-			frames[i] = i;
-		}
+        final int[] frames = new int[frameCount];
+        for (int i = 0; i < frameCount; i++) {
+            frames[i] = i;
+        }
 
-		this.mAnimationData = new AnimationData(pFrameDurations, frames, pLoopCount);
-	}
+        this.mAnimationData = new AnimationData(pFrameDurations, frames, pLoopCount);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public String getAnimationName() {
-		return this.mAnimationName;
-	}
+    public String getAnimationName() {
+        return this.mAnimationName;
+    }
 
-	public AnimationData getAnimationData() {
-		return this.mAnimationData;
-	}
+    public AnimationData getAnimationData() {
+        return this.mAnimationData;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

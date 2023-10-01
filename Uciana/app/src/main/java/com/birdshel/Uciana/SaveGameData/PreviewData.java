@@ -8,6 +8,7 @@ import com.birdshel.Uciana.StarSystems.GalaxySize;
 import com.birdshel.Uciana.StarSystems.SpaceRift;
 import com.birdshel.Uciana.StarSystems.Star;
 import com.birdshel.Uciana.StarSystems.SystemNameDisplay;
+
 import java.util.ArrayList;
 import java.util.List;
 

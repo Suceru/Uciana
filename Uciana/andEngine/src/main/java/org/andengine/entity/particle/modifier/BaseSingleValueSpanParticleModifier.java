@@ -13,81 +13,82 @@ import org.andengine.util.modifier.ease.IEaseFunction;
  * @since 16:10:16 - 04.05.2010
  */
 public abstract class BaseSingleValueSpanParticleModifier<T extends IEntity> implements IParticleModifier<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private float mFromTime;
-	private float mToTime;
-	private float mDuration;
+    private float mFromTime;
+    private float mToTime;
+    private float mDuration;
 
-	private float mFromValue;
-	private float mValueSpan;
+    private float mFromValue;
+    private float mValueSpan;
 
-	private final IEaseFunction mEaseFunction;
+    private final IEaseFunction mEaseFunction;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BaseSingleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValue, final float pToValue) {
-		this(pFromTime, pToTime, pFromValue, pToValue, EaseLinear.getInstance());
-	}
+    public BaseSingleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValue, final float pToValue) {
+        this(pFromTime, pToTime, pFromValue, pToValue, EaseLinear.getInstance());
+    }
 
-	public BaseSingleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValue, final float pToValue, final IEaseFunction pEaseFunction) {
-		this.mFromTime = pFromTime;
-		this.mToTime = pToTime;
-		this.mDuration = pToTime - pFromTime;
+    public BaseSingleValueSpanParticleModifier(final float pFromTime, final float pToTime, final float pFromValue, final float pToValue, final IEaseFunction pEaseFunction) {
+        this.mFromTime = pFromTime;
+        this.mToTime = pToTime;
+        this.mDuration = pToTime - pFromTime;
 
-		this.mFromValue = pFromValue;
-		this.mValueSpan = pToValue - pFromValue;
+        this.mFromValue = pFromValue;
+        this.mValueSpan = pToValue - pFromValue;
 
-		this.mEaseFunction = pEaseFunction;
-	}
+        this.mEaseFunction = pEaseFunction;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onSetInitialValue(final Particle<T> pParticle, final float pValue);
-	protected abstract void onSetValue(final Particle<T> pParticle, final float pPercentageDone, final float pValue);
+    protected abstract void onSetInitialValue(final Particle<T> pParticle, final float pValue);
 
-	@Override
-	public void onInitializeParticle(final Particle<T> pParticle) {
-		this.onSetInitialValue(pParticle, this.mFromValue);
-	}
+    protected abstract void onSetValue(final Particle<T> pParticle, final float pPercentageDone, final float pValue);
 
-	@Override
-	public void onUpdateParticle(final Particle<T> pParticle) {
-		final float lifeTime = pParticle.getLifeTime();
-		if (lifeTime > this.mFromTime && lifeTime < this.mToTime) {
-			final float percentageDone = this.mEaseFunction.getPercentage((lifeTime - this.mFromTime), this.mDuration);
-			this.onSetValue(pParticle, percentageDone, this.mFromValue + percentageDone * this.mValueSpan);
-		}
-	}
+    @Override
+    public void onInitializeParticle(final Particle<T> pParticle) {
+        this.onSetInitialValue(pParticle, this.mFromValue);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    @Override
+    public void onUpdateParticle(final Particle<T> pParticle) {
+        final float lifeTime = pParticle.getLifeTime();
+        if (lifeTime > this.mFromTime && lifeTime < this.mToTime) {
+            final float percentageDone = this.mEaseFunction.getPercentage((lifeTime - this.mFromTime), this.mDuration);
+            this.onSetValue(pParticle, percentageDone, this.mFromValue + percentageDone * this.mValueSpan);
+        }
+    }
 
-	public void reset(final float pFromValue, final float pToValue, final float pFromTime, final float pToTime) {
-		this.mFromValue = pFromValue;
-		this.mFromTime = pFromTime;
-		this.mToTime = pToTime;
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-		this.mValueSpan = pToValue - pFromValue;
-		this.mDuration = pToTime - pFromTime;
-	}
+    public void reset(final float pFromValue, final float pToValue, final float pFromTime, final float pToTime) {
+        this.mFromValue = pFromValue;
+        this.mFromTime = pFromTime;
+        this.mToTime = pToTime;
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+        this.mValueSpan = pToValue - pFromValue;
+        this.mDuration = pToTime - pFromTime;
+    }
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -10,30 +10,31 @@ import org.andengine.util.IMatcher;
  * @since 12:24:09 - 11.03.2010
  */
 public interface IUpdateHandler {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onUpdate(final float pSecondsElapsed);
-	public void reset();
+    public void onUpdate(final float pSecondsElapsed);
 
-	// TODO Maybe add onRegister and onUnregister. (Maybe add SimpleUpdateHandler that implements all methods, but onUpdate)
+    public void reset();
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // TODO Maybe add onRegister and onUnregister. (Maybe add SimpleUpdateHandler that implements all methods, but onUpdate)
 
-	public interface IUpdateHandlerMatcher extends IMatcher<IUpdateHandler> {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
-	}
+    public interface IUpdateHandlerMatcher extends IMatcher<IUpdateHandler> {
+        // ===========================================================
+        // Constants
+        // ===========================================================
+
+        // ===========================================================
+        // Methods
+        // ===========================================================
+    }
 }

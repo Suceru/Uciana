@@ -17,8 +17,7 @@ import com.birdshel.Uciana.StarSystems.GalaxySize;
 import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.StarSystems.StarType;
 import com.birdshel.Uciana.Technology.TechProgressionType;
-import java.util.HashMap;
-import java.util.Map;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
@@ -36,6 +35,9 @@ import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

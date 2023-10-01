@@ -8,7 +8,7 @@ import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.ShipSprite;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.StarSystems.StarSystem;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.particle.BatchedSpriteParticleSystem;
@@ -17,7 +17,6 @@ import org.andengine.entity.particle.initializer.ExpireParticleInitializer;
 import org.andengine.entity.particle.initializer.ScaleParticleInitializer;
 import org.andengine.entity.particle.initializer.VelocityParticleInitializer;
 import org.andengine.entity.particle.modifier.AlphaParticleModifier;
-//import org.andengine.entity.particle.modifier.ExpireParticleInitializer;
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
@@ -26,6 +25,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

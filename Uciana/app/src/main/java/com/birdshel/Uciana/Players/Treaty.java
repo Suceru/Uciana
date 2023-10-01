@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Players;
 
 import android.util.SparseArray;
+
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.GameIconEnum;

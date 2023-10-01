@@ -10,14 +10,15 @@ import org.andengine.opengl.util.GLState;
  * @since 11:57:29 - 08.03.2010
  */
 public interface IRendererListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	public void onSurfaceCreated(final GLState pGlState);
-	public void onSurfaceChanged(final GLState pGlState, final int pWidth, final int pHeight);
+    public void onSurfaceCreated(final GLState pGlState);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    public void onSurfaceChanged(final GLState pGlState, final int pWidth, final int pHeight);
+
+    // ===========================================================
+    // Methods
+    // ===========================================================
 }

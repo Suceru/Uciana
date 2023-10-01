@@ -10,15 +10,17 @@ import org.andengine.opengl.vbo.IVertexBufferObject;
  * @since 18:40:47 - 28.03.2012
  */
 public interface ISpriteVertexBufferObject extends IVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onUpdateColor(final Sprite pSprite);
-	public void onUpdateVertices(final Sprite pSprite);
-	public void onUpdateTextureCoordinates(final Sprite pSprite);
+    public void onUpdateColor(final Sprite pSprite);
+
+    public void onUpdateVertices(final Sprite pSprite);
+
+    public void onUpdateTextureCoordinates(final Sprite pSprite);
 }

@@ -15,124 +15,124 @@ import org.andengine.opengl.vbo.VertexBufferObjectManager;
  * @since 15:44:39 - 07.07.2010
  */
 public class AnimatedSpriteMenuItem extends AnimatedSprite implements IMenuItem {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final int mID;
+    private final int mID;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
-		super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager);
+    public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
+        super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final ShaderProgram pShaderProgram) {
-		super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager, pShaderProgram);
+    public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final ShaderProgram pShaderProgram) {
+        super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager, pShaderProgram);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
-		super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType);
+    public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
+        super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType, final ShaderProgram pShaderProgram) {
-		super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType, pShaderProgram);
+    public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType, final ShaderProgram pShaderProgram) {
+        super(0, 0, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType, pShaderProgram);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject) {
-		super(0, 0, pTiledTextureRegion, pTiledSpriteVertexBufferObject);
+    public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject) {
+        super(0, 0, pTiledTextureRegion, pTiledSpriteVertexBufferObject);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject, final ShaderProgram pShaderProgram) {
-		super(0, 0, pTiledTextureRegion, pTiledSpriteVertexBufferObject, pShaderProgram);
+    public AnimatedSpriteMenuItem(final int pID, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject, final ShaderProgram pShaderProgram) {
+        super(0, 0, pTiledTextureRegion, pTiledSpriteVertexBufferObject, pShaderProgram);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
-		super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager);
+    public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
+        super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final ShaderProgram pShaderProgram) {
-		super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager, pShaderProgram);
+    public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final ShaderProgram pShaderProgram) {
+        super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager, pShaderProgram);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
-		super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType);
+    public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
+        super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType, final ShaderProgram pShaderProgram) {
-		super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType, pShaderProgram);
+    public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType, final ShaderProgram pShaderProgram) {
+        super(0, 0, pWidth, pHeight, pTiledTextureRegion, pVertexBufferObjectManager, pDrawType, pShaderProgram);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject) {
-		super(0, 0, pWidth, pHeight, pTiledTextureRegion, pTiledSpriteVertexBufferObject);
+    public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject) {
+        super(0, 0, pWidth, pHeight, pTiledTextureRegion, pTiledSpriteVertexBufferObject);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject, final ShaderProgram pShaderProgram) {
-		super(0, 0, pWidth, pHeight, pTiledTextureRegion, pTiledSpriteVertexBufferObject, pShaderProgram);
+    public AnimatedSpriteMenuItem(final int pID, final float pWidth, final float pHeight, final ITiledTextureRegion pTiledTextureRegion, final ITiledSpriteVertexBufferObject pTiledSpriteVertexBufferObject, final ShaderProgram pShaderProgram) {
+        super(0, 0, pWidth, pHeight, pTiledTextureRegion, pTiledSpriteVertexBufferObject, pShaderProgram);
 
-		this.mID = pID;
-	}
+        this.mID = pID;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	@Override
-	public int getID() {
-		return this.mID;
-	}
+    @Override
+    public int getID() {
+        return this.mID;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void onSelected() {
-		/* Nothing. */
-	}
+    @Override
+    public void onSelected() {
+        /* Nothing. */
+    }
 
-	@Override
-	public void onUnselected() {
-		/* Nothing. */
-	}
+    @Override
+    public void onUnselected() {
+        /* Nothing. */
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

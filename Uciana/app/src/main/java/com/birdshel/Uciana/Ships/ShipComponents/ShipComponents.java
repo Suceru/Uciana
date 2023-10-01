@@ -3,19 +3,14 @@ package com.birdshel.Uciana.Ships.ShipComponents;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.ComponentIconEnum;
 import com.birdshel.Uciana.Resources.GameIconEnum;
-import com.birdshel.Uciana.Ships.ShipComponents.Armor;
-import com.birdshel.Uciana.Ships.ShipComponents.Shield;
-import com.birdshel.Uciana.Ships.ShipComponents.SpecialComponent;
-import com.birdshel.Uciana.Ships.ShipComponents.SublightEngine;
-import com.birdshel.Uciana.Ships.ShipComponents.TargetingComputer;
-import com.birdshel.Uciana.Ships.ShipComponents.Weapon;
 import com.birdshel.Uciana.Technology.TechID;
+
+import org.andengine.util.adt.color.Color;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.andengine.util.adt.color.Color;
 //import org.andengine.util.adt.color.Color;
 
 /* compiled from: MyApplication */

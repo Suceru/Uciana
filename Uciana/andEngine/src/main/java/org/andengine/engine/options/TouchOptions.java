@@ -7,53 +7,53 @@ package org.andengine.engine.options;
  * @since 23:18:06 - 22.11.2011
  */
 public class TouchOptions {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT = 20;
+    private static final long TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT = 20;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private boolean mNeedsMultiTouch;
-	private long mTouchEventIntervalMilliseconds = TouchOptions.TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT;
+    private boolean mNeedsMultiTouch;
+    private long mTouchEventIntervalMilliseconds = TouchOptions.TOUCHEVENT_INTERVAL_MILLISECONDS_DEFAULT;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public boolean needsMultiTouch() {
-		return this.mNeedsMultiTouch;
-	}
+    public boolean needsMultiTouch() {
+        return this.mNeedsMultiTouch;
+    }
 
-	public TouchOptions setNeedsMultiTouch(final boolean pNeedsMultiTouch) {
-		this.mNeedsMultiTouch = pNeedsMultiTouch;
-		return this;
-	}
+    public TouchOptions setNeedsMultiTouch(final boolean pNeedsMultiTouch) {
+        this.mNeedsMultiTouch = pNeedsMultiTouch;
+        return this;
+    }
 
-	public long getTouchEventIntervalMilliseconds() {
-		return this.mTouchEventIntervalMilliseconds;
-	}
+    public long getTouchEventIntervalMilliseconds() {
+        return this.mTouchEventIntervalMilliseconds;
+    }
 
-	public void setTouchEventIntervalMilliseconds(final long pTouchEventIntervalMilliseconds) {
-		this.mTouchEventIntervalMilliseconds = pTouchEventIntervalMilliseconds;
-	}
+    public void setTouchEventIntervalMilliseconds(final long pTouchEventIntervalMilliseconds) {
+        this.mTouchEventIntervalMilliseconds = pTouchEventIntervalMilliseconds;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

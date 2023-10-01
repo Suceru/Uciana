@@ -1,6 +1,7 @@
 package com.birdshel.Uciana;
 
 import android.app.Activity;
+
 import com.birdshel.Uciana.Colonies.Colonies;
 import com.birdshel.Uciana.Colonies.Outposts;
 import com.birdshel.Uciana.Events.Events;

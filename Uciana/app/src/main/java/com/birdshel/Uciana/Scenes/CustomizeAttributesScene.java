@@ -14,8 +14,7 @@ import com.birdshel.Uciana.Players.RaceAttribute;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.StarSystems.Nebulas;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
@@ -26,6 +25,9 @@ import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

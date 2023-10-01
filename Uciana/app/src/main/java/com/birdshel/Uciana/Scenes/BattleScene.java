@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Scenes;
 
 import android.os.AsyncTask;
+
 import com.birdshel.Uciana.AI.Managers.BattleAI;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Colony;
@@ -47,12 +48,7 @@ import com.birdshel.Uciana.Ships.TorpedoTurret;
 import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.Utility.Log;
 import com.google.android.gms.games.GamesActivityResultCodes;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.modifier.AlphaModifier;
@@ -71,6 +67,13 @@ import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

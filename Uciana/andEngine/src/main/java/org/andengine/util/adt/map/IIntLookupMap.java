@@ -7,15 +7,17 @@ package org.andengine.util.adt.map;
  * @since 15:31:34 - 26.04.2012
  */
 public interface IIntLookupMap<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void add(final T pItem, final int pValue);
-	public T item(final int pValue);
-	public int value(final T pItem);
+    public void add(final T pItem, final int pValue);
+
+    public T item(final int pValue);
+
+    public int value(final T pItem);
 }

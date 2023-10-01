@@ -10,21 +10,23 @@ import org.andengine.opengl.texture.ITexture;
  * @since 12:15:25 - 03.11.2011
  */
 public interface IFont {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void load();
-	public void unload();
+    public void load();
 
-	public ITexture getTexture();
+    public void unload();
 
-	public float getAscent();
-	public float getLineHeight();
+    public ITexture getTexture();
 
-	public Letter getLetter(final char pChar) throws LetterNotFoundException;
+    public float getAscent();
+
+    public float getLineHeight();
+
+    public Letter getLetter(final char pChar) throws LetterNotFoundException;
 }

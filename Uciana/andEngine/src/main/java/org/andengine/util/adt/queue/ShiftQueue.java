@@ -9,67 +9,67 @@ import org.andengine.util.adt.list.ShiftList;
  * @since 17:06:49 - 03.01.2012
  */
 public class ShiftQueue<T> extends ShiftList<T> implements IQueue<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public ShiftQueue() {
-		super();
-	}
+    public ShiftQueue() {
+        super();
+    }
 
-	public ShiftQueue(final int pInitialCapacity) {
-		super(pInitialCapacity);
-	}
+    public ShiftQueue(final int pInitialCapacity) {
+        super(pInitialCapacity);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public T peek() {
-		if (this.isEmpty()) {
-			return null;
-		} else {
-			return this.get(0);
-		}
-	}
+    @Override
+    public T peek() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.get(0);
+        }
+    }
 
-	@Override
-	public T poll() {
-		if (this.isEmpty()) {
-			return null;
-		} else {
-			return this.remove(0);
-		}
-	}
+    @Override
+    public T poll() {
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            return this.remove(0);
+        }
+    }
 
-	@Override
-	public void enter(final T pItem) {
-		this.add(pItem);
-	}
+    @Override
+    public void enter(final T pItem) {
+        this.add(pItem);
+    }
 
-	@Override
-	public void enter(final int pIndex, final T pItem) throws IndexOutOfBoundsException {
-		this.add(pIndex, pItem);
-	}
+    @Override
+    public void enter(final int pIndex, final T pItem) throws IndexOutOfBoundsException {
+        this.add(pIndex, pItem);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

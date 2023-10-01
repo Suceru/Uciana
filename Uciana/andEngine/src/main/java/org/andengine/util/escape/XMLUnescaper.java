@@ -7,54 +7,54 @@ package org.andengine.util.escape;
  * @since 3:27:44 PM - Apr 26, 2012
  */
 public final class XMLUnescaper {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private static final UnescaperEntityMap XMLUNESCAPER_ENTITYMAP = new UnescaperEntityMap() {
-		{
-			/* BASIC */
-			this.add("quot", 34); // " - double-quote
-			this.add("amp", 38); // & - ampersand
-			this.add("lt", 60); // < - less-than
-			this.add("gt", 62); // > - greater-than
+    private static final UnescaperEntityMap XMLUNESCAPER_ENTITYMAP = new UnescaperEntityMap() {
+        {
+            /* BASIC */
+            this.add("quot", 34); // " - double-quote
+            this.add("amp", 38); // & - ampersand
+            this.add("lt", 60); // < - less-than
+            this.add("gt", 62); // > - greater-than
 
-			/* XML */
-			this.add("apos", 39); // XML apostrophe
+            /* XML */
+            this.add("apos", 39); // XML apostrophe
 
-			this.init();
-		}
-	};
+            this.init();
+        }
+    };
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private XMLUnescaper() {
+    private XMLUnescaper() {
 
-	}
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static String unescape(final CharSequence pCharSequence) {
-		return Unescaper.unescape(pCharSequence, XMLUnescaper.XMLUNESCAPER_ENTITYMAP);
-	}
+    public static String unescape(final CharSequence pCharSequence) {
+        return Unescaper.unescape(pCharSequence, XMLUnescaper.XMLUNESCAPER_ENTITYMAP);
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

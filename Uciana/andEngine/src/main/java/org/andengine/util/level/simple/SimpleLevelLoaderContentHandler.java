@@ -1,11 +1,11 @@
 package org.andengine.util.level.simple;
 
-import java.util.HashMap;
-
 import org.andengine.entity.scene.Scene;
 import org.andengine.util.level.IEntityLoader;
 import org.andengine.util.level.IEntityLoaderListener;
 import org.andengine.util.level.LevelLoaderContentHandler;
+
+import java.util.HashMap;
 
 /**
  * (c) 2012 Zynga Inc.
@@ -14,40 +14,40 @@ import org.andengine.util.level.LevelLoaderContentHandler;
  * @since 16:12:23 - 19.04.2012
  */
 public class SimpleLevelLoaderContentHandler extends LevelLoaderContentHandler<SimpleLevelEntityLoaderData, IEntityLoaderListener, SimpleLevelLoaderResult> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public SimpleLevelLoaderContentHandler(final IEntityLoader<SimpleLevelEntityLoaderData> pDefaultEntityLoader, final HashMap<String, IEntityLoader<SimpleLevelEntityLoaderData>> pEntityLoaders, final SimpleLevelEntityLoaderData pEntityLoaderData) {
-		super(pDefaultEntityLoader, pEntityLoaders, pEntityLoaderData);
-	}
+    public SimpleLevelLoaderContentHandler(final IEntityLoader<SimpleLevelEntityLoaderData> pDefaultEntityLoader, final HashMap<String, IEntityLoader<SimpleLevelEntityLoaderData>> pEntityLoaders, final SimpleLevelEntityLoaderData pEntityLoaderData) {
+        super(pDefaultEntityLoader, pEntityLoaders, pEntityLoaderData);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public SimpleLevelLoaderResult getLevelLoaderResult() {
-		return new SimpleLevelLoaderResult((Scene) this.mRootEntity);
-	}
+    @Override
+    public SimpleLevelLoaderResult getLevelLoaderResult() {
+        return new SimpleLevelLoaderResult((Scene) this.mRootEntity);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

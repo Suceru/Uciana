@@ -10,14 +10,15 @@ import org.andengine.opengl.vbo.IVertexBufferObject;
  * @since 14:27:22 - 23.04.2012
  */
 public interface IGradientVertexBufferObject extends IVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onUpdateColor(final Gradient pGradient);
-	public void onUpdateVertices(final Gradient pGradient);
+    public void onUpdateColor(final Gradient pGradient);
+
+    public void onUpdateVertices(final Gradient pGradient);
 }

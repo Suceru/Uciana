@@ -7,7 +7,6 @@ import com.birdshel.Uciana.Colonies.Buildings.BuildingEffectType;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingType;
 import com.birdshel.Uciana.Colonies.Buildings.Buildings;
-import com.birdshel.Uciana.Colonies.Manufacturing;
 import com.birdshel.Uciana.Events.EventType;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.GameData;
@@ -19,6 +18,7 @@ import com.birdshel.Uciana.Planets.Resources;
 import com.birdshel.Uciana.Players.RaceAttributeType;
 import com.birdshel.Uciana.R;
 import com.google.android.gms.games.GamesStatusCodes;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;

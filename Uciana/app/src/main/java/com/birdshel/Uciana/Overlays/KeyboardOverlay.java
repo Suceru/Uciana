@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Overlays;
 
 import android.util.SparseArray;
+
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Elements.KeyboardButton;
 import com.birdshel.Uciana.Game;
@@ -10,13 +11,15 @@ import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.Resources.SupportedLocales;
 import com.birdshel.Uciana.Scenes.SystemScene;
 import com.birdshel.Uciana.StarSystems.StarSystem;
-import java.util.Iterator;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.util.Iterator;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

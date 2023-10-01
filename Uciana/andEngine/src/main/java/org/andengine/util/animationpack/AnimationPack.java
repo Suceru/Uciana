@@ -10,47 +10,47 @@ import org.andengine.util.texturepack.TexturePackLibrary;
  * @since 16:58:15 - 03.05.2012
  */
 public class AnimationPack {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final TexturePackLibrary mTexturePackLibrary;
-	private final AnimationPackTiledTextureRegionLibrary mAnimationPackTiledTextureRegionLibrary;
+    private final TexturePackLibrary mTexturePackLibrary;
+    private final AnimationPackTiledTextureRegionLibrary mAnimationPackTiledTextureRegionLibrary;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AnimationPack(final TexturePackLibrary pTexturePackLibrary, final AnimationPackTiledTextureRegionLibrary pAnimationPackTiledTextureRegionLibrary) {
-		this.mTexturePackLibrary = pTexturePackLibrary;
-		this.mAnimationPackTiledTextureRegionLibrary = pAnimationPackTiledTextureRegionLibrary;
-	}
+    public AnimationPack(final TexturePackLibrary pTexturePackLibrary, final AnimationPackTiledTextureRegionLibrary pAnimationPackTiledTextureRegionLibrary) {
+        this.mTexturePackLibrary = pTexturePackLibrary;
+        this.mAnimationPackTiledTextureRegionLibrary = pAnimationPackTiledTextureRegionLibrary;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public TexturePackLibrary getTexturePackLibrary() {
-		return this.mTexturePackLibrary;
-	}
+    public TexturePackLibrary getTexturePackLibrary() {
+        return this.mTexturePackLibrary;
+    }
 
-	public AnimationPackTiledTextureRegionLibrary getAnimationPackAnimationDataLibrary() {
-		return this.mAnimationPackTiledTextureRegionLibrary;
-	}
+    public AnimationPackTiledTextureRegionLibrary getAnimationPackAnimationDataLibrary() {
+        return this.mAnimationPackTiledTextureRegionLibrary;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

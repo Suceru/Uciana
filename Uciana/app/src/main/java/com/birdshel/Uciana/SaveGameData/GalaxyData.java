@@ -3,7 +3,9 @@ package com.birdshel.Uciana.SaveGameData;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import androidx.constraintlayout.motion.widget.Key;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Planets.AsteroidBelt;
@@ -26,9 +28,11 @@ import com.birdshel.Uciana.StarSystems.SpaceRift;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.StarSystems.StarType;
 import com.birdshel.Uciana.StarSystems.WormholeObject;
+
+import org.andengine.util.level.constants.LevelConstants;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.andengine.util.level.constants.LevelConstants;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

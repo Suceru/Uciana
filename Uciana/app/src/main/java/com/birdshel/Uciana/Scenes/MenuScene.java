@@ -2,7 +2,9 @@ package com.birdshel.Uciana.Scenes;
 
 import android.os.AsyncTask;
 import android.os.Environment;
+
 import androidx.core.content.ContextCompat;
+
 import com.birdshel.Uciana.BuildConfig;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
@@ -29,8 +31,7 @@ import com.birdshel.Uciana.StarSystems.StarType;
 import com.birdshel.Uciana.StarSystems.SunSprite;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
-import java.io.File;
-import java.util.Locale;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.modifier.MoveModifier;
@@ -38,6 +39,9 @@ import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.io.File;
+import java.util.Locale;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

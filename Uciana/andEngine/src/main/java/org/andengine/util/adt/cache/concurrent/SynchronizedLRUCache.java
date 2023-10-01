@@ -9,60 +9,60 @@ import org.andengine.util.adt.cache.LRUCache;
  * @since 18:26:47 - 16.01.2012
  */
 public class SynchronizedLRUCache<K, V> extends LRUCache<K, V> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public SynchronizedLRUCache(final int pCapacity) {
-		super(pCapacity);
-	}
+    public SynchronizedLRUCache(final int pCapacity) {
+        super(pCapacity);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public synchronized int getSize() {
-		return super.getSize();
-	}
+    @Override
+    public synchronized int getSize() {
+        return super.getSize();
+    }
 
-	@Override
-	public synchronized boolean isEmpty() {
-		return super.isEmpty();
-	}
+    @Override
+    public synchronized boolean isEmpty() {
+        return super.isEmpty();
+    }
 
-	@Override
-	public synchronized V put(final K pKey, final V pValue) {
-		return super.put(pKey, pValue);
-	}
+    @Override
+    public synchronized V put(final K pKey, final V pValue) {
+        return super.put(pKey, pValue);
+    }
 
-	@Override
-	public synchronized V get(final K pKey) {
-		return super.get(pKey);
-	}
+    @Override
+    public synchronized V get(final K pKey) {
+        return super.get(pKey);
+    }
 
-	@Override
-	public synchronized void clear() {
-		super.clear();
-	}
+    @Override
+    public synchronized void clear() {
+        super.clear();
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

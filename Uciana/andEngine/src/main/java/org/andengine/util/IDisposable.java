@@ -9,66 +9,67 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 00:45:48 - 17.01.2012
  */
 public interface IDisposable {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public boolean isDisposed();
-	public void dispose() throws AlreadyDisposedException;
+    public boolean isDisposed();
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    public void dispose() throws AlreadyDisposedException;
 
-	public class AlreadyDisposedException extends AndEngineRuntimeException {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-		private static final long serialVersionUID = 5796912098160771249L;
+    public class AlreadyDisposedException extends AndEngineRuntimeException {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
+        private static final long serialVersionUID = 5796912098160771249L;
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
+        // ===========================================================
+        // Fields
+        // ===========================================================
 
-		public AlreadyDisposedException() {
+        // ===========================================================
+        // Constructors
+        // ===========================================================
 
-		}
+        public AlreadyDisposedException() {
 
-		public AlreadyDisposedException(final String pMessage) {
-			super(pMessage);
-		}
+        }
 
-		public AlreadyDisposedException(final Throwable pThrowable) {
-			super(pThrowable);
-		}
+        public AlreadyDisposedException(final String pMessage) {
+            super(pMessage);
+        }
 
-		public AlreadyDisposedException(final String pMessage, final Throwable pThrowable) {
-			super(pMessage, pThrowable);
-		}
+        public AlreadyDisposedException(final Throwable pThrowable) {
+            super(pThrowable);
+        }
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
+        public AlreadyDisposedException(final String pMessage, final Throwable pThrowable) {
+            super(pMessage, pThrowable);
+        }
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
+        // ===========================================================
+        // Getter & Setter
+        // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        // ===========================================================
+        // Methods for/from SuperClass/Interfaces
+        // ===========================================================
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
-	}
+        // ===========================================================
+        // Methods
+        // ===========================================================
+
+        // ===========================================================
+        // Inner and Anonymous Classes
+        // ===========================================================
+    }
 }

@@ -6,10 +6,12 @@ import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Scenes.ColoniesScene;
 import com.birdshel.Uciana.Scenes.ExtendedScene;
 import com.birdshel.Uciana.Scenes.MovePopulationScene;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

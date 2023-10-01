@@ -6,7 +6,7 @@ import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.ComponentIconEnum;
 import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
-import com.birdshel.Uciana.Technology.Tech;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

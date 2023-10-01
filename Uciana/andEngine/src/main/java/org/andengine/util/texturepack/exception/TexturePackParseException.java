@@ -9,49 +9,49 @@ import org.xml.sax.SAXException;
  * @since 17:29:20 - 29.07.2011
  */
 public class TexturePackParseException extends SAXException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 5773816582330137037L;
+    private static final long serialVersionUID = 5773816582330137037L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public TexturePackParseException() {
-		super();
-	}
+    public TexturePackParseException() {
+        super();
+    }
 
-	public TexturePackParseException(final String pDetailMessage) {
-		super(pDetailMessage);
-	}
+    public TexturePackParseException(final String pDetailMessage) {
+        super(pDetailMessage);
+    }
 
-	public TexturePackParseException(final Exception pException) {
-		super(pException);
-	}
+    public TexturePackParseException(final Exception pException) {
+        super(pException);
+    }
 
-	public TexturePackParseException(final String pMessage, final Exception pException) {
-		super(pMessage, pException);
-	}
+    public TexturePackParseException(final String pMessage, final Exception pException) {
+        super(pMessage, pException);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -13,202 +13,203 @@ import org.andengine.util.adt.align.VerticalAlign;
  * @since 11:17:32 - 02.04.2010
  */
 public abstract class MenuSceneAnimator implements IMenuSceneAnimator {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final HorizontalAlign HORIZONTALALIGN_DEFAULT = HorizontalAlign.CENTER;
-	private static final VerticalAlign VERTICALALIGN_DEFAULT = VerticalAlign.CENTER;
-	private static final float SPACING_DEFAULT = 1.0f;
-	private static final float OFFSET_X_DEFAULT = 0.0f;
-	private static final float OFFSET_Y_DEFAULT = 0.0f;
+    private static final HorizontalAlign HORIZONTALALIGN_DEFAULT = HorizontalAlign.CENTER;
+    private static final VerticalAlign VERTICALALIGN_DEFAULT = VerticalAlign.CENTER;
+    private static final float SPACING_DEFAULT = 1.0f;
+    private static final float OFFSET_X_DEFAULT = 0.0f;
+    private static final float OFFSET_Y_DEFAULT = 0.0f;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	protected HorizontalAlign mHorizontalAlign;
-	protected VerticalAlign mVerticalAlign;
+    protected HorizontalAlign mHorizontalAlign;
+    protected VerticalAlign mVerticalAlign;
 
-	protected float mOffsetX = MenuSceneAnimator.OFFSET_X_DEFAULT;
-	protected float mOffsetY = MenuSceneAnimator.OFFSET_Y_DEFAULT;
+    protected float mOffsetX = MenuSceneAnimator.OFFSET_X_DEFAULT;
+    protected float mOffsetY = MenuSceneAnimator.OFFSET_Y_DEFAULT;
 
-	protected float mMenuItemSpacing = MenuSceneAnimator.SPACING_DEFAULT;
-	protected float mOverallHeight;
+    protected float mMenuItemSpacing = MenuSceneAnimator.SPACING_DEFAULT;
+    protected float mOverallHeight;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public MenuSceneAnimator() {
-		this(MenuSceneAnimator.HORIZONTALALIGN_DEFAULT, MenuSceneAnimator.VERTICALALIGN_DEFAULT);
-	}
+    public MenuSceneAnimator() {
+        this(MenuSceneAnimator.HORIZONTALALIGN_DEFAULT, MenuSceneAnimator.VERTICALALIGN_DEFAULT);
+    }
 
-	public MenuSceneAnimator(final HorizontalAlign pHorizontalAlign, final VerticalAlign pVerticalAlign) {
-		this.mHorizontalAlign = pHorizontalAlign;
-		this.mVerticalAlign = pVerticalAlign;
-	}
+    public MenuSceneAnimator(final HorizontalAlign pHorizontalAlign, final VerticalAlign pVerticalAlign) {
+        this.mHorizontalAlign = pHorizontalAlign;
+        this.mVerticalAlign = pVerticalAlign;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	@Override
-	public float getOffsetX() {
-		return this.mOffsetX;
-	}
+    @Override
+    public float getOffsetX() {
+        return this.mOffsetX;
+    }
 
-	@Override
-	public void setOffsetX(final float pOffsetX) {
-		this.mOffsetX = pOffsetX;
-	}
+    @Override
+    public void setOffsetX(final float pOffsetX) {
+        this.mOffsetX = pOffsetX;
+    }
 
-	@Override
-	public float getOffsetY() {
-		return this.mOffsetY;
-	}
+    @Override
+    public float getOffsetY() {
+        return this.mOffsetY;
+    }
 
-	@Override
-	public void setOffsetY(final float pOffsetY) {
-		this.mOffsetY = pOffsetY;
-	}
+    @Override
+    public void setOffsetY(final float pOffsetY) {
+        this.mOffsetY = pOffsetY;
+    }
 
-	@Override
-	public float getMenuItemSpacing() {
-		return this.mMenuItemSpacing;
-	}
+    @Override
+    public float getMenuItemSpacing() {
+        return this.mMenuItemSpacing;
+    }
 
-	@Override
-	public void setMenuItemSpacing(final float pMenuItemSpacing) {
-		this.mMenuItemSpacing = pMenuItemSpacing;
-	}
+    @Override
+    public void setMenuItemSpacing(final float pMenuItemSpacing) {
+        this.mMenuItemSpacing = pMenuItemSpacing;
+    }
 
-	@Override
-	public HorizontalAlign getHorizontalAlign() {
-		return this.mHorizontalAlign;
-	}
+    @Override
+    public HorizontalAlign getHorizontalAlign() {
+        return this.mHorizontalAlign;
+    }
 
-	@Override
-	public void setHorizontalAlign(final HorizontalAlign pHorizontalAlign) {
-		this.mHorizontalAlign = pHorizontalAlign;
-	}
+    @Override
+    public void setHorizontalAlign(final HorizontalAlign pHorizontalAlign) {
+        this.mHorizontalAlign = pHorizontalAlign;
+    }
 
-	@Override
-	public VerticalAlign getVerticalAlign() {
-		return this.mVerticalAlign;
-	}
+    @Override
+    public VerticalAlign getVerticalAlign() {
+        return this.mVerticalAlign;
+    }
 
-	@Override
-	public void setVerticalAlign(final VerticalAlign pVerticalAlign) {
-		this.mVerticalAlign = pVerticalAlign;
-	}
+    @Override
+    public void setVerticalAlign(final VerticalAlign pVerticalAlign) {
+        this.mVerticalAlign = pVerticalAlign;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onMenuItemPositionBuilt(final MenuScene pMenuScene, final int pIndex, final IMenuItem pMenuItem, final float pX, final float pY);
-	protected abstract void onMenuItemPositionReset(final MenuScene pMenuScene, final int pIndex, final IMenuItem pMenuItem, final float pX, final float pY);
+    protected abstract void onMenuItemPositionBuilt(final MenuScene pMenuScene, final int pIndex, final IMenuItem pMenuItem, final float pX, final float pY);
 
-	@Override
-	public void buildMenuSceneAnimations(final MenuScene pMenuScene) {
-		this.updateOverallHeight(pMenuScene);
+    protected abstract void onMenuItemPositionReset(final MenuScene pMenuScene, final int pIndex, final IMenuItem pMenuItem, final float pX, final float pY);
 
-		final int menuItemCount = pMenuScene.getMenuItemCount();
+    @Override
+    public void buildMenuSceneAnimations(final MenuScene pMenuScene) {
+        this.updateOverallHeight(pMenuScene);
 
-		for (int i = 0; i < menuItemCount; i++) {
-			final IMenuItem menuItem = pMenuScene.getMenuItem(i);
+        final int menuItemCount = pMenuScene.getMenuItemCount();
 
-			final float x = this.getMenuItemX(pMenuScene, i);
-			final float y = this.getMenuItemY(pMenuScene, i);
-			this.onMenuItemPositionBuilt(pMenuScene, i, menuItem, x, y);
-		}
-	}
+        for (int i = 0; i < menuItemCount; i++) {
+            final IMenuItem menuItem = pMenuScene.getMenuItem(i);
 
-	@Override
-	public void resetMenuSceneAnimations(final MenuScene pMenuScene) {
-		final int menuItemCount = pMenuScene.getMenuItemCount();
+            final float x = this.getMenuItemX(pMenuScene, i);
+            final float y = this.getMenuItemY(pMenuScene, i);
+            this.onMenuItemPositionBuilt(pMenuScene, i, menuItem, x, y);
+        }
+    }
 
-		for (int i = 0; i < menuItemCount; i++) {
-			final IMenuItem menuItem = pMenuScene.getMenuItem(i);
+    @Override
+    public void resetMenuSceneAnimations(final MenuScene pMenuScene) {
+        final int menuItemCount = pMenuScene.getMenuItemCount();
 
-			final float x = this.getMenuItemX(pMenuScene, i);
-			final float y = this.getMenuItemY(pMenuScene, i);
-			this.onMenuItemPositionReset(pMenuScene, i, menuItem, x, y);
-		}
-	}
+        for (int i = 0; i < menuItemCount; i++) {
+            final IMenuItem menuItem = pMenuScene.getMenuItem(i);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+            final float x = this.getMenuItemX(pMenuScene, i);
+            final float y = this.getMenuItemY(pMenuScene, i);
+            this.onMenuItemPositionReset(pMenuScene, i, menuItem, x, y);
+        }
+    }
 
-	protected float getMenuItemX(final MenuScene pMenuScene, final int pIndex) {
-		final float menuSceneWidth = pMenuScene.getWidth();
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-		final IMenuItem menuItem = pMenuScene.getMenuItem(pIndex);
-		final float menuItemWidth = menuItem.getWidth();
+    protected float getMenuItemX(final MenuScene pMenuScene, final int pIndex) {
+        final float menuSceneWidth = pMenuScene.getWidth();
 
-		/* Determine horizontal position. */
-		final float x;
-		switch (this.mHorizontalAlign) {
-			case LEFT:
-				x = menuItemWidth * 0.5f;
-				break;
-			case CENTER:
-				x = menuSceneWidth * 0.5f;
-				break;
-			case RIGHT:
-				x = menuSceneWidth - (menuItemWidth * 0.5f);
-				break;
-			default:
-				throw new IllegalArgumentException("Unexpected " + HorizontalAlign.class.getSimpleName() + " with value: '" + this.mHorizontalAlign + "'.");
-		}
+        final IMenuItem menuItem = pMenuScene.getMenuItem(pIndex);
+        final float menuItemWidth = menuItem.getWidth();
 
-		return x + this.mOffsetX;
-	}
+        /* Determine horizontal position. */
+        final float x;
+        switch (this.mHorizontalAlign) {
+            case LEFT:
+                x = menuItemWidth * 0.5f;
+                break;
+            case CENTER:
+                x = menuSceneWidth * 0.5f;
+                break;
+            case RIGHT:
+                x = menuSceneWidth - (menuItemWidth * 0.5f);
+                break;
+            default:
+                throw new IllegalArgumentException("Unexpected " + HorizontalAlign.class.getSimpleName() + " with value: '" + this.mHorizontalAlign + "'.");
+        }
 
-	protected float getMenuItemY(final MenuScene pMenuScene, final int pIndex) {
-		final float menuSceneHeight = pMenuScene.getHeight();
+        return x + this.mOffsetX;
+    }
 
-		final IMenuItem menuItem = pMenuScene.getMenuItem(pIndex);
+    protected float getMenuItemY(final MenuScene pMenuScene, final int pIndex) {
+        final float menuSceneHeight = pMenuScene.getHeight();
 
-		/* Prepare vertical position. */
-		float baseY;
-		switch (this.mVerticalAlign) {
-			case TOP:
-				baseY = menuSceneHeight;
-				break;
-			case CENTER:
-				baseY = (0.5f * menuSceneHeight) + (this.mOverallHeight * 0.5f);
-				break;
-			case BOTTOM:
-				baseY = this.mOverallHeight;
-				break;
-			default:
-				throw new IllegalArgumentException("Unexpected " + VerticalAlign.class.getSimpleName() + " with value: '" + this.mVerticalAlign + "'.");
-		}
+        final IMenuItem menuItem = pMenuScene.getMenuItem(pIndex);
 
-		final float menuItemHeight = menuItem.getHeight();
+        /* Prepare vertical position. */
+        float baseY;
+        switch (this.mVerticalAlign) {
+            case TOP:
+                baseY = menuSceneHeight;
+                break;
+            case CENTER:
+                baseY = (0.5f * menuSceneHeight) + (this.mOverallHeight * 0.5f);
+                break;
+            case BOTTOM:
+                baseY = this.mOverallHeight;
+                break;
+            default:
+                throw new IllegalArgumentException("Unexpected " + VerticalAlign.class.getSimpleName() + " with value: '" + this.mVerticalAlign + "'.");
+        }
 
-		/* Determine vertical position. */
-		final float y = baseY - (menuItemHeight * 0.5f) - (pIndex * (menuItemHeight + this.mMenuItemSpacing));
+        final float menuItemHeight = menuItem.getHeight();
 
-		return y + this.mOffsetY;
-	}
+        /* Determine vertical position. */
+        final float y = baseY - (menuItemHeight * 0.5f) - (pIndex * (menuItemHeight + this.mMenuItemSpacing));
 
-	private void updateOverallHeight(final MenuScene pMenuScene) {
-		final int menuItemCount = pMenuScene.getMenuItemCount();
+        return y + this.mOffsetY;
+    }
 
-		float overallHeight = 0;
-		for (int i = menuItemCount - 1; i >= 0; i--) {
-			final IMenuItem menuItem = pMenuScene.getMenuItem(i);
-			overallHeight += menuItem.getHeight();
-		}
+    private void updateOverallHeight(final MenuScene pMenuScene) {
+        final int menuItemCount = pMenuScene.getMenuItemCount();
 
-		this.mOverallHeight = overallHeight + ((menuItemCount - 1) * this.mMenuItemSpacing);
-	}
+        float overallHeight = 0;
+        for (int i = menuItemCount - 1; i >= 0; i--) {
+            final IMenuItem menuItem = pMenuScene.getMenuItem(i);
+            overallHeight += menuItem.getHeight();
+        }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+        this.mOverallHeight = overallHeight + ((menuItemCount - 1) * this.mMenuItemSpacing);
+    }
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

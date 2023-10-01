@@ -13,7 +13,7 @@ import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechID;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.Sprite;
@@ -24,6 +24,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

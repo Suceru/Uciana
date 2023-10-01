@@ -7,6 +7,7 @@ import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Ships.ShipSprite;
 import com.birdshel.Uciana.Ships.ShipType;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;

@@ -13,113 +13,115 @@ import org.andengine.util.progress.ProgressCallable;
  * @since 01:24:18 - 03.12.2011
  */
 public abstract class SimpleAsyncGameActivity extends BaseGameActivity {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public abstract void onCreateResourcesAsync(final IProgressListener pProgressListener) throws Exception; // TODO Rename
-	public abstract Scene onCreateSceneAsync(final IProgressListener pProgressListener) throws Exception; // TODO Rename
-	public abstract void onPopulateSceneAsync(final Scene pScene, IProgressListener pProgressListener) throws Exception; // TODO Rename
+    public abstract void onCreateResourcesAsync(final IProgressListener pProgressListener) throws Exception; // TODO Rename
 
-	@Override
-	public void onCreateResources(final OnCreateResourcesCallback pOnCreateResourcesCallback) {
-		this.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				ActivityUtils.doProgressAsync(SimpleAsyncGameActivity.this, "Loading Resources...", android.R.drawable.ic_menu_rotate, new ProgressCallable<Void>() {
-					@Override
-					public Void call(final IProgressListener pProgressListener) throws Exception {
-						SimpleAsyncGameActivity.this.onCreateResourcesAsync(pProgressListener);
+    public abstract Scene onCreateSceneAsync(final IProgressListener pProgressListener) throws Exception; // TODO Rename
 
-						pProgressListener.onProgressChanged(100);
+    public abstract void onPopulateSceneAsync(final Scene pScene, IProgressListener pProgressListener) throws Exception; // TODO Rename
 
-						pOnCreateResourcesCallback.onCreateResourcesFinished();
+    @Override
+    public void onCreateResources(final OnCreateResourcesCallback pOnCreateResourcesCallback) {
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ActivityUtils.doProgressAsync(SimpleAsyncGameActivity.this, "Loading Resources...", android.R.drawable.ic_menu_rotate, new ProgressCallable<Void>() {
+                    @Override
+                    public Void call(final IProgressListener pProgressListener) throws Exception {
+                        SimpleAsyncGameActivity.this.onCreateResourcesAsync(pProgressListener);
 
-						return null;
-					}
-				}, new Callback<Void>() {
-					@Override
-					public void onCallback(final Void pCallbackValue) {
-						/* Nothing. */
-					}
-				});
-			}
-		});
-	}
+                        pProgressListener.onProgressChanged(100);
 
-	@Override
-	public void onCreateScene(final OnCreateSceneCallback pOnCreateSceneCallback) {
-		this.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				ActivityUtils.doProgressAsync(SimpleAsyncGameActivity.this, "Loading Scene...", android.R.drawable.ic_menu_rotate, new ProgressCallable<Void>() {
-					@Override
-					public Void call(final IProgressListener pProgressListener) throws Exception {
-						final Scene scene = SimpleAsyncGameActivity.this.onCreateSceneAsync(pProgressListener);
+                        pOnCreateResourcesCallback.onCreateResourcesFinished();
 
-						pProgressListener.onProgressChanged(100);
+                        return null;
+                    }
+                }, new Callback<Void>() {
+                    @Override
+                    public void onCallback(final Void pCallbackValue) {
+                        /* Nothing. */
+                    }
+                });
+            }
+        });
+    }
 
-						pOnCreateSceneCallback.onCreateSceneFinished(scene);
+    @Override
+    public void onCreateScene(final OnCreateSceneCallback pOnCreateSceneCallback) {
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ActivityUtils.doProgressAsync(SimpleAsyncGameActivity.this, "Loading Scene...", android.R.drawable.ic_menu_rotate, new ProgressCallable<Void>() {
+                    @Override
+                    public Void call(final IProgressListener pProgressListener) throws Exception {
+                        final Scene scene = SimpleAsyncGameActivity.this.onCreateSceneAsync(pProgressListener);
 
-						return null;
-					}
-				}, new Callback<Void>() {
-					@Override
-					public void onCallback(final Void pCallbackValue) {
-						/* Nothing. */
-					}
-				});
-			}
-		});
-	}
+                        pProgressListener.onProgressChanged(100);
 
-	@Override
-	public void onPopulateScene(final Scene pScene, final OnPopulateSceneCallback pOnPopulateSceneCallback) {
-		this.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				ActivityUtils.doProgressAsync(SimpleAsyncGameActivity.this, "Populating Scene...", android.R.drawable.ic_menu_rotate, new ProgressCallable<Void>() {
-					@Override
-					public Void call(final IProgressListener pProgressListener) throws Exception {
-						SimpleAsyncGameActivity.this.onPopulateSceneAsync(pScene, pProgressListener);
+                        pOnCreateSceneCallback.onCreateSceneFinished(scene);
 
-						pProgressListener.onProgressChanged(100);
+                        return null;
+                    }
+                }, new Callback<Void>() {
+                    @Override
+                    public void onCallback(final Void pCallbackValue) {
+                        /* Nothing. */
+                    }
+                });
+            }
+        });
+    }
 
-						pOnPopulateSceneCallback.onPopulateSceneFinished();
+    @Override
+    public void onPopulateScene(final Scene pScene, final OnPopulateSceneCallback pOnPopulateSceneCallback) {
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                ActivityUtils.doProgressAsync(SimpleAsyncGameActivity.this, "Populating Scene...", android.R.drawable.ic_menu_rotate, new ProgressCallable<Void>() {
+                    @Override
+                    public Void call(final IProgressListener pProgressListener) throws Exception {
+                        SimpleAsyncGameActivity.this.onPopulateSceneAsync(pScene, pProgressListener);
 
-						return null;
-					}
-				}, new Callback<Void>() {
-					@Override
-					public void onCallback(final Void pCallbackValue) {
-						/* Nothing. */
-					}
-				});
-			}
-		});
-	}
+                        pProgressListener.onProgressChanged(100);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+                        pOnPopulateSceneCallback.onPopulateSceneFinished();
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+                        return null;
+                    }
+                }, new Callback<Void>() {
+                    @Override
+                    public void onCallback(final Void pCallbackValue) {
+                        /* Nothing. */
+                    }
+                });
+            }
+        });
+    }
+
+    // ===========================================================
+    // Methods
+    // ===========================================================
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

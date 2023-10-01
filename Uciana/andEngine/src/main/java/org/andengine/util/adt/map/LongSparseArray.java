@@ -1,8 +1,8 @@
 package org.andengine.util.adt.map;
 
-import org.andengine.util.adt.array.ArrayUtils;
-
 import android.util.Log;
+
+import org.andengine.util.adt.array.ArrayUtils;
 
 /*
  * Copyright (C) 2009 The Android Open Source Project
@@ -63,7 +63,8 @@ public class LongSparseArray<E> {
 
     /**
      * Sets all supplied keys to the given unique value.
-     * @param keys Keys to set
+     *
+     * @param keys        Keys to set
      * @param uniqueValue Value to set all supplied keys to
      */
     public void setValues(long[] keys, E uniqueValue) {
@@ -86,7 +87,7 @@ public class LongSparseArray<E> {
      * if no such mapping has been made.
      */
     @SuppressWarnings("unchecked")
-	public E get(long key, E valueIfKeyNotFound) {
+    public E get(long key, E valueIfKeyNotFound) {
         int i = binarySearch(mKeys, 0, mSize, key);
 
         if (i < 0 || mValues[i] == DELETED) {
@@ -227,7 +228,7 @@ public class LongSparseArray<E> {
      * SparseArray stores.
      */
     @SuppressWarnings("unchecked")
-	public E valueAt(int index) {
+    public E valueAt(int index) {
         if (mGarbage) {
             gc();
         }
@@ -351,7 +352,7 @@ public class LongSparseArray<E> {
     }
 
     @SuppressWarnings("unused")
-	private void checkIntegrity() {
+    private void checkIntegrity() {
         for (int i = 1; i < mSize; i++) {
             if (mKeys[i] <= mKeys[i - 1]) {
                 for (int j = 0; j < mSize; j++) {

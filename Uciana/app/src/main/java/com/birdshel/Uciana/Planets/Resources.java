@@ -1,9 +1,9 @@
 package com.birdshel.Uciana.Planets;
 
 import com.birdshel.Uciana.Math.Functions;
-import com.birdshel.Uciana.Planets.Resource;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Technology.TechID;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;

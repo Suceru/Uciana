@@ -4,8 +4,8 @@ import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.GameProperties;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Planets.ResourceID;
-import com.birdshel.Uciana.Ships.ShipComponents.ShipComponent;
 import com.birdshel.Uciana.Technology.TechID;
+
 import org.andengine.util.adt.color.Color;
 
 /* compiled from: MyApplication */

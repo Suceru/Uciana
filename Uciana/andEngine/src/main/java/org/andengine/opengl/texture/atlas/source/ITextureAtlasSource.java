@@ -9,23 +9,29 @@ package org.andengine.opengl.texture.atlas.source;
  * @since 11:46:56 - 12.07.2011
  */
 public interface ITextureAtlasSource {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public int getTextureX();
-	public int getTextureY();
-	public void setTextureX(final int pTextureX);
-	public void setTextureY(final int pTextureY);
+    public int getTextureX();
 
-	public int getTextureWidth();
-	public int getTextureHeight();
-	public void setTextureWidth(final int pTextureWidth);
-	public void setTextureHeight(final int pTextureHeight);
+    public int getTextureY();
 
-	public ITextureAtlasSource deepCopy();
+    public void setTextureX(final int pTextureX);
+
+    public void setTextureY(final int pTextureY);
+
+    public int getTextureWidth();
+
+    public int getTextureHeight();
+
+    public void setTextureWidth(final int pTextureWidth);
+
+    public void setTextureHeight(final int pTextureHeight);
+
+    public ITextureAtlasSource deepCopy();
 }

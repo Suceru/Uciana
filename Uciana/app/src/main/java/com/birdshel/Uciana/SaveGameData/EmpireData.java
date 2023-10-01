@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
+
 import com.birdshel.Uciana.AI.Personality;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.SortType;
@@ -25,12 +26,14 @@ import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechID;
 import com.birdshel.Uciana.Technology.TechType;
 import com.birdshel.Uciana.Technology.Technology;
+
+import org.andengine.util.level.constants.LevelConstants;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.andengine.util.level.constants.LevelConstants;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

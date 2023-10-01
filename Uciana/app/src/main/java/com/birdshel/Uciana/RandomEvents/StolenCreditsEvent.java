@@ -6,6 +6,7 @@ import com.birdshel.Uciana.GameProperties;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.R;
+
 import org.andengine.entity.Entity;
 
 /* compiled from: MyApplication */

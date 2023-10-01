@@ -9,49 +9,49 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 20:09:38 - 13.04.2013
  */
 public class SecureSharedPreferencesException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 5683854473467471982L;
+    private static final long serialVersionUID = 5683854473467471982L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public SecureSharedPreferencesException() {
+    public SecureSharedPreferencesException() {
 
-	}
+    }
 
-	public SecureSharedPreferencesException(final String pMessage) {
-		super(pMessage);
-	}
+    public SecureSharedPreferencesException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public SecureSharedPreferencesException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public SecureSharedPreferencesException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public SecureSharedPreferencesException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public SecureSharedPreferencesException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

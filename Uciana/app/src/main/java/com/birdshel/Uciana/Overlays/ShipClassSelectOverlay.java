@@ -5,11 +5,13 @@ import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Ships.ShipType;
-import java.util.HashMap;
-import java.util.Map;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /* JADX INFO: Access modifiers changed from: package-private */
 /* compiled from: MyApplication */

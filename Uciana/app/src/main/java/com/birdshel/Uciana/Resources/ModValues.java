@@ -1,15 +1,18 @@
 package com.birdshel.Uciana.Resources;
 
 import androidx.core.content.ContextCompat;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Players.RaceAttribute;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.Uciana;
-import java.lang.reflect.Array;
+
 import org.andengine.util.level.constants.LevelConstants;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import java.lang.reflect.Array;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

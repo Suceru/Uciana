@@ -10,7 +10,7 @@ import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Ships.Ship;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
@@ -20,6 +20,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

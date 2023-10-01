@@ -5,13 +5,15 @@ import com.birdshel.Uciana.Players.RaceAttribute;
 import com.birdshel.Uciana.Players.RaceAttributeType;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
-import java.nio.CharBuffer;
-import java.util.List;
-import java.util.Map;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.nio.CharBuffer;
+import java.util.List;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

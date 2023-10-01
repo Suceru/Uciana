@@ -14,125 +14,125 @@ import org.andengine.util.exception.MethodNotSupportedException;
  * @since 15:35:53 - 29.03.2010
  */
 public class CameraScene extends Scene {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	protected Camera mCamera;
+    protected Camera mCamera;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	/**
-	 * {@link #setCamera(Camera)} needs to be called manually. Otherwise nothing will be drawn.
-	 */
-	public CameraScene() {
-		this(null);
-	}
+    /**
+     * {@link #setCamera(Camera)} needs to be called manually. Otherwise nothing will be drawn.
+     */
+    public CameraScene() {
+        this(null);
+    }
 
-	public CameraScene(final Camera pCamera) {
-		this.mCamera = pCamera;
-	}
+    public CameraScene(final Camera pCamera) {
+        this.mCamera = pCamera;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public Camera getCamera() {
-		return this.mCamera;
-	}
+    public Camera getCamera() {
+        return this.mCamera;
+    }
 
-	public void setCamera(final Camera pCamera) {
-		this.mCamera = pCamera;
-	}
+    public void setCamera(final Camera pCamera) {
+        this.mCamera = pCamera;
+    }
 
-	@Override
-	public float getWidth() {
-		return this.mCamera.getCameraSceneWidth();
-	}
+    @Override
+    public float getWidth() {
+        return this.mCamera.getCameraSceneWidth();
+    }
 
-	@Override
-	public float getHeight() {
-		return this.mCamera.getCameraSceneHeight();
-	}
+    @Override
+    public float getHeight() {
+        return this.mCamera.getCameraSceneHeight();
+    }
 
-	@Override
-	public void setWidth(final float pWidth) {
-		throw new MethodNotSupportedException();
-	}
+    @Override
+    public void setWidth(final float pWidth) {
+        throw new MethodNotSupportedException();
+    }
 
-	@Override
-	public void setHeight(final float pHeight) {
-		throw new MethodNotSupportedException();
-	}
+    @Override
+    public void setHeight(final float pHeight) {
+        throw new MethodNotSupportedException();
+    }
 
-	@Override
-	public void setSize(final float pWidth, final float pHeight) {
-		throw new MethodNotSupportedException();
-	}
+    @Override
+    public void setSize(final float pWidth, final float pHeight) {
+        throw new MethodNotSupportedException();
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public boolean onSceneTouchEvent(final TouchEvent pSceneTouchEvent) {
-		if (this.mCamera == null) {
-			return false;
-		} else {
-			this.mCamera.convertSceneTouchEventToCameraSceneTouchEvent(pSceneTouchEvent);
+    @Override
+    public boolean onSceneTouchEvent(final TouchEvent pSceneTouchEvent) {
+        if (this.mCamera == null) {
+            return false;
+        } else {
+            this.mCamera.convertSceneTouchEventToCameraSceneTouchEvent(pSceneTouchEvent);
 
-			final boolean handled = super.onSceneTouchEvent(pSceneTouchEvent);
+            final boolean handled = super.onSceneTouchEvent(pSceneTouchEvent);
 
-			if (handled) {
-				return true;
-			} else {
-				this.mCamera.convertCameraSceneTouchEventToSceneTouchEvent(pSceneTouchEvent);
-				return false;
-			}
-		}
-	}
+            if (handled) {
+                return true;
+            } else {
+                this.mCamera.convertCameraSceneTouchEventToSceneTouchEvent(pSceneTouchEvent);
+                return false;
+            }
+        }
+    }
 
-	@Override
-	protected boolean onChildSceneTouchEvent(final TouchEvent pSceneTouchEvent) {
-		final boolean childIsCameraScene = this.mChildScene instanceof CameraScene;
-		if (childIsCameraScene) {
-			this.mCamera.convertCameraSceneTouchEventToSceneTouchEvent(pSceneTouchEvent);
-			final boolean result = super.onChildSceneTouchEvent(pSceneTouchEvent);
-			this.mCamera.convertSceneTouchEventToCameraSceneTouchEvent(pSceneTouchEvent);
-			return result;
-		} else {
-			return super.onChildSceneTouchEvent(pSceneTouchEvent);
-		}
-	}
+    @Override
+    protected boolean onChildSceneTouchEvent(final TouchEvent pSceneTouchEvent) {
+        final boolean childIsCameraScene = this.mChildScene instanceof CameraScene;
+        if (childIsCameraScene) {
+            this.mCamera.convertCameraSceneTouchEventToSceneTouchEvent(pSceneTouchEvent);
+            final boolean result = super.onChildSceneTouchEvent(pSceneTouchEvent);
+            this.mCamera.convertSceneTouchEventToCameraSceneTouchEvent(pSceneTouchEvent);
+            return result;
+        } else {
+            return super.onChildSceneTouchEvent(pSceneTouchEvent);
+        }
+    }
 
-	@Override
-	protected void onApplyMatrix(final GLState pGLState, final Camera pCamera) {
-		this.mCamera.onApplyCameraSceneMatrix(pGLState);
-	}
+    @Override
+    protected void onApplyMatrix(final GLState pGLState, final Camera pCamera) {
+        this.mCamera.onApplyCameraSceneMatrix(pGLState);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void centerEntityInCamera(final IEntity pEntity) {
-		pEntity.setPosition(this.mCamera.getCenterX(), this.mCamera.getCenterY());
-	}
+    public void centerEntityInCamera(final IEntity pEntity) {
+        pEntity.setPosition(this.mCamera.getCenterX(), this.mCamera.getCenterY());
+    }
 
-	public void centerEntityInCameraHorizontally(final IEntity pEntity) {
-		pEntity.setX(this.mCamera.getCenterX());
-	}
+    public void centerEntityInCameraHorizontally(final IEntity pEntity) {
+        pEntity.setX(this.mCamera.getCenterX());
+    }
 
-	public void centerEntityInCameraVertically(final IEntity pEntity) {
-		pEntity.setY(this.mCamera.getCenterY());
-	}
+    public void centerEntityInCameraVertically(final IEntity pEntity) {
+        pEntity.setY(this.mCamera.getCenterY());
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

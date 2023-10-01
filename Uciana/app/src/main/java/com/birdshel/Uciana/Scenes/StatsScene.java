@@ -2,6 +2,7 @@ package com.birdshel.Uciana.Scenes;
 
 import android.util.SparseArray;
 import android.util.SparseIntArray;
+
 import com.birdshel.Uciana.Elements.EmpireButton;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.GameData;
@@ -17,9 +18,7 @@ import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.StarSystems.StarType;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.primitive.Line;
@@ -30,6 +29,10 @@ import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

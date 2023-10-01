@@ -9,49 +9,49 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 14:59:01 - 19.04.2012
  */
 public class LevelLoaderException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 1027781104016235328L;
+    private static final long serialVersionUID = 1027781104016235328L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public LevelLoaderException() {
+    public LevelLoaderException() {
 
-	}
+    }
 
-	public LevelLoaderException(final String pMessage) {
-		super(pMessage);
-	}
+    public LevelLoaderException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public LevelLoaderException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public LevelLoaderException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public LevelLoaderException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public LevelLoaderException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

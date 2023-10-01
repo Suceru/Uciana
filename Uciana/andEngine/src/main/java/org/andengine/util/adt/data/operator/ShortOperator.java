@@ -7,74 +7,74 @@ package org.andengine.util.adt.data.operator;
  * @since 14:24:15 - 02.02.2012
  */
 public enum ShortOperator {
-	// ===========================================================
-	// Elements
-	// ===========================================================
+    // ===========================================================
+    // Elements
+    // ===========================================================
 
-	EQUALS() {
-		@Override
-		public boolean check(final short pShortA, final short pShortB) {
-			return pShortA == pShortB;
-		}
-	},
-	NOT_EQUALS() {
-		@Override
-		public boolean check(final short pShortA, final short pShortB) {
-			return pShortA != pShortB;
-		}
-	},
-	LESS_THAN() {
-		@Override
-		public boolean check(final short pShortA, final short pShortB) {
-			return pShortA < pShortB;
-		}
-	},
-	LESS_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final short pShortA, final short pShortB) {
-			return pShortA <= pShortB;
-		}
-	},
-	MORE_THAN() {
-		@Override
-		public boolean check(final short pShortA, final short pShortB) {
-			return pShortA > pShortB;
-		}
-	},
-	MORE_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final short pShortA, final short pShortB) {
-			return pShortA >= pShortB;
-		}
-	};
+    EQUALS() {
+        @Override
+        public boolean check(final short pShortA, final short pShortB) {
+            return pShortA == pShortB;
+        }
+    },
+    NOT_EQUALS() {
+        @Override
+        public boolean check(final short pShortA, final short pShortB) {
+            return pShortA != pShortB;
+        }
+    },
+    LESS_THAN() {
+        @Override
+        public boolean check(final short pShortA, final short pShortB) {
+            return pShortA < pShortB;
+        }
+    },
+    LESS_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final short pShortA, final short pShortB) {
+            return pShortA <= pShortB;
+        }
+    },
+    MORE_THAN() {
+        @Override
+        public boolean check(final short pShortA, final short pShortB) {
+            return pShortA > pShortB;
+        }
+    },
+    MORE_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final short pShortA, final short pShortB) {
+            return pShortA >= pShortB;
+        }
+    };
 
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public abstract boolean check(final short pShortA, final short pShortB);
+    public abstract boolean check(final short pShortA, final short pShortB);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

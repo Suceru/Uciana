@@ -11,44 +11,44 @@ import org.andengine.entity.particle.Particle;
  * @since 10:03:29 - 19.11.2011
  */
 public class ScaleParticleInitializer<T extends IEntity> extends BaseSingleValueParticleInitializer<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public ScaleParticleInitializer(final float pScale) {
-		super(pScale, pScale);
-	}
+    public ScaleParticleInitializer(final float pScale) {
+        super(pScale, pScale);
+    }
 
-	public ScaleParticleInitializer(final float pMinScale, final float pMaxScale) {
-		super(pMinScale, pMaxScale);
-	}
+    public ScaleParticleInitializer(final float pMinScale, final float pMaxScale) {
+        super(pMinScale, pMaxScale);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void onInitializeParticle(final Particle<T> pParticle, final float pScale) {
-		pParticle.getEntity().setScale(pScale);
-	}
+    @Override
+    protected void onInitializeParticle(final Particle<T> pParticle, final float pScale) {
+        pParticle.getEntity().setScale(pScale);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

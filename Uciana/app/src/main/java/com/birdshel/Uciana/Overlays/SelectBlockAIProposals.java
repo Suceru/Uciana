@@ -5,13 +5,13 @@ import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
-//import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.align.HorizontalAlign;
 
 /* compiled from: MyApplication */

@@ -9,155 +9,155 @@ import android.util.SparseArray;
  * @since 12:25:47 - 30.01.2012
  */
 public class Trie implements ITrie {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final int CHILDREN_SIZE_DEFAULT = 'Z' - 'A' + 1;
+    private static final int CHILDREN_SIZE_DEFAULT = 'Z' - 'A' + 1;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final TrieNode mRoot = new TrieNode();
+    private final TrieNode mRoot = new TrieNode();
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void add(final CharSequence pCharSequence) {
-		this.mRoot.add(pCharSequence);
-	}
+    @Override
+    public void add(final CharSequence pCharSequence) {
+        this.mRoot.add(pCharSequence);
+    }
 
-	@Override
-	public void add(final CharSequence pCharSequence, final int pStart, final int pEnd) {
-		this.mRoot.add(pCharSequence, pStart, pEnd);
-	}
+    @Override
+    public void add(final CharSequence pCharSequence, final int pStart, final int pEnd) {
+        this.mRoot.add(pCharSequence, pStart, pEnd);
+    }
 
-	@Override
-	public boolean contains(final CharSequence pCharSequence) {
-		return this.mRoot.contains(pCharSequence);
-	}
+    @Override
+    public boolean contains(final CharSequence pCharSequence) {
+        return this.mRoot.contains(pCharSequence);
+    }
 
-	@Override
-	public boolean contains(final CharSequence pCharSequence, final int pStart, final int pEnd) {
-		return this.mRoot.contains(pCharSequence, pStart, pEnd);
-	}
+    @Override
+    public boolean contains(final CharSequence pCharSequence, final int pStart, final int pEnd) {
+        return this.mRoot.contains(pCharSequence, pStart, pEnd);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-	public static class TrieNode implements ITrie {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public static class TrieNode implements ITrie {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
+        // ===========================================================
+        // Fields
+        // ===========================================================
 
-		private SparseArray<TrieNode> mChildren;
+        private SparseArray<TrieNode> mChildren;
 
-		private boolean mWordEndFlag;
+        private boolean mWordEndFlag;
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
+        // ===========================================================
+        // Constructors
+        // ===========================================================
 
-		public TrieNode() {
-			this(false);
-		}
+        public TrieNode() {
+            this(false);
+        }
 
-		public TrieNode(final boolean pWordEndFlag) {
-			this.mWordEndFlag = pWordEndFlag;
-		}
+        public TrieNode(final boolean pWordEndFlag) {
+            this.mWordEndFlag = pWordEndFlag;
+        }
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
+        // ===========================================================
+        // Getter & Setter
+        // ===========================================================
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
+        // ===========================================================
+        // Methods for/from SuperClass/Interfaces
+        // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        // ===========================================================
+        // Methods
+        // ===========================================================
 
-		@Override
-		public void add(final CharSequence pCharSequence) {
-			final int length = pCharSequence.length();
-			if (length == 0) {
-				return;
-			}
+        @Override
+        public void add(final CharSequence pCharSequence) {
+            final int length = pCharSequence.length();
+            if (length == 0) {
+                return;
+            }
 
-			this.add(pCharSequence, 0, length);
-		}
+            this.add(pCharSequence, 0, length);
+        }
 
-		@Override
-		public void add(final CharSequence pCharSequence, final int pStart, final int pEnd) {
-			if (this.mChildren == null) {
-				this.mChildren = new SparseArray<Trie.TrieNode>(Trie.CHILDREN_SIZE_DEFAULT);
-			}
-			final char character = pCharSequence.charAt(pStart);
+        @Override
+        public void add(final CharSequence pCharSequence, final int pStart, final int pEnd) {
+            if (this.mChildren == null) {
+                this.mChildren = new SparseArray<Trie.TrieNode>(Trie.CHILDREN_SIZE_DEFAULT);
+            }
+            final char character = pCharSequence.charAt(pStart);
 
-			TrieNode child = this.mChildren.get(character);
-			if (child == null) {
-				child = new TrieNode();
-				this.mChildren.put(character, child);
-			}
+            TrieNode child = this.mChildren.get(character);
+            if (child == null) {
+                child = new TrieNode();
+                this.mChildren.put(character, child);
+            }
 
-			if (pStart < pEnd - 1) {
-				child.add(pCharSequence, pStart + 1, pEnd);
-			} else {
-				child.mWordEndFlag = true;
-			}
-		}
+            if (pStart < pEnd - 1) {
+                child.add(pCharSequence, pStart + 1, pEnd);
+            } else {
+                child.mWordEndFlag = true;
+            }
+        }
 
-		@Override
-		public boolean contains(final CharSequence pCharSequence) {
-			final int length = pCharSequence.length();
-			if (length == 0) {
-				throw new IllegalArgumentException();
-			}
-			return this.contains(pCharSequence, 0, length);
-		}
+        @Override
+        public boolean contains(final CharSequence pCharSequence) {
+            final int length = pCharSequence.length();
+            if (length == 0) {
+                throw new IllegalArgumentException();
+            }
+            return this.contains(pCharSequence, 0, length);
+        }
 
-		@Override
-		public boolean contains(final CharSequence pCharSequence, final int pStart, final int pEnd) {
-			if (this.mChildren == null) {
-				return false;
-			}
+        @Override
+        public boolean contains(final CharSequence pCharSequence, final int pStart, final int pEnd) {
+            if (this.mChildren == null) {
+                return false;
+            }
 
-			final char character = pCharSequence.charAt(pStart);
-			final TrieNode child = this.mChildren.get(character);
-			if (child == null) {
-				return false;
-			} else {
-				if (pStart < pEnd - 1) {
-					return child.contains(pCharSequence, pStart + 1, pEnd);
-				} else {
-					return child.mWordEndFlag;
-				}
-			}
-		}
+            final char character = pCharSequence.charAt(pStart);
+            final TrieNode child = this.mChildren.get(character);
+            if (child == null) {
+                return false;
+            } else {
+                if (pStart < pEnd - 1) {
+                    return child.contains(pCharSequence, pStart + 1, pEnd);
+                } else {
+                    return child.mWordEndFlag;
+                }
+            }
+        }
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
-	}
+        // ===========================================================
+        // Inner and Anonymous Classes
+        // ===========================================================
+    }
 }

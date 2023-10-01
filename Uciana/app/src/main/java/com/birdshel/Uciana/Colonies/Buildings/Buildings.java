@@ -1,11 +1,11 @@
 package com.birdshel.Uciana.Colonies.Buildings;
 
-import com.birdshel.Uciana.Colonies.Buildings.Building;
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Technology.TechID;
+
 import java.util.HashMap;
 import java.util.Map;
 

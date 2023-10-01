@@ -30,9 +30,7 @@ import com.birdshel.Uciana.Ships.ShipSprite;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.Technology.TechID;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
@@ -47,6 +45,10 @@ import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

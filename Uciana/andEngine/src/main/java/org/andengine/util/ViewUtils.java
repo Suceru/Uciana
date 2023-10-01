@@ -13,43 +13,43 @@ import android.view.ViewGroup;
  * @since 20:55:35 - 08.09.2009
  */
 public final class ViewUtils {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private ViewUtils() {
+    private ViewUtils() {
 
-	}
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static final View inflate(final Context pContext, final int pLayoutID) {
-		return LayoutInflater.from(pContext).inflate(pLayoutID, null);
-	}
+    public static final View inflate(final Context pContext, final int pLayoutID) {
+        return LayoutInflater.from(pContext).inflate(pLayoutID, null);
+    }
 
-	public static final View inflate(final Context pContext, final int pLayoutID, final ViewGroup pViewGroup) {
-		return LayoutInflater.from(pContext).inflate(pLayoutID, pViewGroup, true);
-	}
+    public static final View inflate(final Context pContext, final int pLayoutID, final ViewGroup pViewGroup) {
+        return LayoutInflater.from(pContext).inflate(pLayoutID, pViewGroup, true);
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

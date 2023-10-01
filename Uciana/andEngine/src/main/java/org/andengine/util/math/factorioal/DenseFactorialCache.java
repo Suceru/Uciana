@@ -9,62 +9,62 @@ import android.util.SparseIntArray;
  * @since 21:37:15 - 09.06.2013
  */
 public class DenseFactorialCache implements IFactorialProvider {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static DenseFactorialCache INSTANCE;
+    private static DenseFactorialCache INSTANCE;
 
-	private final SparseIntArray mCache = new SparseIntArray();
+    private final SparseIntArray mCache = new SparseIntArray();
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private DenseFactorialCache() {
+    private DenseFactorialCache() {
 
-	}
+    }
 
-	public static DenseFactorialCache getInstance() {
-		if (INSTANCE == null) {
-			INSTANCE = new DenseFactorialCache();
-		}
-		return INSTANCE;
-	}
+    public static DenseFactorialCache getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new DenseFactorialCache();
+        }
+        return INSTANCE;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	@Override
-	public int factorial(final int n) {
-		if (n == 0 || n == 1) {
-			return 1;
-		} else {
-			int result = this.mCache.get(n);
-			if (result != 0) {
-				return result;
-			} else {
-				result = n * this.factorial(n - 1);
-				this.mCache.put(n, result);
-				return result;
-			}
-		}
-	}
+    @Override
+    public int factorial(final int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            int result = this.mCache.get(n);
+            if (result != 0) {
+                return result;
+            } else {
+                result = n * this.factorial(n - 1);
+                this.mCache.put(n, result);
+                return result;
+            }
+        }
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

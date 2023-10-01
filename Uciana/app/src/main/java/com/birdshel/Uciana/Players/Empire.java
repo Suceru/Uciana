@@ -3,6 +3,7 @@ package com.birdshel.Uciana.Players;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
+
 import com.birdshel.Uciana.AI.FleetTasks.AutoFleetTaskAI;
 import com.birdshel.Uciana.AI.FleetTasks.FleetTaskAI;
 import com.birdshel.Uciana.AI.Managers.AttackAI;
@@ -56,6 +57,7 @@ import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechCategory;
 import com.birdshel.Uciana.Technology.TechID;
 import com.birdshel.Uciana.Technology.Technology;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

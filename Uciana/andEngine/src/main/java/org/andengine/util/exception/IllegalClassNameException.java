@@ -1,7 +1,5 @@
 package org.andengine.util.exception;
 
-import org.andengine.util.exception.AndEngineRuntimeException;
-
 /**
  * (c) 2013 Nicolas Gramlich
  *
@@ -9,49 +7,49 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 21:33:53 - 01.05.2013
  */
 public class IllegalClassNameException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 5615299668631505188L;
+    private static final long serialVersionUID = 5615299668631505188L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public IllegalClassNameException() {
-		super();
-	}
+    public IllegalClassNameException() {
+        super();
+    }
 
-	public IllegalClassNameException(final String pMessage) {
-		super(pMessage);
-	}
+    public IllegalClassNameException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public IllegalClassNameException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public IllegalClassNameException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public IllegalClassNameException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public IllegalClassNameException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

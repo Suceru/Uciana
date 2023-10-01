@@ -8,14 +8,15 @@ package org.andengine.input.sensor.acceleration;
  * @since 16:58:38 - 10.03.2010
  */
 public interface IAccelerationListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onAccelerationAccuracyChanged(final AccelerationData pAccelerationData);
-	public void onAccelerationChanged(final AccelerationData pAccelerationData);
+    public void onAccelerationAccuracyChanged(final AccelerationData pAccelerationData);
+
+    public void onAccelerationChanged(final AccelerationData pAccelerationData);
 }

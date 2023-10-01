@@ -14,15 +14,17 @@ import com.birdshel.Uciana.Messages.MessageType;
 import com.birdshel.Uciana.Planets.PlanetSprite;
 import com.birdshel.Uciana.Players.Treaty;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

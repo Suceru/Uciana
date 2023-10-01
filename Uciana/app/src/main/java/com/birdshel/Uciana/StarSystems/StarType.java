@@ -7,10 +7,11 @@ import com.birdshel.Uciana.Planets.Climate;
 import com.birdshel.Uciana.Planets.MineralRichness;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.OptionID;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.andengine.util.adt.color.Color;
+
+import java.util.HashMap;
+import java.util.Map;
 //import org.andengine.util.adt.color.Color;
 
 /* compiled from: MyApplication */

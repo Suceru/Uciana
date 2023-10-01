@@ -7,49 +7,49 @@ package org.andengine.opengl.font.exception;
  * @since 12:19:24 - 03.11.2011
  */
 public class LetterNotFoundException extends FontException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 5260601170771253529L;
+    private static final long serialVersionUID = 5260601170771253529L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public LetterNotFoundException() {
-		super();
-	}
+    public LetterNotFoundException() {
+        super();
+    }
 
-	public LetterNotFoundException(final String pMessage) {
-		super(pMessage);
-	}
+    public LetterNotFoundException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public LetterNotFoundException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public LetterNotFoundException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public LetterNotFoundException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public LetterNotFoundException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

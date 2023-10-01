@@ -6,13 +6,14 @@ import com.birdshel.Uciana.Messages.Message;
 import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
-import java.text.DecimalFormat;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
-//import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.text.DecimalFormat;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

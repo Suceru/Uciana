@@ -10,37 +10,39 @@ import org.andengine.util.IMatcher;
  * @since 15:01:18 - 27.03.2012
  */
 public interface ITouchArea {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public boolean contains(final float pX, final float pY);
+    public boolean contains(final float pX, final float pY);
 
-	public float[] convertSceneCoordinatesToLocalCoordinates(final float pX, final float pY);
-	public float[] convertLocalCoordinatesToSceneCoordinates(final float pX, final float pY);
+    public float[] convertSceneCoordinatesToLocalCoordinates(final float pX, final float pY);
 
-	/**
-	 * This method only fires if this {@link ITouchArea} is registered to the {@link Scene} via {@link Scene#registerTouchArea(ITouchArea)}.
-	 * @param pSceneTouchEvent
-	 * @return <code>true</code> if the event was handled (that means {@link IOnAreaTouchListener} of the {@link Scene} will not be fired!), otherwise <code>false</code>.
-	 */
-	public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY);
+    public float[] convertLocalCoordinatesToSceneCoordinates(final float pX, final float pY);
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    /**
+     * This method only fires if this {@link ITouchArea} is registered to the {@link Scene} via {@link Scene#registerTouchArea(ITouchArea)}.
+     *
+     * @param pSceneTouchEvent
+     * @return <code>true</code> if the event was handled (that means {@link IOnAreaTouchListener} of the {@link Scene} will not be fired!), otherwise <code>false</code>.
+     */
+    public boolean onAreaTouched(final TouchEvent pSceneTouchEvent, final float pTouchAreaLocalX, final float pTouchAreaLocalY);
 
-	public static interface ITouchAreaMatcher extends IMatcher<ITouchArea> {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
-	}
+    public static interface ITouchAreaMatcher extends IMatcher<ITouchArea> {
+        // ===========================================================
+        // Constants
+        // ===========================================================
+
+        // ===========================================================
+        // Methods
+        // ===========================================================
+    }
 }

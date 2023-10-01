@@ -1,9 +1,9 @@
 package org.andengine.opengl.util.criteria;
 
+import android.os.Build;
+
 import org.andengine.opengl.util.GLState;
 import org.andengine.util.adt.data.operator.IntOperator;
-
-import android.os.Build;
 
 /**
  * (c) 2011 Zynga Inc.
@@ -12,40 +12,40 @@ import android.os.Build;
  * @since 17:21:13 - 10.10.2011
  */
 public class AndroidVersionCodeGLCriteria extends IntGLCriteria {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AndroidVersionCodeGLCriteria(final IntOperator pIntOperator, final int pAndroidVersionCode) {
-		super(pIntOperator, pAndroidVersionCode);
-	}
+    public AndroidVersionCodeGLCriteria(final IntOperator pIntOperator, final int pAndroidVersionCode) {
+        super(pIntOperator, pAndroidVersionCode);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected int getActualCriteria(final GLState pGLState) {
-		return Build.VERSION.SDK_INT;
-	}
+    @Override
+    protected int getActualCriteria(final GLState pGLState) {
+        return Build.VERSION.SDK_INT;
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

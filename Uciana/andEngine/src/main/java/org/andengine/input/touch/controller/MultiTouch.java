@@ -1,9 +1,9 @@
 package org.andengine.input.touch.controller;
 
-import org.andengine.util.system.SystemUtils;
-
 import android.content.Context;
 import android.content.pm.PackageManager;
+
+import org.andengine.util.system.SystemUtils;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -13,54 +13,54 @@ import android.content.pm.PackageManager;
  * @since 16:00:38 - 14.07.2010
  */
 public final class MultiTouch {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private static Boolean sSupported;
-	private static Boolean sSupportedDistinct;
+    private static Boolean sSupported;
+    private static Boolean sSupportedDistinct;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private MultiTouch() {
+    private MultiTouch() {
 
-	}
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static boolean isSupported(final Context pContext) {
-		if (MultiTouch.sSupported == null) {
-			MultiTouch.sSupported = SystemUtils.hasSystemFeature(pContext, PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH, false);
-		}
+    public static boolean isSupported(final Context pContext) {
+        if (MultiTouch.sSupported == null) {
+            MultiTouch.sSupported = SystemUtils.hasSystemFeature(pContext, PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH, false);
+        }
 
-		return MultiTouch.sSupported;
-	}
+        return MultiTouch.sSupported;
+    }
 
-	public static boolean isSupportedDistinct(final Context pContext) {
-		if (MultiTouch.sSupportedDistinct == null) {
-			MultiTouch.sSupportedDistinct = SystemUtils.hasSystemFeature(pContext, PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT, false);
-		}
+    public static boolean isSupportedDistinct(final Context pContext) {
+        if (MultiTouch.sSupportedDistinct == null) {
+            MultiTouch.sSupportedDistinct = SystemUtils.hasSystemFeature(pContext, PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT, false);
+        }
 
-		return MultiTouch.sSupportedDistinct;
-	}
+        return MultiTouch.sSupportedDistinct;
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

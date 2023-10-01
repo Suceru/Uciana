@@ -9,57 +9,57 @@ import android.opengl.GLU;
  * @since 10:44:27 - 13.02.2012
  */
 public class GLException extends RuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = -7494923307858371890L;
+    private static final long serialVersionUID = -7494923307858371890L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final int mError;
+    private final int mError;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public GLException(final int pError) {
-		this(pError, GLException.getErrorString(pError));
-	}
+    public GLException(final int pError) {
+        this(pError, GLException.getErrorString(pError));
+    }
 
-	public GLException(final int pError, final String pString) {
-		super(pString);
+    public GLException(final int pError, final String pString) {
+        super(pString);
 
-		this.mError = pError;
-	}
+        this.mError = pError;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public int getError() {
-		return this.mError;
-	}
+    public int getError() {
+        return this.mError;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	private static String getErrorString(final int pError) {
-		String errorString = GLU.gluErrorString(pError);
-		if (errorString == null) {
-			errorString = "Unknown error '0x" + Integer.toHexString(pError) + "'.";
-		}
-		return errorString;
-	}
+    private static String getErrorString(final int pError) {
+        String errorString = GLU.gluErrorString(pError);
+        if (errorString == null) {
+            errorString = "Unknown error '0x" + Integer.toHexString(pError) + "'.";
+        }
+        return errorString;
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

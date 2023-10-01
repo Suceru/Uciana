@@ -6,6 +6,7 @@ import com.birdshel.Uciana.Messages.ChangeLocaleMessage;
 import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Resources.SupportedLocales;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;

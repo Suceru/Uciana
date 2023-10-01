@@ -1,17 +1,18 @@
 package com.birdshel.Uciana.Elements.Buildings;
 
-import androidx.constraintlayout.motion.utils.*;//.TypedValues;
 import com.birdshel.Uciana.Colonies.Buildings.Building;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
-import java.text.DecimalFormat;
-import java.util.TreeSet;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.text.DecimalFormat;
+import java.util.TreeSet;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

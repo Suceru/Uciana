@@ -11,95 +11,96 @@ import org.andengine.util.modifier.ease.IEaseFunction;
  * @since 23:29:22 - 19.03.2010
  */
 public abstract class BaseSingleValueSpanModifier<T> extends BaseDurationModifier<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private float mFromValue;
-	private float mValueSpan;
+    private float mFromValue;
+    private float mValueSpan;
 
-	protected final IEaseFunction mEaseFunction;
+    protected final IEaseFunction mEaseFunction;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue) {
-		this(pDuration, pFromValue, pToValue, null, EaseLinear.getInstance());
-	}
+    public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue) {
+        this(pDuration, pFromValue, pToValue, null, EaseLinear.getInstance());
+    }
 
-	public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue, final IEaseFunction pEaseFunction) {
-		this(pDuration, pFromValue, pToValue, null, pEaseFunction);
-	}
+    public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue, final IEaseFunction pEaseFunction) {
+        this(pDuration, pFromValue, pToValue, null, pEaseFunction);
+    }
 
-	public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue, final IModifierListener<T> pModifierListener) {
-		this(pDuration, pFromValue, pToValue, pModifierListener, EaseLinear.getInstance());
-	}
+    public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue, final IModifierListener<T> pModifierListener) {
+        this(pDuration, pFromValue, pToValue, pModifierListener, EaseLinear.getInstance());
+    }
 
-	public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue, final IModifierListener<T> pModifierListener, final IEaseFunction pEaseFunction) {
-		super(pDuration, pModifierListener);
+    public BaseSingleValueSpanModifier(final float pDuration, final float pFromValue, final float pToValue, final IModifierListener<T> pModifierListener, final IEaseFunction pEaseFunction) {
+        super(pDuration, pModifierListener);
 
-		this.mFromValue = pFromValue;
-		this.mValueSpan = pToValue - pFromValue;
-		this.mEaseFunction = pEaseFunction;
-	}
+        this.mFromValue = pFromValue;
+        this.mValueSpan = pToValue - pFromValue;
+        this.mEaseFunction = pEaseFunction;
+    }
 
-	protected BaseSingleValueSpanModifier(final BaseSingleValueSpanModifier<T> pBaseSingleValueSpanModifier) {
-		super(pBaseSingleValueSpanModifier);
+    protected BaseSingleValueSpanModifier(final BaseSingleValueSpanModifier<T> pBaseSingleValueSpanModifier) {
+        super(pBaseSingleValueSpanModifier);
 
-		this.mFromValue = pBaseSingleValueSpanModifier.mFromValue;
-		this.mValueSpan = pBaseSingleValueSpanModifier.mValueSpan;
-		this.mEaseFunction = pBaseSingleValueSpanModifier.mEaseFunction;
-	}
+        this.mFromValue = pBaseSingleValueSpanModifier.mFromValue;
+        this.mValueSpan = pBaseSingleValueSpanModifier.mValueSpan;
+        this.mEaseFunction = pBaseSingleValueSpanModifier.mEaseFunction;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public float getFromValue() {
-		return this.mFromValue;
-	}
+    public float getFromValue() {
+        return this.mFromValue;
+    }
 
-	public float getToValue() {
-		return this.mFromValue + this.mValueSpan;
-	}
+    public float getToValue() {
+        return this.mFromValue + this.mValueSpan;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onSetInitialValue(final T pItem, final float pValue);
-	protected abstract void onSetValue(final T pItem, final float pPercentageDone, final float pValue);
+    protected abstract void onSetInitialValue(final T pItem, final float pValue);
 
-	@Override
-	protected void onManagedInitialize(final T pItem) {
-		this.onSetInitialValue(pItem, this.mFromValue);
-	}
+    protected abstract void onSetValue(final T pItem, final float pPercentageDone, final float pValue);
 
-	@Override
-	protected void onManagedUpdate(final float pSecondsElapsed, final T pItem) {
-		final float percentageDone = this.mEaseFunction.getPercentage(this.getSecondsElapsed(), this.mDuration);
+    @Override
+    protected void onManagedInitialize(final T pItem) {
+        this.onSetInitialValue(pItem, this.mFromValue);
+    }
 
-		this.onSetValue(pItem, percentageDone, this.mFromValue + percentageDone * this.mValueSpan);
-	}
+    @Override
+    protected void onManagedUpdate(final float pSecondsElapsed, final T pItem) {
+        final float percentageDone = this.mEaseFunction.getPercentage(this.getSecondsElapsed(), this.mDuration);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+        this.onSetValue(pItem, percentageDone, this.mFromValue + percentageDone * this.mValueSpan);
+    }
 
-	public void reset(final float pDuration, final float pFromValue, final float pToValue) {
-		super.reset();
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-		this.mDuration = pDuration;
-		this.mFromValue = pFromValue;
-		this.mValueSpan = pToValue - pFromValue;
-	}
+    public void reset(final float pDuration, final float pFromValue, final float pToValue) {
+        super.reset();
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+        this.mDuration = pDuration;
+        this.mFromValue = pFromValue;
+        this.mValueSpan = pToValue - pFromValue;
+    }
+
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

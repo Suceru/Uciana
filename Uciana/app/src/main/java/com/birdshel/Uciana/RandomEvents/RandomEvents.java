@@ -6,6 +6,7 @@ import com.birdshel.Uciana.GameSettings;
 import com.birdshel.Uciana.GameSettingsEnum;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.StarSystems.GalaxySize;
+
 import java.util.ArrayList;
 import java.util.List;
 

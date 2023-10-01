@@ -8,47 +8,47 @@ package org.andengine.engine.options;
  * @since 13:01:40 - 02.07.2010
  */
 public class RenderOptions {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private boolean mDithering;
+    private boolean mDithering;
 
-	private ConfigChooserOptions mConfigChooserOptions = new ConfigChooserOptions();
+    private ConfigChooserOptions mConfigChooserOptions = new ConfigChooserOptions();
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public boolean isDithering() {
-		return this.mDithering;
-	}
+    public boolean isDithering() {
+        return this.mDithering;
+    }
 
-	public void setDithering(final boolean pDithering) {
-		this.mDithering = pDithering;
-	}
+    public void setDithering(final boolean pDithering) {
+        this.mDithering = pDithering;
+    }
 
-	public ConfigChooserOptions getConfigChooserOptions() {
-		return this.mConfigChooserOptions;
-	}
+    public ConfigChooserOptions getConfigChooserOptions() {
+        return this.mConfigChooserOptions;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

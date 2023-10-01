@@ -1,9 +1,11 @@
 package com.birdshel.Uciana.Technology;
 
 import android.util.SparseIntArray;
+
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Players.EmpireType;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

@@ -3,6 +3,7 @@ package com.birdshel.Uciana;
 import android.os.AsyncTask;
 import android.os.Vibrator;
 import android.util.SparseArray;
+
 import com.birdshel.Uciana.AI.AIAttack;
 import com.birdshel.Uciana.AI.AscendedAttack;
 import com.birdshel.Uciana.AI.MonsterAttack;
@@ -91,14 +92,7 @@ import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.Technology.TechID;
 import com.birdshel.Uciana.Utility.Log;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Stack;
+
 import org.andengine.engine.Engine;
 import org.andengine.engine.camera.Camera;
 import org.andengine.entity.scene.Scene;
@@ -108,6 +102,15 @@ import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlas;
 import org.andengine.opengl.texture.atlas.bitmap.BitmapTextureAtlasTextureRegionFactory;
 import org.andengine.opengl.texture.region.TextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

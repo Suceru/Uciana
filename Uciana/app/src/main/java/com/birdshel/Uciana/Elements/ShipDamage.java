@@ -2,6 +2,7 @@ package com.birdshel.Uciana.Elements;
 
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
+
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.SequenceEntityModifier;

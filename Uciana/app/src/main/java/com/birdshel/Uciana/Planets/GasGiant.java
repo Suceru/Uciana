@@ -1,12 +1,12 @@
 package com.birdshel.Uciana.Planets;
 
 import com.birdshel.Uciana.Math.Functions;
-import com.birdshel.Uciana.Planets.SystemObject;
 import com.birdshel.Uciana.Scenes.ExtendedScene;
 import com.birdshel.Uciana.Scenes.FleetsScene;
 import com.birdshel.Uciana.Scenes.GalaxyScene;
 import com.birdshel.Uciana.Scenes.PlanetScene;
 import com.birdshel.Uciana.Scenes.SystemScene;
+
 import java.util.List;
 
 /* compiled from: MyApplication */

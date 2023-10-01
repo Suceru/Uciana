@@ -12,23 +12,25 @@ import com.birdshel.Uciana.Scenes.ExtendedScene;
 import com.birdshel.Uciana.Scenes.GalaxyScene;
 import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.ShipType;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.IEntity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.ScaleAtModifier;
 import org.andengine.entity.particle.BatchedSpriteParticleSystem;
 import org.andengine.entity.particle.emitter.RectangleParticleEmitter;
+import org.andengine.entity.particle.initializer.ExpireParticleInitializer;
 import org.andengine.entity.particle.initializer.ScaleParticleInitializer;
 import org.andengine.entity.particle.initializer.VelocityParticleInitializer;
 import org.andengine.entity.particle.modifier.AlphaParticleModifier;
-import org.andengine.entity.particle.initializer.ExpireParticleInitializer;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.sprite.UncoloredSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

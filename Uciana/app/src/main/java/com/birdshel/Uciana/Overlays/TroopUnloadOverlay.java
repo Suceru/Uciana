@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Overlays;
 
 import androidx.constraintlayout.core.motion.utils.TypedValues;
+
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
@@ -18,6 +19,7 @@ import com.birdshel.Uciana.Ships.ShipComponents.ShipComponent;
 import com.birdshel.Uciana.Ships.ShipComponents.ShipComponentID;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.StarSystems.Nebulas;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;

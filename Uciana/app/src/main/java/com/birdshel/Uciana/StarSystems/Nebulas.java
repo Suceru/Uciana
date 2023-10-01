@@ -3,14 +3,16 @@ package com.birdshel.Uciana.StarSystems;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Math.Point;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+
 import org.andengine.engine.camera.Camera;
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.util.GLState;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

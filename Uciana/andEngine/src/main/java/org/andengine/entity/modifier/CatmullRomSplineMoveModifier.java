@@ -9,83 +9,83 @@ import org.andengine.util.modifier.ease.IEaseFunction;
  * @since 11:51:22 - 21.03.2012
  */
 public class CatmullRomSplineMoveModifier extends CardinalSplineMoveModifier {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig) {
-		super(pDuration, pCatmullRomMoveModifierConfig);
-	}
+    public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig) {
+        super(pDuration, pCatmullRomMoveModifierConfig);
+    }
 
-	public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig, final IEaseFunction pEaseFunction) {
-		super(pDuration, pCatmullRomMoveModifierConfig, pEaseFunction);
-	}
+    public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig, final IEaseFunction pEaseFunction) {
+        super(pDuration, pCatmullRomMoveModifierConfig, pEaseFunction);
+    }
 
-	public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig, final IEntityModifierListener pEntityModifierListener) {
-		super(pDuration, pCatmullRomMoveModifierConfig, pEntityModifierListener);
-	}
+    public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig, final IEntityModifierListener pEntityModifierListener) {
+        super(pDuration, pCatmullRomMoveModifierConfig, pEntityModifierListener);
+    }
 
-	public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig, final IEntityModifierListener pEntityModifierListener, final IEaseFunction pEaseFunction) {
-		super(pDuration, pCatmullRomMoveModifierConfig, pEntityModifierListener, pEaseFunction);
-	}
+    public CatmullRomSplineMoveModifier(final float pDuration, final CatmullRomMoveModifierConfig pCatmullRomMoveModifierConfig, final IEntityModifierListener pEntityModifierListener, final IEaseFunction pEaseFunction) {
+        super(pDuration, pCatmullRomMoveModifierConfig, pEntityModifierListener, pEaseFunction);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-	public static class CatmullRomMoveModifierConfig extends CardinalSplineMoveModifierConfig {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public static class CatmullRomMoveModifierConfig extends CardinalSplineMoveModifierConfig {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		private static final int CARDINALSPLINE_CATMULLROM_TENSION = 0;
+        private static final int CARDINALSPLINE_CATMULLROM_TENSION = 0;
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
+        // ===========================================================
+        // Fields
+        // ===========================================================
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
+        // ===========================================================
+        // Constructors
+        // ===========================================================
 
-		public CatmullRomMoveModifierConfig(final int pControlPointCount) {
-			super(pControlPointCount, CatmullRomMoveModifierConfig.CARDINALSPLINE_CATMULLROM_TENSION);
-		}
+        public CatmullRomMoveModifierConfig(final int pControlPointCount) {
+            super(pControlPointCount, CatmullRomMoveModifierConfig.CARDINALSPLINE_CATMULLROM_TENSION);
+        }
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
+        // ===========================================================
+        // Getter & Setter
+        // ===========================================================
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
+        // ===========================================================
+        // Methods for/from SuperClass/Interfaces
+        // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        // ===========================================================
+        // Methods
+        // ===========================================================
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
-	}
+        // ===========================================================
+        // Inner and Anonymous Classes
+        // ===========================================================
+    }
 }

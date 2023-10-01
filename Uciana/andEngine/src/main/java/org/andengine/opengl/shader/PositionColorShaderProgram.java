@@ -1,11 +1,11 @@
 package org.andengine.opengl.shader;
 
+import android.opengl.GLES20;
+
 import org.andengine.opengl.shader.constants.ShaderProgramConstants;
 import org.andengine.opengl.shader.exception.ShaderProgramLinkException;
 import org.andengine.opengl.util.GLState;
 import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
-
-import android.opengl.GLES20;
 
 /**
  * (c) 2011 Zynga Inc.
@@ -14,89 +14,89 @@ import android.opengl.GLES20;
  * @since 13:56:44 - 25.08.2011
  */
 public class PositionColorShaderProgram extends ShaderProgram {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static PositionColorShaderProgram INSTANCE;
+    private static PositionColorShaderProgram INSTANCE;
 
-	public static final String VERTEXSHADER =
-			"uniform mat4 " + ShaderProgramConstants.UNIFORM_MODELVIEWPROJECTIONMATRIX + ";\n" +
-			"attribute vec4 " + ShaderProgramConstants.ATTRIBUTE_POSITION + ";\n" +
-			"attribute vec4 " + ShaderProgramConstants.ATTRIBUTE_COLOR + ";\n" +
-			"varying vec4 " + ShaderProgramConstants.VARYING_COLOR + ";\n" +
-			"void main() {\n" +
-			"	gl_Position = " + ShaderProgramConstants.UNIFORM_MODELVIEWPROJECTIONMATRIX + " * " + ShaderProgramConstants.ATTRIBUTE_POSITION + ";\n" +
-			"	" + ShaderProgramConstants.VARYING_COLOR + " = " + ShaderProgramConstants.ATTRIBUTE_COLOR + ";\n" +
-			"}";
+    public static final String VERTEXSHADER =
+            "uniform mat4 " + ShaderProgramConstants.UNIFORM_MODELVIEWPROJECTIONMATRIX + ";\n" +
+                    "attribute vec4 " + ShaderProgramConstants.ATTRIBUTE_POSITION + ";\n" +
+                    "attribute vec4 " + ShaderProgramConstants.ATTRIBUTE_COLOR + ";\n" +
+                    "varying vec4 " + ShaderProgramConstants.VARYING_COLOR + ";\n" +
+                    "void main() {\n" +
+                    "	gl_Position = " + ShaderProgramConstants.UNIFORM_MODELVIEWPROJECTIONMATRIX + " * " + ShaderProgramConstants.ATTRIBUTE_POSITION + ";\n" +
+                    "	" + ShaderProgramConstants.VARYING_COLOR + " = " + ShaderProgramConstants.ATTRIBUTE_COLOR + ";\n" +
+                    "}";
 
-	public static final String FRAGMENTSHADER =
-			"precision lowp float;\n" +
-			"varying vec4 " + ShaderProgramConstants.VARYING_COLOR + ";\n" +
-			"void main() {\n" +
-			"	gl_FragColor = " + ShaderProgramConstants.VARYING_COLOR + ";\n" +
-			"}";
+    public static final String FRAGMENTSHADER =
+            "precision lowp float;\n" +
+                    "varying vec4 " + ShaderProgramConstants.VARYING_COLOR + ";\n" +
+                    "void main() {\n" +
+                    "	gl_FragColor = " + ShaderProgramConstants.VARYING_COLOR + ";\n" +
+                    "}";
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	public static int sUniformModelViewPositionMatrixLocation = ShaderProgramConstants.LOCATION_INVALID;
+    public static int sUniformModelViewPositionMatrixLocation = ShaderProgramConstants.LOCATION_INVALID;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private PositionColorShaderProgram() {
-		super(PositionColorShaderProgram.VERTEXSHADER, PositionColorShaderProgram.FRAGMENTSHADER);
-	}
+    private PositionColorShaderProgram() {
+        super(PositionColorShaderProgram.VERTEXSHADER, PositionColorShaderProgram.FRAGMENTSHADER);
+    }
 
-	public static PositionColorShaderProgram getInstance() {
-		if (PositionColorShaderProgram.INSTANCE == null) {
-			PositionColorShaderProgram.INSTANCE = new PositionColorShaderProgram();
-		}
-		return PositionColorShaderProgram.INSTANCE;
-	}
+    public static PositionColorShaderProgram getInstance() {
+        if (PositionColorShaderProgram.INSTANCE == null) {
+            PositionColorShaderProgram.INSTANCE = new PositionColorShaderProgram();
+        }
+        return PositionColorShaderProgram.INSTANCE;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void link(final GLState pGLState) throws ShaderProgramLinkException {
-		GLES20.glBindAttribLocation(this.mProgramID, ShaderProgramConstants.ATTRIBUTE_POSITION_LOCATION, ShaderProgramConstants.ATTRIBUTE_POSITION);
-		GLES20.glBindAttribLocation(this.mProgramID, ShaderProgramConstants.ATTRIBUTE_COLOR_LOCATION, ShaderProgramConstants.ATTRIBUTE_COLOR);
+    @Override
+    protected void link(final GLState pGLState) throws ShaderProgramLinkException {
+        GLES20.glBindAttribLocation(this.mProgramID, ShaderProgramConstants.ATTRIBUTE_POSITION_LOCATION, ShaderProgramConstants.ATTRIBUTE_POSITION);
+        GLES20.glBindAttribLocation(this.mProgramID, ShaderProgramConstants.ATTRIBUTE_COLOR_LOCATION, ShaderProgramConstants.ATTRIBUTE_COLOR);
 
-		super.link(pGLState);
+        super.link(pGLState);
 
-		PositionColorShaderProgram.sUniformModelViewPositionMatrixLocation = this.getUniformLocation(ShaderProgramConstants.UNIFORM_MODELVIEWPROJECTIONMATRIX);
-	}
+        PositionColorShaderProgram.sUniformModelViewPositionMatrixLocation = this.getUniformLocation(ShaderProgramConstants.UNIFORM_MODELVIEWPROJECTIONMATRIX);
+    }
 
-	@Override
-	public void bind(final GLState pGLState, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
-		GLES20.glDisableVertexAttribArray(ShaderProgramConstants.ATTRIBUTE_TEXTURECOORDINATES_LOCATION);
+    @Override
+    public void bind(final GLState pGLState, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
+        GLES20.glDisableVertexAttribArray(ShaderProgramConstants.ATTRIBUTE_TEXTURECOORDINATES_LOCATION);
 
-		super.bind(pGLState, pVertexBufferObjectAttributes);
+        super.bind(pGLState, pVertexBufferObjectAttributes);
 
-		GLES20.glUniformMatrix4fv(PositionColorShaderProgram.sUniformModelViewPositionMatrixLocation, 1, false, pGLState.getModelViewProjectionGLMatrix(), 0);
-	}
+        GLES20.glUniformMatrix4fv(PositionColorShaderProgram.sUniformModelViewPositionMatrixLocation, 1, false, pGLState.getModelViewProjectionGLMatrix(), 0);
+    }
 
-	@Override
-	public void unbind(final GLState pGLState) {
-		GLES20.glEnableVertexAttribArray(ShaderProgramConstants.ATTRIBUTE_TEXTURECOORDINATES_LOCATION);
+    @Override
+    public void unbind(final GLState pGLState) {
+        GLES20.glEnableVertexAttribArray(ShaderProgramConstants.ATTRIBUTE_TEXTURECOORDINATES_LOCATION);
 
-		super.unbind(pGLState);
-	}
+        super.unbind(pGLState);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

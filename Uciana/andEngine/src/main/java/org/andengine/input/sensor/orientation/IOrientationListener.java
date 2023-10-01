@@ -8,14 +8,15 @@ package org.andengine.input.sensor.orientation;
  * @since 11:30:42 - 25.05.2010
  */
 public interface IOrientationListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onOrientationAccuracyChanged(final OrientationData pOrientationData);
-	public void onOrientationChanged(final OrientationData pOrientationData);
+    public void onOrientationAccuracyChanged(final OrientationData pOrientationData);
+
+    public void onOrientationChanged(final OrientationData pOrientationData);
 }

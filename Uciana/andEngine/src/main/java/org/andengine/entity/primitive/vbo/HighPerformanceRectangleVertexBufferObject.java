@@ -13,71 +13,71 @@ import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
  * @since 18:48:14 - 28.03.2012
  */
 public class HighPerformanceRectangleVertexBufferObject extends HighPerformanceVertexBufferObject implements IRectangleVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public HighPerformanceRectangleVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final boolean pAutoDispose, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
-		super(pVertexBufferObjectManager, pCapacity, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
-	}
+    public HighPerformanceRectangleVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final boolean pAutoDispose, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
+        super(pVertexBufferObjectManager, pCapacity, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void onUpdateColor(final Rectangle pRectangle) {
-		final float[] bufferData = this.mBufferData;
+    @Override
+    public void onUpdateColor(final Rectangle pRectangle) {
+        final float[] bufferData = this.mBufferData;
 
-		final float packedColor = pRectangle.getColor().getABGRPackedFloat();
+        final float packedColor = pRectangle.getColor().getABGRPackedFloat();
 
-		bufferData[(0 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
-		bufferData[(1 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
-		bufferData[(2 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
-		bufferData[(3 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
+        bufferData[(0 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
+        bufferData[(1 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
+        bufferData[(2 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
+        bufferData[(3 * Rectangle.VERTEX_SIZE) + Rectangle.COLOR_INDEX] = packedColor;
 
-		this.setDirtyOnHardware();
-	}
+        this.setDirtyOnHardware();
+    }
 
-	@Override
-	public void onUpdateVertices(final Rectangle pRectangle) {
-		final float[] bufferData = this.mBufferData;
+    @Override
+    public void onUpdateVertices(final Rectangle pRectangle) {
+        final float[] bufferData = this.mBufferData;
 
-		final float width = pRectangle.getWidth(); // TODO Optimize with field access?
-		final float height = pRectangle.getHeight(); // TODO Optimize with field access?
+        final float width = pRectangle.getWidth(); // TODO Optimize with field access?
+        final float height = pRectangle.getHeight(); // TODO Optimize with field access?
 
-		bufferData[(0 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = 0;
-		bufferData[(0 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = 0;
+        bufferData[(0 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = 0;
+        bufferData[(0 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = 0;
 
-		bufferData[(1 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = 0;
-		bufferData[(1 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = height;
+        bufferData[(1 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = 0;
+        bufferData[(1 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = height;
 
-		bufferData[(2 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = width;
-		bufferData[(2 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = 0;
+        bufferData[(2 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = width;
+        bufferData[(2 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = 0;
 
-		bufferData[(3 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = width;
-		bufferData[(3 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = height;
+        bufferData[(3 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_X] = width;
+        bufferData[(3 * Rectangle.VERTEX_SIZE) + Rectangle.VERTEX_INDEX_Y] = height;
 
-		this.setDirtyOnHardware();
-	}
+        this.setDirtyOnHardware();
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

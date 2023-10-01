@@ -9,49 +9,49 @@ import org.xml.sax.SAXException;
  * @since 18:03:45 - 03.06.2012
  */
 public class AnimationPackParseException extends SAXException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 1136010869754861664L;
+    private static final long serialVersionUID = 1136010869754861664L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AnimationPackParseException() {
-		super();
-	}
+    public AnimationPackParseException() {
+        super();
+    }
 
-	public AnimationPackParseException(final String pDetailMessage) {
-		super(pDetailMessage);
-	}
+    public AnimationPackParseException(final String pDetailMessage) {
+        super(pDetailMessage);
+    }
 
-	public AnimationPackParseException(final Exception pException) {
-		super(pException);
-	}
+    public AnimationPackParseException(final Exception pException) {
+        super(pException);
+    }
 
-	public AnimationPackParseException(final String pMessage, final Exception pException) {
-		super(pMessage, pException);
-	}
+    public AnimationPackParseException(final String pMessage, final Exception pException) {
+        super(pMessage, pException);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

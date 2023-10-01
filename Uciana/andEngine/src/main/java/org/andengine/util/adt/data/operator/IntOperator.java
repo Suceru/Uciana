@@ -7,74 +7,74 @@ package org.andengine.util.adt.data.operator;
  * @since 17:21:27 - 10.10.2011
  */
 public enum IntOperator {
-	// ===========================================================
-	// Elements
-	// ===========================================================
+    // ===========================================================
+    // Elements
+    // ===========================================================
 
-	EQUALS() {
-		@Override
-		public boolean check(final int pIntA, final int pIntB) {
-			return pIntA == pIntB;
-		}
-	},
-	NOT_EQUALS() {
-		@Override
-		public boolean check(final int pIntA, final int pIntB) {
-			return pIntA != pIntB;
-		}
-	},
-	LESS_THAN() {
-		@Override
-		public boolean check(final int pIntA, final int pIntB) {
-			return pIntA < pIntB;
-		}
-	},
-	LESS_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final int pIntA, final int pIntB) {
-			return pIntA <= pIntB;
-		}
-	},
-	MORE_THAN() {
-		@Override
-		public boolean check(final int pIntA, final int pIntB) {
-			return pIntA > pIntB;
-		}
-	},
-	MORE_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final int pIntA, final int pIntB) {
-			return pIntA >= pIntB;
-		}
-	};
+    EQUALS() {
+        @Override
+        public boolean check(final int pIntA, final int pIntB) {
+            return pIntA == pIntB;
+        }
+    },
+    NOT_EQUALS() {
+        @Override
+        public boolean check(final int pIntA, final int pIntB) {
+            return pIntA != pIntB;
+        }
+    },
+    LESS_THAN() {
+        @Override
+        public boolean check(final int pIntA, final int pIntB) {
+            return pIntA < pIntB;
+        }
+    },
+    LESS_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final int pIntA, final int pIntB) {
+            return pIntA <= pIntB;
+        }
+    },
+    MORE_THAN() {
+        @Override
+        public boolean check(final int pIntA, final int pIntB) {
+            return pIntA > pIntB;
+        }
+    },
+    MORE_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final int pIntA, final int pIntB) {
+            return pIntA >= pIntB;
+        }
+    };
 
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public abstract boolean check(final int pIntA, final int pIntB);
+    public abstract boolean check(final int pIntA, final int pIntB);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

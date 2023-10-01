@@ -22,14 +22,16 @@ import com.birdshel.Uciana.Technology.TechID;
 import com.birdshel.Uciana.Technology.TechProgressionType;
 import com.birdshel.Uciana.Technology.TechType;
 import com.birdshel.Uciana.Technology.Technology;
-import java.util.HashMap;
-import java.util.Map;
+
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

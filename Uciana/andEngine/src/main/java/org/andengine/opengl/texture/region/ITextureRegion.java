@@ -10,46 +10,57 @@ import org.andengine.util.modifier.IModifier.DeepCopyNotSupportedException;
  * @since 20:07:17 - 07.08.2011
  */
 public interface ITextureRegion {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public float getTextureX();
-	public float getTextureY();
+    public float getTextureX();
 
-	public void setTextureX(final float pTextureX);
-	public void setTextureY(final float pTextureY);
-	public void setTexturePosition(final float pTextureX, final float pTextureY);
+    public float getTextureY();
 
-	/**
-	 * Note: Takes {@link #getScale()} into account!
-	 */
-	public float getWidth();
-	/**
-	 * Note: Takes {@link #getScale()} into account!
-	 */
-	public float getHeight();
+    public void setTextureX(final float pTextureX);
 
-	public void setTextureWidth(final float pTextureWidth);
-	public void setTextureHeight(final float pTextureHeight);
-	public void setTextureSize(final float pTextureWidth, final float pTextureHeight);
+    public void setTextureY(final float pTextureY);
 
-	public void set(final float pTextureX, final float pTextureY, final float pTextureWidth, final float pTextureHeight);
+    public void setTexturePosition(final float pTextureX, final float pTextureY);
 
-	public float getU();
-	public float getU2();
-	public float getV();
-	public float getV2();
+    /**
+     * Note: Takes {@link #getScale()} into account!
+     */
+    public float getWidth();
 
-	public boolean isScaled();
-	public float getScale();
-	public boolean isRotated();
+    /**
+     * Note: Takes {@link #getScale()} into account!
+     */
+    public float getHeight();
 
-	public ITexture getTexture();
+    public void setTextureWidth(final float pTextureWidth);
 
-	public ITextureRegion deepCopy() throws DeepCopyNotSupportedException;
+    public void setTextureHeight(final float pTextureHeight);
+
+    public void setTextureSize(final float pTextureWidth, final float pTextureHeight);
+
+    public void set(final float pTextureX, final float pTextureY, final float pTextureWidth, final float pTextureHeight);
+
+    public float getU();
+
+    public float getU2();
+
+    public float getV();
+
+    public float getV2();
+
+    public boolean isScaled();
+
+    public float getScale();
+
+    public boolean isRotated();
+
+    public ITexture getTexture();
+
+    public ITextureRegion deepCopy() throws DeepCopyNotSupportedException;
 }

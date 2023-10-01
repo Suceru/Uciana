@@ -7,76 +7,76 @@ package org.andengine.opengl.view;
  * @since 15:34:13 - 12.05.2012
  */
 public abstract class ConfigChooserMatcher {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	public static final ConfigChooserMatcher STRICT = new ConfigChooserMatcher() {
-		@Override
-		public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
-			if (pDepthSize == pRequestedDepthSize && pStencilSize == pRequestedStencilSize) {
-				if (pRedSize == pRequestedRedSize && pGreenSize == pRequestedGreenSize && pBlueSize == pRequestedBlueSize && pAlphaSize == pRequestedAlphaSize) {
-					return true;
-				}
-			}
-			return false;
-		}
-	};
+    public static final ConfigChooserMatcher STRICT = new ConfigChooserMatcher() {
+        @Override
+        public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
+            if (pDepthSize == pRequestedDepthSize && pStencilSize == pRequestedStencilSize) {
+                if (pRedSize == pRequestedRedSize && pGreenSize == pRequestedGreenSize && pBlueSize == pRequestedBlueSize && pAlphaSize == pRequestedAlphaSize) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
 
-	public static final ConfigChooserMatcher LOOSE_STENCIL = new ConfigChooserMatcher() {
-		@Override
-		public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
-			if (pDepthSize == pRequestedDepthSize && pStencilSize >= pRequestedStencilSize) {
-				if (pRedSize == pRequestedRedSize && pGreenSize == pRequestedGreenSize && pBlueSize == pRequestedBlueSize && pAlphaSize == pRequestedAlphaSize) {
-					return true;
-				}
-			}
-			return false;
-		}
-	};
+    public static final ConfigChooserMatcher LOOSE_STENCIL = new ConfigChooserMatcher() {
+        @Override
+        public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
+            if (pDepthSize == pRequestedDepthSize && pStencilSize >= pRequestedStencilSize) {
+                if (pRedSize == pRequestedRedSize && pGreenSize == pRequestedGreenSize && pBlueSize == pRequestedBlueSize && pAlphaSize == pRequestedAlphaSize) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
 
-	public static final ConfigChooserMatcher LOOSE_DEPTH_AND_STENCIL = new ConfigChooserMatcher() {
-		@Override
-		public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
-			if (pDepthSize >= pRequestedDepthSize && pStencilSize >= pRequestedStencilSize) {
-				if (pRedSize == pRequestedRedSize && pGreenSize == pRequestedGreenSize && pBlueSize == pRequestedBlueSize && pAlphaSize == pRequestedAlphaSize) {
-					return true;
-				}
-			}
-			return false;
-		}
-	};
+    public static final ConfigChooserMatcher LOOSE_DEPTH_AND_STENCIL = new ConfigChooserMatcher() {
+        @Override
+        public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
+            if (pDepthSize >= pRequestedDepthSize && pStencilSize >= pRequestedStencilSize) {
+                if (pRedSize == pRequestedRedSize && pGreenSize == pRequestedGreenSize && pBlueSize == pRequestedBlueSize && pAlphaSize == pRequestedAlphaSize) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    };
 
-	public static final ConfigChooserMatcher ANY = new ConfigChooserMatcher() {
-		@Override
-		public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
-			return true;
-		}
-	};
+    public static final ConfigChooserMatcher ANY = new ConfigChooserMatcher() {
+        @Override
+        public boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize) {
+            return true;
+        }
+    };
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public abstract boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize);
+    public abstract boolean matches(final int pRequestedRedSize, final int pRedSize, final int pRequestedGreenSize, final int pGreenSize, final int pRequestedBlueSize, final int pBlueSize, final int pRequestedAlphaSize, final int pAlphaSize, final int pRequestedDepthSize, final int pDepthSize, final int pRequestedStencilSize, final int pStencilSize);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

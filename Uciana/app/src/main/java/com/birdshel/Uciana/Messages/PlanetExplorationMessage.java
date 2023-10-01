@@ -7,7 +7,7 @@ import com.birdshel.Uciana.Planets.Planet;
 import com.birdshel.Uciana.Planets.ResourceID;
 import com.birdshel.Uciana.Planets.Resources;
 import com.birdshel.Uciana.R;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
@@ -16,6 +16,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

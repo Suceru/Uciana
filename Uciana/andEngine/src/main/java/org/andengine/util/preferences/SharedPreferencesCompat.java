@@ -1,9 +1,9 @@
 package org.andengine.util.preferences;
 
+import android.content.SharedPreferences.Editor;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import android.content.SharedPreferences.Editor;
 
 /**
  * (c) 2013 Nicolas Gramlich
@@ -12,59 +12,59 @@ import android.content.SharedPreferences.Editor;
  * @since 20:41:56 - 07.04.2013
  */
 public class SharedPreferencesCompat {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final Method WORKAROUND_APPLY_METHOD;
+    private static final Method WORKAROUND_APPLY_METHOD;
 
-	static {
-		Method applyMethod;
-		try {
-			final Class<Editor> cls = Editor.class;
-			applyMethod = cls.getMethod("apply");
-		} catch (final NoSuchMethodException unused) {
-			applyMethod = null;
-		}
+    static {
+        Method applyMethod;
+        try {
+            final Class<Editor> cls = Editor.class;
+            applyMethod = cls.getMethod("apply");
+        } catch (final NoSuchMethodException unused) {
+            applyMethod = null;
+        }
 
-		WORKAROUND_APPLY_METHOD = applyMethod;
-	}
+        WORKAROUND_APPLY_METHOD = applyMethod;
+    }
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static void apply(final Editor pEditor) {
-		if (SharedPreferencesCompat.WORKAROUND_APPLY_METHOD != null) {
-			try {
-				SharedPreferencesCompat.WORKAROUND_APPLY_METHOD.invoke(pEditor);
-				return;
-			} catch (final InvocationTargetException e) {
-				/* Nothing. */
-			} catch (final IllegalAccessException e) {
-				/* Nothing. */
-			}
-		}
-		pEditor.commit();
-	}
+    public static void apply(final Editor pEditor) {
+        if (SharedPreferencesCompat.WORKAROUND_APPLY_METHOD != null) {
+            try {
+                SharedPreferencesCompat.WORKAROUND_APPLY_METHOD.invoke(pEditor);
+                return;
+            } catch (final InvocationTargetException e) {
+                /* Nothing. */
+            } catch (final IllegalAccessException e) {
+                /* Nothing. */
+            }
+        }
+        pEditor.commit();
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

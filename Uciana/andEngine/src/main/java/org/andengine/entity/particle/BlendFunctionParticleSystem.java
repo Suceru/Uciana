@@ -14,87 +14,87 @@ import org.andengine.opengl.util.GLState;
  * @since 11:34:32 - 10.05.2012
  */
 public class BlendFunctionParticleSystem<T extends IEntity> extends ParticleSystem<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	protected boolean mBlendingEnabled = true;
-	protected int mBlendFunctionSource = IShape.BLENDFUNCTION_SOURCE_DEFAULT;
-	protected int mBlendFunctionDestination = IShape.BLENDFUNCTION_DESTINATION_DEFAULT;
+    protected boolean mBlendingEnabled = true;
+    protected int mBlendFunctionSource = IShape.BLENDFUNCTION_SOURCE_DEFAULT;
+    protected int mBlendFunctionDestination = IShape.BLENDFUNCTION_DESTINATION_DEFAULT;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BlendFunctionParticleSystem(final IEntityFactory<T> pEntityFactory, final IParticleEmitter pParticleEmitter, final float pRateMinimum, final float pRateMaximum, final int pParticlesMaximum) {
-		super(pEntityFactory, pParticleEmitter, pRateMinimum, pRateMaximum, pParticlesMaximum);
-	}
+    public BlendFunctionParticleSystem(final IEntityFactory<T> pEntityFactory, final IParticleEmitter pParticleEmitter, final float pRateMinimum, final float pRateMaximum, final int pParticlesMaximum) {
+        super(pEntityFactory, pParticleEmitter, pRateMinimum, pRateMaximum, pParticlesMaximum);
+    }
 
-	public BlendFunctionParticleSystem(final float pX, final float pY, final IEntityFactory<T> pEntityFactory, final IParticleEmitter pParticleEmitter, final float pRateMinimum, final float pRateMaximum, final int pParticlesMaximum) {
-		super(pX, pY, pEntityFactory, pParticleEmitter, pRateMinimum, pRateMaximum, pParticlesMaximum);
-	}
+    public BlendFunctionParticleSystem(final float pX, final float pY, final IEntityFactory<T> pEntityFactory, final IParticleEmitter pParticleEmitter, final float pRateMinimum, final float pRateMaximum, final int pParticlesMaximum) {
+        super(pX, pY, pEntityFactory, pParticleEmitter, pRateMinimum, pRateMaximum, pParticlesMaximum);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public boolean isBlendingEnabled() {
-		return this.mBlendingEnabled;
-	}
+    public boolean isBlendingEnabled() {
+        return this.mBlendingEnabled;
+    }
 
-	public void setBlendingEnabled(final boolean pBlendingEnabled) {
-		this.mBlendingEnabled = pBlendingEnabled;
-	}
+    public void setBlendingEnabled(final boolean pBlendingEnabled) {
+        this.mBlendingEnabled = pBlendingEnabled;
+    }
 
-	public int getBlendFunctionSource() {
-		return this.mBlendFunctionSource;
-	}
+    public int getBlendFunctionSource() {
+        return this.mBlendFunctionSource;
+    }
 
-	public void setBlendFunctionSource(final int pBlendFunctionSource) {
-		this.mBlendFunctionSource = pBlendFunctionSource;
-	}
+    public void setBlendFunctionSource(final int pBlendFunctionSource) {
+        this.mBlendFunctionSource = pBlendFunctionSource;
+    }
 
-	public int getBlendFunctionDestination() {
-		return this.mBlendFunctionDestination;
-	}
+    public int getBlendFunctionDestination() {
+        return this.mBlendFunctionDestination;
+    }
 
-	public void setBlendFunctionDestination(final int pBlendFunctionDestination) {
-		this.mBlendFunctionDestination = pBlendFunctionDestination;
-	}
+    public void setBlendFunctionDestination(final int pBlendFunctionDestination) {
+        this.mBlendFunctionDestination = pBlendFunctionDestination;
+    }
 
-	public void setBlendFunction(final int pBlendFunctionSource, final int pBlendFunctionDestination) {
-		this.mBlendFunctionSource = pBlendFunctionSource;
-		this.mBlendFunctionDestination = pBlendFunctionDestination;
-	}
+    public void setBlendFunction(final int pBlendFunctionSource, final int pBlendFunctionDestination) {
+        this.mBlendFunctionSource = pBlendFunctionSource;
+        this.mBlendFunctionDestination = pBlendFunctionDestination;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void preDraw(final GLState pGLState, final Camera pCamera) {
-		if (this.mBlendingEnabled) {
-			pGLState.enableBlend();
-			pGLState.blendFunction(this.mBlendFunctionSource, this.mBlendFunctionDestination);
-		}
-	}
+    @Override
+    protected void preDraw(final GLState pGLState, final Camera pCamera) {
+        if (this.mBlendingEnabled) {
+            pGLState.enableBlend();
+            pGLState.blendFunction(this.mBlendFunctionSource, this.mBlendFunctionDestination);
+        }
+    }
 
-	@Override
-	protected void postDraw(final GLState pGLState, final Camera pCamera) {
-		if (this.mBlendingEnabled) {
-			pGLState.disableBlend();
-		}
-	}
+    @Override
+    protected void postDraw(final GLState pGLState, final Camera pCamera) {
+        if (this.mBlendingEnabled) {
+            pGLState.disableBlend();
+        }
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

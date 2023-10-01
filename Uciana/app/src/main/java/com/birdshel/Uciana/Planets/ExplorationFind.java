@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Planets;
 
 import androidx.constraintlayout.core.motion.utils.TypedValues;
+
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Colonies.Outpost;
 import com.birdshel.Uciana.Game;
@@ -14,10 +15,7 @@ import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechID;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
@@ -25,6 +23,11 @@ import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeSet;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

@@ -1,12 +1,16 @@
 package com.birdshel.Uciana.Resources;
 
 import android.os.Environment;
+
 import androidx.core.content.ContextCompat;
+
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Scenes.BattleScene;
-import java.io.File;
+
 import org.andengine.audio.music.Music;
 import org.andengine.audio.music.MusicFactory;
+
+import java.io.File;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

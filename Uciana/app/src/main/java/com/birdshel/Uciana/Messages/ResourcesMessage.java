@@ -9,8 +9,7 @@ import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Ships.ShipComponents.ShipComponentID;
 import com.birdshel.Uciana.Ships.ShipComponents.ShipComponents;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;
@@ -18,6 +17,9 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

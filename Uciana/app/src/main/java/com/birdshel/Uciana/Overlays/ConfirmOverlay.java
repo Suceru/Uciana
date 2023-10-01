@@ -18,14 +18,16 @@ import com.birdshel.Uciana.Scenes.PlanetScene;
 import com.birdshel.Uciana.Scenes.ProductionScene;
 import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.Ships.ShipComponents.ShipComponentID;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

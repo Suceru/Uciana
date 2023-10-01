@@ -10,13 +10,15 @@ import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponStats;
 import com.birdshel.Uciana.Ships.ShipSprite;
 import com.birdshel.Uciana.Ships.ShipType;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

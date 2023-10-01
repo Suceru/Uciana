@@ -1,8 +1,8 @@
 package com.birdshel.Uciana.Planets;
 
 import com.birdshel.Uciana.Math.Functions;
-import com.birdshel.Uciana.Planets.SystemObject;
 import com.birdshel.Uciana.StarSystems.StarType;
+
 import java.util.List;
 
 /* compiled from: MyApplication */

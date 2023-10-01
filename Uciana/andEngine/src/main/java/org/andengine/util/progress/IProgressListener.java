@@ -9,19 +9,19 @@ package org.andengine.util.progress;
  * @since 18:07:35 - 09.07.2009
  */
 public interface IProgressListener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	public static final int PROGRESS_MIN = 0;
-	public static final int PROGRESS_MAX = 100;
+    public static final int PROGRESS_MIN = 0;
+    public static final int PROGRESS_MAX = 100;
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	/**
-	 * @param pProgress between 0 and 100.
-	 */
-	public void onProgressChanged(final int pProgress);
+    /**
+     * @param pProgress between 0 and 100.
+     */
+    public void onProgressChanged(final int pProgress);
 }

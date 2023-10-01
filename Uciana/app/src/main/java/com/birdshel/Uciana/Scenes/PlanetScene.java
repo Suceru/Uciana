@@ -1,6 +1,7 @@
 package com.birdshel.Uciana.Scenes;
 
 import androidx.constraintlayout.core.motion.utils.TypedValues;
+
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Colonies.ManufacturingType;
@@ -51,9 +52,7 @@ import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.StarSystems.SunSprite;
 import com.birdshel.Uciana.Technology.TechID;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.MoveModifier;
@@ -69,6 +68,10 @@ import org.andengine.opengl.texture.region.TiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

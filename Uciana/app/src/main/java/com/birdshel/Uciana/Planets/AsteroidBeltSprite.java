@@ -4,14 +4,16 @@ import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Resources.GameIconEnum;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.MoveModifier;
 import org.andengine.entity.modifier.SequenceEntityModifier;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

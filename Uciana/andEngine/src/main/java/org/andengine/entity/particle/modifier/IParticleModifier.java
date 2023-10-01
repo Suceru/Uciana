@@ -12,13 +12,13 @@ import org.andengine.entity.particle.initializer.IParticleInitializer;
  * @since 20:06:05 - 14.03.2010
  */
 public interface IParticleModifier<T extends IEntity> extends IParticleInitializer<T> {
-	// ===========================================================
-	// Final Fields
-	// ===========================================================
+    // ===========================================================
+    // Final Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onUpdateParticle(final Particle<T> pParticle);
+    public void onUpdateParticle(final Particle<T> pParticle);
 }

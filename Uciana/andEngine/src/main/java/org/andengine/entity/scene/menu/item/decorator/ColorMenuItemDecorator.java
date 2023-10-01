@@ -11,62 +11,62 @@ import org.andengine.util.adt.color.Color;
  * @since 14:25:35 - 07.07.2010
  */
 public class ColorMenuItemDecorator extends BaseMenuItemDecorator {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final Color mSelectedColor;
-	private final Color mUnselectedColor;
+    private final Color mSelectedColor;
+    private final Color mUnselectedColor;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public ColorMenuItemDecorator(final IMenuItem pMenuItem, final Color pSelectedColor, final Color pUnselectedColor) {
-		super(pMenuItem);
+    public ColorMenuItemDecorator(final IMenuItem pMenuItem, final Color pSelectedColor, final Color pUnselectedColor) {
+        super(pMenuItem);
 
-		this.mSelectedColor = pSelectedColor;
-		this.mUnselectedColor = pUnselectedColor;
+        this.mSelectedColor = pSelectedColor;
+        this.mUnselectedColor = pUnselectedColor;
 
-		pMenuItem.setColor(pUnselectedColor);
-	}
+        pMenuItem.setColor(pUnselectedColor);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void onMenuItemSelected(final IMenuItem pMenuItem) {
-		pMenuItem.setColor(this.mSelectedColor);
-	}
+    @Override
+    public void onMenuItemSelected(final IMenuItem pMenuItem) {
+        pMenuItem.setColor(this.mSelectedColor);
+    }
 
-	@Override
-	public void onMenuItemUnselected(final IMenuItem pMenuItem) {
-		pMenuItem.setColor(this.mUnselectedColor);
-	}
+    @Override
+    public void onMenuItemUnselected(final IMenuItem pMenuItem) {
+        pMenuItem.setColor(this.mUnselectedColor);
+    }
 
-	@Override
-	public void onMenuItemReset(final IMenuItem pMenuItem) {
-		pMenuItem.setColor(this.mUnselectedColor);
-	}
+    @Override
+    public void onMenuItemReset(final IMenuItem pMenuItem) {
+        pMenuItem.setColor(this.mUnselectedColor);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

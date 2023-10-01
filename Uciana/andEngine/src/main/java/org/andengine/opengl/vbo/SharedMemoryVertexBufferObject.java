@@ -1,11 +1,11 @@
 package org.andengine.opengl.vbo;
 
+import org.andengine.opengl.util.BufferUtils;
+import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
+
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.concurrent.locks.ReentrantLock;
-
-import org.andengine.opengl.util.BufferUtils;
-import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
 
 /**
  * Compared to {@link ZeroMemoryVertexBufferObject}, all {@link SharedMemoryVertexBufferObject}s share a single {@link ByteBuffer} which is used by whichever {@link SharedMemoryVertexBufferObject} instance is currently buffering data,
@@ -23,98 +23,98 @@ import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
  * @since 19:22:13 - 10.02.2012
  */
 public abstract class SharedMemoryVertexBufferObject extends ZeroMemoryVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static ReentrantLock sSharedByteBufferLock = new ReentrantLock(true);
-	private static ByteBuffer sSharedByteBuffer;
+    private static ReentrantLock sSharedByteBufferLock = new ReentrantLock(true);
+    private static ByteBuffer sSharedByteBuffer;
 
-	public static int getSharedByteBufferByteCapacity() {
-		final int byteCapacity;
-		try {
-			SharedMemoryVertexBufferObject.sSharedByteBufferLock.lock();
+    public static int getSharedByteBufferByteCapacity() {
+        final int byteCapacity;
+        try {
+            SharedMemoryVertexBufferObject.sSharedByteBufferLock.lock();
 
-			final ByteBuffer sharedByteBuffer = SharedMemoryVertexBufferObject.sSharedByteBuffer;
-			if (sharedByteBuffer == null) {
-				byteCapacity = 0;
-			} else {
-				byteCapacity = sharedByteBuffer.capacity();
-			}
-		} finally {
-			SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
-		}
+            final ByteBuffer sharedByteBuffer = SharedMemoryVertexBufferObject.sSharedByteBuffer;
+            if (sharedByteBuffer == null) {
+                byteCapacity = 0;
+            } else {
+                byteCapacity = sharedByteBuffer.capacity();
+            }
+        } finally {
+            SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
+        }
 
-		return byteCapacity;
-	}
+        return byteCapacity;
+    }
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public SharedMemoryVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
-		super(pVertexBufferObjectManager, pCapacity, pDrawType, false, pVertexBufferObjectAttributes);
-	}
+    public SharedMemoryVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
+        super(pVertexBufferObjectManager, pCapacity, pDrawType, false, pVertexBufferObjectAttributes);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void dispose() {
-		super.dispose();
+    @Override
+    public void dispose() {
+        super.dispose();
 
-		try {
-			SharedMemoryVertexBufferObject.sSharedByteBufferLock.lock();
+        try {
+            SharedMemoryVertexBufferObject.sSharedByteBufferLock.lock();
 
-			if (SharedMemoryVertexBufferObject.sSharedByteBuffer != null) {
-				BufferUtils.freeDirectByteBuffer(SharedMemoryVertexBufferObject.sSharedByteBuffer);
+            if (SharedMemoryVertexBufferObject.sSharedByteBuffer != null) {
+                BufferUtils.freeDirectByteBuffer(SharedMemoryVertexBufferObject.sSharedByteBuffer);
 
-				SharedMemoryVertexBufferObject.sSharedByteBuffer = null;
-			}
-		} finally {
-			SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
-		}
-	}
+                SharedMemoryVertexBufferObject.sSharedByteBuffer = null;
+            }
+        } finally {
+            SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
+        }
+    }
 
-	@Override
-	protected ByteBuffer aquireByteBuffer() {
-		SharedMemoryVertexBufferObject.sSharedByteBufferLock.lock();
+    @Override
+    protected ByteBuffer aquireByteBuffer() {
+        SharedMemoryVertexBufferObject.sSharedByteBufferLock.lock();
 
-		final int byteCapacity = this.getByteCapacity();
+        final int byteCapacity = this.getByteCapacity();
 
-		if (SharedMemoryVertexBufferObject.sSharedByteBuffer == null || SharedMemoryVertexBufferObject.sSharedByteBuffer.capacity() < byteCapacity) {
-			if (SharedMemoryVertexBufferObject.sSharedByteBuffer != null) {
-				BufferUtils.freeDirectByteBuffer(SharedMemoryVertexBufferObject.sSharedByteBuffer);
-			}
+        if (SharedMemoryVertexBufferObject.sSharedByteBuffer == null || SharedMemoryVertexBufferObject.sSharedByteBuffer.capacity() < byteCapacity) {
+            if (SharedMemoryVertexBufferObject.sSharedByteBuffer != null) {
+                BufferUtils.freeDirectByteBuffer(SharedMemoryVertexBufferObject.sSharedByteBuffer);
+            }
 
-			SharedMemoryVertexBufferObject.sSharedByteBuffer = BufferUtils.allocateDirectByteBuffer(byteCapacity);
-			SharedMemoryVertexBufferObject.sSharedByteBuffer.order(ByteOrder.nativeOrder());
-		}
+            SharedMemoryVertexBufferObject.sSharedByteBuffer = BufferUtils.allocateDirectByteBuffer(byteCapacity);
+            SharedMemoryVertexBufferObject.sSharedByteBuffer.order(ByteOrder.nativeOrder());
+        }
 
-		SharedMemoryVertexBufferObject.sSharedByteBuffer.limit(byteCapacity);
+        SharedMemoryVertexBufferObject.sSharedByteBuffer.limit(byteCapacity);
 
-		return SharedMemoryVertexBufferObject.sSharedByteBuffer;
-	}
+        return SharedMemoryVertexBufferObject.sSharedByteBuffer;
+    }
 
-	@Override
-	protected void releaseByteBuffer(final ByteBuffer byteBuffer) {
-		SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
-	}
+    @Override
+    protected void releaseByteBuffer(final ByteBuffer byteBuffer) {
+        SharedMemoryVertexBufferObject.sSharedByteBufferLock.unlock();
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

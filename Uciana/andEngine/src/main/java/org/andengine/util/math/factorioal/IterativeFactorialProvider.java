@@ -8,53 +8,53 @@ package org.andengine.util.math.factorioal;
  * @since 21:37:15 - 09.06.2013
  */
 public class IterativeFactorialProvider implements IFactorialProvider {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static IterativeFactorialProvider INSTANCE;
+    private static IterativeFactorialProvider INSTANCE;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private IterativeFactorialProvider() {
+    private IterativeFactorialProvider() {
 
-	}
+    }
 
-	public static IterativeFactorialProvider getInstance() {
-		if (INSTANCE == null) {
-			INSTANCE = new IterativeFactorialProvider();
-		}
-		return INSTANCE;
-	}
+    public static IterativeFactorialProvider getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new IterativeFactorialProvider();
+        }
+        return INSTANCE;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	@Override
-	public int factorial(final int n) {
-		int result = 1;
-		for (int i = 1; i <= n; i++) {
-			result *= i;
-		}
-		return result;
-	}
+    @Override
+    public int factorial(final int n) {
+        int result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        return result;
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

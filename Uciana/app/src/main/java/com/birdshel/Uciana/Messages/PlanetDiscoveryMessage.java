@@ -8,6 +8,7 @@ import com.birdshel.Uciana.Planets.PlanetSprite;
 import com.birdshel.Uciana.Players.EmpireType;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.OptionID;
+
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;

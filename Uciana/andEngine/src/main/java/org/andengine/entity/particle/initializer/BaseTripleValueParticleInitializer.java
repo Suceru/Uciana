@@ -12,55 +12,55 @@ import org.andengine.util.math.MathUtils;
  * @since 15:58:29 - 04.05.2010
  */
 public abstract class BaseTripleValueParticleInitializer<T extends IEntity> extends BaseDoubleValueParticleInitializer<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	protected float mMinValueC;
-	protected float mMaxValueC;
+    protected float mMinValueC;
+    protected float mMaxValueC;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BaseTripleValueParticleInitializer(final float pMinValueA, final float pMaxValueA, final float pMinValueB, final float pMaxValueB, final float pMinValueC, final float pMaxValueC) {
-		super(pMinValueA, pMaxValueA, pMinValueB, pMaxValueB);
-		this.mMinValueC = pMinValueC;
-		this.mMaxValueC = pMaxValueC;
-	}
+    public BaseTripleValueParticleInitializer(final float pMinValueA, final float pMaxValueA, final float pMinValueB, final float pMaxValueB, final float pMinValueC, final float pMaxValueC) {
+        super(pMinValueA, pMaxValueA, pMinValueB, pMaxValueB);
+        this.mMinValueC = pMinValueC;
+        this.mMaxValueC = pMaxValueC;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract void onInitializeParticle(final Particle<T> pParticle, final float pValueA, final float pValueB, final float pValueC);
+    protected abstract void onInitializeParticle(final Particle<T> pParticle, final float pValueA, final float pValueB, final float pValueC);
 
-	@Override
-	protected final void onInitializeParticle(final Particle<T> pParticle, final float pValueA, final float pValueB) {
-		this.onInitializeParticle(pParticle, pValueA, pValueB, this.getRandomValueC());
-	}
+    @Override
+    protected final void onInitializeParticle(final Particle<T> pParticle, final float pValueA, final float pValueB) {
+        this.onInitializeParticle(pParticle, pValueA, pValueB, this.getRandomValueC());
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	protected float getRandomValueC() {
-		if (this.mMinValueC == this.mMaxValueC) {
-			return this.mMaxValueC;
-		} else {
-			return MathUtils.random(this.mMinValueC, this.mMaxValueC);
-		}
-	}
+    protected float getRandomValueC() {
+        if (this.mMinValueC == this.mMaxValueC) {
+            return this.mMaxValueC;
+        } else {
+            return MathUtils.random(this.mMinValueC, this.mMaxValueC);
+        }
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

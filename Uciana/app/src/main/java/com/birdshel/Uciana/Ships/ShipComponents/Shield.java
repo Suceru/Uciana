@@ -1,6 +1,5 @@
 package com.birdshel.Uciana.Ships.ShipComponents;
 
-import com.birdshel.Uciana.Ships.ShipComponents.ShipComponent;
 import com.birdshel.Uciana.Technology.TechID;
 
 /* compiled from: MyApplication */

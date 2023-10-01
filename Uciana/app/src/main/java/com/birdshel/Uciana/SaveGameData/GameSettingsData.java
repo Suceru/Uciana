@@ -3,10 +3,12 @@ package com.birdshel.Uciana.SaveGameData;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.GameSettingsEnum;
 import com.birdshel.Uciana.RandomEvents.RandomEventData;
 import com.birdshel.Uciana.RandomEvents.RandomEventType;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

@@ -1,12 +1,15 @@
 package com.birdshel.Uciana.Planets;
 
 import android.util.SparseArray;
+
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Math.Point;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

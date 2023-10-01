@@ -1,7 +1,6 @@
 package com.birdshel.Uciana.AI;
 
 import com.birdshel.Uciana.AI.AIObjects.AttackTarget;
-import com.birdshel.Uciana.AI.AIObjects.AttackTargetType;
 import com.birdshel.Uciana.AI.Managers.AttackAI;
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Colonies.Outpost;
@@ -12,6 +11,7 @@ import com.birdshel.Uciana.Scenes.AttackSceneData;
 import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.StarSystems.StarSystem;
+
 import java.util.Iterator;
 
 public class AscendedAttack {

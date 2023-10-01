@@ -9,7 +9,7 @@ import com.birdshel.Uciana.Planets.ResourceID;
 import com.birdshel.Uciana.Planets.Resources;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
@@ -22,6 +22,8 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

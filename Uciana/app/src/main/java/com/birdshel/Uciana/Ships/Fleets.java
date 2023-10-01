@@ -1,12 +1,14 @@
 package com.birdshel.Uciana.Ships;
 
 import android.util.SparseArray;
+
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.GameProperties;
 import com.birdshel.Uciana.Players.Empire;
 import com.birdshel.Uciana.Players.EmpireEventKeys;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.Utility.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

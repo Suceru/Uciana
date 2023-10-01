@@ -10,15 +10,17 @@ import org.andengine.opengl.vbo.IVertexBufferObject;
  * @since 18:46:51 - 28.03.2012
  */
 public interface IMeshVertexBufferObject extends IVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public float[] getBufferData();
-	public void onUpdateColor(final Mesh pMesh);
-	public void onUpdateVertices(final Mesh pMesh);
+    public float[] getBufferData();
+
+    public void onUpdateColor(final Mesh pMesh);
+
+    public void onUpdateVertices(final Mesh pMesh);
 }

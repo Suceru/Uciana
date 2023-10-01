@@ -5,9 +5,7 @@ import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.Players.EmpireMessages;
 import com.birdshel.Uciana.Players.RelationStatus;
 import com.birdshel.Uciana.Players.Treaty;
-import java.nio.CharBuffer;
-import java.util.HashMap;
-import java.util.Map;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
@@ -15,6 +13,10 @@ import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
+import java.util.HashMap;
+import java.util.Map;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

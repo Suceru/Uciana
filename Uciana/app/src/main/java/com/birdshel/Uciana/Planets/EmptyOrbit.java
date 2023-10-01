@@ -1,6 +1,5 @@
 package com.birdshel.Uciana.Planets;
 
-import com.birdshel.Uciana.Planets.SystemObject;
 import java.util.List;
 
 /* compiled from: MyApplication */

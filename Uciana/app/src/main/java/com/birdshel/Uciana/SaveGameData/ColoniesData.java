@@ -3,6 +3,7 @@ package com.birdshel.Uciana.SaveGameData;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import com.birdshel.Uciana.AI.Tasks.NoTask;
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Colonies.Colony;
@@ -12,6 +13,9 @@ import com.birdshel.Uciana.Colonies.ProductionItem;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Planets.Planet;
 import com.birdshel.Uciana.Ships.Ship;
+
+import org.andengine.util.level.constants.LevelConstants;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -19,7 +23,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
-import org.andengine.util.level.constants.LevelConstants;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

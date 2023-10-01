@@ -10,41 +10,41 @@ import org.andengine.util.level.IEntityLoaderData;
  * @since 16:13:09 - 19.04.2012
  */
 public class SimpleLevelEntityLoaderData implements IEntityLoaderData {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final VertexBufferObjectManager mVertexBufferObjectManager;
+    private final VertexBufferObjectManager mVertexBufferObjectManager;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public SimpleLevelEntityLoaderData(final VertexBufferObjectManager pVertexBufferObjectManager) {
-		this.mVertexBufferObjectManager = pVertexBufferObjectManager;
-	}
+    public SimpleLevelEntityLoaderData(final VertexBufferObjectManager pVertexBufferObjectManager) {
+        this.mVertexBufferObjectManager = pVertexBufferObjectManager;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public VertexBufferObjectManager getVertexBufferObjectManager() {
-		return this.mVertexBufferObjectManager;
-	}
+    public VertexBufferObjectManager getVertexBufferObjectManager() {
+        return this.mVertexBufferObjectManager;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

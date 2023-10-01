@@ -1,8 +1,8 @@
 package org.andengine.util.modifier;
 
-import java.util.Comparator;
-
 import org.andengine.util.exception.AndEngineRuntimeException;
+
+import java.util.Comparator;
 
 
 /**
@@ -13,92 +13,97 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 11:17:50 - 19.03.2010
  */
 public interface IModifier<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	public static final Comparator<IModifier<?>> MODIFIER_COMPARATOR_DURATION_DESCENDING = new Comparator<IModifier<?>>() {
-		@Override
-		public int compare(final IModifier<?> pModifierA, final IModifier<?> pModifierB) {
-			final float durationA = pModifierA.getDuration();
-			final float durationB = pModifierB.getDuration();
+    public static final Comparator<IModifier<?>> MODIFIER_COMPARATOR_DURATION_DESCENDING = new Comparator<IModifier<?>>() {
+        @Override
+        public int compare(final IModifier<?> pModifierA, final IModifier<?> pModifierB) {
+            final float durationA = pModifierA.getDuration();
+            final float durationB = pModifierB.getDuration();
 
-			if (durationA < durationB) {
-				return 1;
-			} else if (durationA > durationB) {
-				return -1;
-			} else {
-				return 0;
-			}
-		}
-	};
+            if (durationA < durationB) {
+                return 1;
+            } else if (durationA > durationB) {
+                return -1;
+            } else {
+                return 0;
+            }
+        }
+    };
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void reset();
+    public void reset();
 
-	public boolean isFinished();
-	public boolean isAutoUnregisterWhenFinished();
-	public void setAutoUnregisterWhenFinished(final boolean pRemoveWhenFinished);
+    public boolean isFinished();
 
-	public IModifier<T> deepCopy() throws DeepCopyNotSupportedException;
+    public boolean isAutoUnregisterWhenFinished();
 
-	public float getSecondsElapsed();
-	public float getDuration();
+    public void setAutoUnregisterWhenFinished(final boolean pRemoveWhenFinished);
 
-	public float onUpdate(final float pSecondsElapsed, final T pItem);
+    public IModifier<T> deepCopy() throws DeepCopyNotSupportedException;
 
-	public void addModifierListener(final IModifierListener<T> pModifierListener);
-	public boolean removeModifierListener(final IModifierListener<T> pModifierListener);
+    public float getSecondsElapsed();
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    public float getDuration();
 
-	public static interface IModifierListener<T> {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public float onUpdate(final float pSecondsElapsed, final T pItem);
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+    public void addModifierListener(final IModifierListener<T> pModifierListener);
 
-		public void onModifierStarted(final IModifier<T> pModifier, final T pItem);
-		public void onModifierFinished(final IModifier<T> pModifier, final T pItem);
-	}
+    public boolean removeModifierListener(final IModifierListener<T> pModifierListener);
 
-	public static class DeepCopyNotSupportedException extends AndEngineRuntimeException {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-		private static final long serialVersionUID = -5838035434002587320L;
+    public static interface IModifierListener<T> {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
+        // ===========================================================
+        // Methods
+        // ===========================================================
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
+        public void onModifierStarted(final IModifier<T> pModifier, final T pItem);
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
+        public void onModifierFinished(final IModifier<T> pModifier, final T pItem);
+    }
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
+    public static class DeepCopyNotSupportedException extends AndEngineRuntimeException {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        private static final long serialVersionUID = -5838035434002587320L;
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
-	}
+        // ===========================================================
+        // Fields
+        // ===========================================================
+
+        // ===========================================================
+        // Constructors
+        // ===========================================================
+
+        // ===========================================================
+        // Getter & Setter
+        // ===========================================================
+
+        // ===========================================================
+        // Methods for/from SuperClass/Interfaces
+        // ===========================================================
+
+        // ===========================================================
+        // Methods
+        // ===========================================================
+
+        // ===========================================================
+        // Inner and Anonymous Classes
+        // ===========================================================
+    }
 }

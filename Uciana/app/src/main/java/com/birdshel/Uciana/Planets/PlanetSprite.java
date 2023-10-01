@@ -8,8 +8,7 @@ import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Ships.ShipComponents.ShipComponentID;
 import com.birdshel.Uciana.Ships.ShipComponents.ShipComponents;
 import com.birdshel.Uciana.Ships.ShipComponents.Weapon;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.sprite.AnimatedSprite;
@@ -21,6 +20,9 @@ import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

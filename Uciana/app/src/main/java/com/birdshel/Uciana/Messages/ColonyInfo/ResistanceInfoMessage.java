@@ -6,13 +6,13 @@ import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.Players.RaceAttributeType;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.AutoWrap;
 import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
-//import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.align.HorizontalAlign;
 
 /* compiled from: MyApplication */

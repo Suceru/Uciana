@@ -13,60 +13,60 @@ import org.andengine.opengl.vbo.attribute.VertexBufferObjectAttributes;
  * @since 18:45:00 - 28.03.2012
  */
 public class HighPerformanceLineVertexBufferObject extends HighPerformanceVertexBufferObject implements ILineVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public HighPerformanceLineVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final boolean pAutoDispose, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
-		super(pVertexBufferObjectManager, pCapacity, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
-	}
+    public HighPerformanceLineVertexBufferObject(final VertexBufferObjectManager pVertexBufferObjectManager, final int pCapacity, final DrawType pDrawType, final boolean pAutoDispose, final VertexBufferObjectAttributes pVertexBufferObjectAttributes) {
+        super(pVertexBufferObjectManager, pCapacity, pDrawType, pAutoDispose, pVertexBufferObjectAttributes);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void onUpdateColor(final Line pLine) {
-		final float[] bufferData = this.mBufferData;
+    @Override
+    public void onUpdateColor(final Line pLine) {
+        final float[] bufferData = this.mBufferData;
 
-		final float packedColor = pLine.getColor().getABGRPackedFloat();
+        final float packedColor = pLine.getColor().getABGRPackedFloat();
 
-		bufferData[(0 * Line.VERTEX_SIZE) + Line.COLOR_INDEX] = packedColor;
-		bufferData[(1 * Line.VERTEX_SIZE) + Line.COLOR_INDEX] = packedColor;
+        bufferData[(0 * Line.VERTEX_SIZE) + Line.COLOR_INDEX] = packedColor;
+        bufferData[(1 * Line.VERTEX_SIZE) + Line.COLOR_INDEX] = packedColor;
 
-		this.setDirtyOnHardware();
-	}
+        this.setDirtyOnHardware();
+    }
 
-	@Override
-	public void onUpdateVertices(final Line pLine) {
-		final float[] bufferData = this.mBufferData;
+    @Override
+    public void onUpdateVertices(final Line pLine) {
+        final float[] bufferData = this.mBufferData;
 
-		bufferData[(0 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_X] = 0;
-		bufferData[(0 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_Y] = 0;
+        bufferData[(0 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_X] = 0;
+        bufferData[(0 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_Y] = 0;
 
-		bufferData[(1 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_X] = pLine.getX2() - pLine.getX1();
-		bufferData[(1 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_Y] = pLine.getY2() - pLine.getY1();
+        bufferData[(1 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_X] = pLine.getX2() - pLine.getX1();
+        bufferData[(1 * Line.VERTEX_SIZE) + Line.VERTEX_INDEX_Y] = pLine.getY2() - pLine.getY1();
 
-		this.setDirtyOnHardware();
-	}
+        this.setDirtyOnHardware();
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

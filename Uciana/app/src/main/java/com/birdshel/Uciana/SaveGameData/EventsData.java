@@ -3,6 +3,7 @@ package com.birdshel.Uciana.SaveGameData;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
 import com.birdshel.Uciana.Events.Event;
 import com.birdshel.Uciana.Events.EventDataFields;
@@ -10,6 +11,7 @@ import com.birdshel.Uciana.Events.EventType;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Messages.DiplomaticType;
 import com.birdshel.Uciana.Players.Treaty;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

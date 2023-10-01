@@ -1,11 +1,11 @@
 package org.andengine.util;
 
-import org.andengine.util.system.SystemUtils;
-import org.andengine.util.system.SystemUtils.SystemUtilsException;
-
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
+
+import org.andengine.util.system.SystemUtils;
+import org.andengine.util.system.SystemUtils.SystemUtilsException;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -15,57 +15,57 @@ import android.os.Build;
  * @since 21:44:07 - 04.03.2011
  */
 public final class Bluetooth {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private static Boolean sSupported;
+    private static Boolean sSupported;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	private Bluetooth() {
+    private Bluetooth() {
 
-	}
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public static boolean isSupported(final Context pContext) {
-		if (sSupported == null) {
-			if (SystemUtils.isAndroidVersionOrHigher(Build.VERSION_CODES.ECLAIR_MR1)) {
-				try {
-					sSupported = SystemUtils.hasSystemFeature(pContext, PackageManager.FEATURE_BLUETOOTH);
-				} catch (final SystemUtilsException e) {
-					sSupported = Boolean.FALSE;
-				}
-			} else {
-				sSupported = Boolean.FALSE;
-			}
-		}
+    public static boolean isSupported(final Context pContext) {
+        if (sSupported == null) {
+            if (SystemUtils.isAndroidVersionOrHigher(Build.VERSION_CODES.ECLAIR_MR1)) {
+                try {
+                    sSupported = SystemUtils.hasSystemFeature(pContext, PackageManager.FEATURE_BLUETOOTH);
+                } catch (final SystemUtilsException e) {
+                    sSupported = Boolean.FALSE;
+                }
+            } else {
+                sSupported = Boolean.FALSE;
+            }
+        }
 
-		return sSupported;
-	}
+        return sSupported;
+    }
 
-	public static boolean isSupportedByAndroidVersion() {
-		return SystemUtils.isAndroidVersionOrHigher(Build.VERSION_CODES.ECLAIR_MR1);
-	}
+    public static boolean isSupportedByAndroidVersion() {
+        return SystemUtils.isAndroidVersionOrHigher(Build.VERSION_CODES.ECLAIR_MR1);
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

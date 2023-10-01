@@ -1,9 +1,9 @@
 package org.andengine.opengl.texture.atlas.bitmap.source;
 
-import org.andengine.opengl.texture.atlas.source.BaseTextureAtlasSource;
-
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
+
+import org.andengine.opengl.texture.atlas.source.BaseTextureAtlasSource;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -13,62 +13,62 @@ import android.graphics.Bitmap.Config;
  * @since 16:43:29 - 06.08.2010
  */
 public abstract class BaseBitmapTextureAtlasSource extends BaseTextureAtlasSource implements IBitmapTextureAtlasSource {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	protected final IBitmapTextureAtlasSource mBitmapTextureAtlasSource;
+    protected final IBitmapTextureAtlasSource mBitmapTextureAtlasSource;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BaseBitmapTextureAtlasSource(final IBitmapTextureAtlasSource pBitmapTextureAtlasSource) {
-		super(pBitmapTextureAtlasSource.getTextureX(), pBitmapTextureAtlasSource.getTextureY(), pBitmapTextureAtlasSource.getTextureWidth(), pBitmapTextureAtlasSource.getTextureHeight());
+    public BaseBitmapTextureAtlasSource(final IBitmapTextureAtlasSource pBitmapTextureAtlasSource) {
+        super(pBitmapTextureAtlasSource.getTextureX(), pBitmapTextureAtlasSource.getTextureY(), pBitmapTextureAtlasSource.getTextureWidth(), pBitmapTextureAtlasSource.getTextureHeight());
 
-		this.mBitmapTextureAtlasSource = pBitmapTextureAtlasSource;
-	}
+        this.mBitmapTextureAtlasSource = pBitmapTextureAtlasSource;
+    }
 
-	@Override
-	public abstract BaseBitmapTextureAtlasSource deepCopy();
+    @Override
+    public abstract BaseBitmapTextureAtlasSource deepCopy();
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public int getTextureWidth() {
-		return this.mBitmapTextureAtlasSource.getTextureWidth();
-	}
+    @Override
+    public int getTextureWidth() {
+        return this.mBitmapTextureAtlasSource.getTextureWidth();
+    }
 
-	@Override
-	public int getTextureHeight() {
-		return this.mBitmapTextureAtlasSource.getTextureHeight();
-	}
+    @Override
+    public int getTextureHeight() {
+        return this.mBitmapTextureAtlasSource.getTextureHeight();
+    }
 
-	@Override
-	public Bitmap onLoadBitmap(final Config pBitmapConfig) {
-		return this.mBitmapTextureAtlasSource.onLoadBitmap(pBitmapConfig);
-	}
+    @Override
+    public Bitmap onLoadBitmap(final Config pBitmapConfig) {
+        return this.mBitmapTextureAtlasSource.onLoadBitmap(pBitmapConfig);
+    }
 
-	@Override
-	public Bitmap onLoadBitmap(final Config pBitmapConfig, final boolean pMutable) {
-		return this.mBitmapTextureAtlasSource.onLoadBitmap(pBitmapConfig, pMutable);
-	}
+    @Override
+    public Bitmap onLoadBitmap(final Config pBitmapConfig, final boolean pMutable) {
+        return this.mBitmapTextureAtlasSource.onLoadBitmap(pBitmapConfig, pMutable);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -7,74 +7,74 @@ package org.andengine.util.adt.data.operator;
  * @since 14:24:15 - 02.02.2012
  */
 public enum DoubleOperator {
-	// ===========================================================
-	// Elements
-	// ===========================================================
+    // ===========================================================
+    // Elements
+    // ===========================================================
 
-	EQUALS() {
-		@Override
-		public boolean check(final double pDoubleA, final double pDoubleB) {
-			return pDoubleA == pDoubleB;
-		}
-	},
-	NOT_EQUALS() {
-		@Override
-		public boolean check(final double pDoubleA, final double pDoubleB) {
-			return pDoubleA != pDoubleB;
-		}
-	},
-	LESS_THAN() {
-		@Override
-		public boolean check(final double pDoubleA, final double pDoubleB) {
-			return pDoubleA < pDoubleB;
-		}
-	},
-	LESS_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final double pDoubleA, final double pDoubleB) {
-			return pDoubleA <= pDoubleB;
-		}
-	},
-	MORE_THAN() {
-		@Override
-		public boolean check(final double pDoubleA, final double pDoubleB) {
-			return pDoubleA > pDoubleB;
-		}
-	},
-	MORE_OR_EQUAL_THAN() {
-		@Override
-		public boolean check(final double pDoubleA, final double pDoubleB) {
-			return pDoubleA >= pDoubleB;
-		}
-	};
+    EQUALS() {
+        @Override
+        public boolean check(final double pDoubleA, final double pDoubleB) {
+            return pDoubleA == pDoubleB;
+        }
+    },
+    NOT_EQUALS() {
+        @Override
+        public boolean check(final double pDoubleA, final double pDoubleB) {
+            return pDoubleA != pDoubleB;
+        }
+    },
+    LESS_THAN() {
+        @Override
+        public boolean check(final double pDoubleA, final double pDoubleB) {
+            return pDoubleA < pDoubleB;
+        }
+    },
+    LESS_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final double pDoubleA, final double pDoubleB) {
+            return pDoubleA <= pDoubleB;
+        }
+    },
+    MORE_THAN() {
+        @Override
+        public boolean check(final double pDoubleA, final double pDoubleB) {
+            return pDoubleA > pDoubleB;
+        }
+    },
+    MORE_OR_EQUAL_THAN() {
+        @Override
+        public boolean check(final double pDoubleA, final double pDoubleB) {
+            return pDoubleA >= pDoubleB;
+        }
+    };
 
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public abstract boolean check(final double pDoubleA, final double pDoubleB);
+    public abstract boolean check(final double pDoubleA, final double pDoubleB);
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

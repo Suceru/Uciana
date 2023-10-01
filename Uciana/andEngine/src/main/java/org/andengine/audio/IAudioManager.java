@@ -8,19 +8,21 @@ package org.andengine.audio;
  * @since 15:02:06 - 13.06.2010
  */
 public interface IAudioManager<T extends IAudioEntity> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public float getMasterVolume();
-	public void setMasterVolume(final float pMasterVolume);
+    public float getMasterVolume();
 
-	public void add(final T pAudioEntity);
-	public boolean remove(final T pAudioEntity);
+    public void setMasterVolume(final float pMasterVolume);
 
-	public void releaseAll();
+    public void add(final T pAudioEntity);
+
+    public boolean remove(final T pAudioEntity);
+
+    public void releaseAll();
 }

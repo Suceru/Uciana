@@ -10,40 +10,40 @@ import org.andengine.opengl.GLES20Fix;
  * @since 12:52:33 - 08.03.2012
  */
 public class VertexBufferObjectAttributeFix extends VertexBufferObjectAttribute {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public VertexBufferObjectAttributeFix(final int pLocation, final String pName, final int pSize, final int pType, final boolean pNormalized, final int pOffset) {
-		super(pLocation, pName, pSize, pType, pNormalized, pOffset);
-	}
+    public VertexBufferObjectAttributeFix(final int pLocation, final String pName, final int pSize, final int pType, final boolean pNormalized, final int pOffset) {
+        super(pLocation, pName, pSize, pType, pNormalized, pOffset);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public void glVertexAttribPointer(final int pStride) {
-		GLES20Fix.glVertexAttribPointer(this.mLocation, this.mSize, this.mType, this.mNormalized, pStride, this.mOffset);
-	}
+    @Override
+    public void glVertexAttribPointer(final int pStride) {
+        GLES20Fix.glVertexAttribPointer(this.mLocation, this.mSize, this.mType, this.mNormalized, pStride, this.mOffset);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

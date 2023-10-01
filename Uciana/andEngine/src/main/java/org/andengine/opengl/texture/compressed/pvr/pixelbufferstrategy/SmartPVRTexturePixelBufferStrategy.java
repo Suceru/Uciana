@@ -1,9 +1,6 @@
 package org.andengine.opengl.texture.compressed.pvr.pixelbufferstrategy;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.Buffer;
-import java.nio.ByteBuffer;
+import android.opengl.GLES20;
 
 import org.andengine.opengl.texture.PixelFormat;
 import org.andengine.opengl.texture.compressed.pvr.PVRTexture;
@@ -11,7 +8,10 @@ import org.andengine.opengl.texture.compressed.pvr.PVRTexture.PVRTextureHeader;
 import org.andengine.util.StreamUtils;
 import org.andengine.util.exception.AndEngineRuntimeException;
 
-import android.opengl.GLES20;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.Buffer;
+import java.nio.ByteBuffer;
 
 /**
  * (c) 2011 Zynga Inc.
@@ -20,142 +20,142 @@ import android.opengl.GLES20;
  * @since 11:26:07 - 27.09.2011
  */
 public class SmartPVRTexturePixelBufferStrategy implements IPVRTexturePixelBufferStrategy {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final int mAllocationSizeMaximum;
+    private final int mAllocationSizeMaximum;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public SmartPVRTexturePixelBufferStrategy(final int pAllocationSizeMaximum) {
-		this.mAllocationSizeMaximum = pAllocationSizeMaximum;
-	}
+    public SmartPVRTexturePixelBufferStrategy(final int pAllocationSizeMaximum) {
+        this.mAllocationSizeMaximum = pAllocationSizeMaximum;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public IPVRTexturePixelBufferStrategyBufferManager newPVRTexturePixelBufferStrategyManager(final PVRTexture pPVRTexture) throws IOException {
-		return new SmartPVRTexturePixelBufferStrategyBufferManager(pPVRTexture);
-	}
+    @Override
+    public IPVRTexturePixelBufferStrategyBufferManager newPVRTexturePixelBufferStrategyManager(final PVRTexture pPVRTexture) throws IOException {
+        return new SmartPVRTexturePixelBufferStrategyBufferManager(pPVRTexture);
+    }
 
-	@Override
-	public void loadPVRTextureData(final IPVRTexturePixelBufferStrategyBufferManager pPVRTexturePixelBufferStrategyManager, final int pWidth, final int pHeight, final int pBytesPerPixel, final PixelFormat pPixelFormat, final int pLevel, final int pCurrentPixelDataOffset, final int pCurrentPixelDataSize) throws IOException {
-		final int glFormat = pPixelFormat.getGLFormat();
-		final int glType = pPixelFormat.getGLType();
+    @Override
+    public void loadPVRTextureData(final IPVRTexturePixelBufferStrategyBufferManager pPVRTexturePixelBufferStrategyManager, final int pWidth, final int pHeight, final int pBytesPerPixel, final PixelFormat pPixelFormat, final int pLevel, final int pCurrentPixelDataOffset, final int pCurrentPixelDataSize) throws IOException {
+        final int glFormat = pPixelFormat.getGLFormat();
+        final int glType = pPixelFormat.getGLType();
 
-		/* Create the texture with the required parameters but without data. */
-		GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, pLevel, pPixelFormat.getGLInternalFormat(), pWidth, pHeight, 0, glFormat, glType, null);
+        /* Create the texture with the required parameters but without data. */
+        GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, pLevel, pPixelFormat.getGLInternalFormat(), pWidth, pHeight, 0, glFormat, glType, null);
 
-		final int bytesPerRow = pWidth * pBytesPerPixel;
-		final int stripeHeight = Math.max(1, this.mAllocationSizeMaximum / bytesPerRow);
+        final int bytesPerRow = pWidth * pBytesPerPixel;
+        final int stripeHeight = Math.max(1, this.mAllocationSizeMaximum / bytesPerRow);
 
-		/* Load stripes. */
-		int currentStripePixelDataOffset = pCurrentPixelDataOffset;
-		int currentStripeOffsetY = 0;
-		while (currentStripeOffsetY < pHeight) {
-			final int currentStripeHeight = Math.min(pHeight - currentStripeOffsetY, stripeHeight);
-			final int currentStripePixelDataSize = currentStripeHeight * bytesPerRow;
+        /* Load stripes. */
+        int currentStripePixelDataOffset = pCurrentPixelDataOffset;
+        int currentStripeOffsetY = 0;
+        while (currentStripeOffsetY < pHeight) {
+            final int currentStripeHeight = Math.min(pHeight - currentStripeOffsetY, stripeHeight);
+            final int currentStripePixelDataSize = currentStripeHeight * bytesPerRow;
 
-			/* Adjust buffer. */
-			final Buffer pixelBuffer = pPVRTexturePixelBufferStrategyManager.getPixelBuffer(PVRTextureHeader.SIZE + currentStripePixelDataOffset, currentStripePixelDataSize);
+            /* Adjust buffer. */
+            final Buffer pixelBuffer = pPVRTexturePixelBufferStrategyManager.getPixelBuffer(PVRTextureHeader.SIZE + currentStripePixelDataOffset, currentStripePixelDataSize);
 
-			/* Send to hardware. */
-			GLES20.glTexSubImage2D(GLES20.GL_TEXTURE_2D, pLevel, 0, currentStripeOffsetY, pWidth, currentStripeHeight, glFormat, glType, pixelBuffer);
+            /* Send to hardware. */
+            GLES20.glTexSubImage2D(GLES20.GL_TEXTURE_2D, pLevel, 0, currentStripeOffsetY, pWidth, currentStripeHeight, glFormat, glType, pixelBuffer);
 
-			currentStripePixelDataOffset += currentStripePixelDataSize;
-			currentStripeOffsetY += currentStripeHeight;
-		}
-	}
+            currentStripePixelDataOffset += currentStripePixelDataSize;
+            currentStripeOffsetY += currentStripeHeight;
+        }
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 
-	public static class SmartPVRTexturePixelBufferStrategyBufferManager implements IPVRTexturePixelBufferStrategyBufferManager {
-		// ===========================================================
-		// Constants
-		// ===========================================================
+    public static class SmartPVRTexturePixelBufferStrategyBufferManager implements IPVRTexturePixelBufferStrategyBufferManager {
+        // ===========================================================
+        // Constants
+        // ===========================================================
 
-		// ===========================================================
-		// Fields
-		// ===========================================================
+        // ===========================================================
+        // Fields
+        // ===========================================================
 
-		private final InputStream mInputStream;
-		private int mInputStreamPosition;
+        private final InputStream mInputStream;
+        private int mInputStreamPosition;
 
-		private byte[] mData;
+        private byte[] mData;
 
-		// ===========================================================
-		// Constructors
-		// ===========================================================
+        // ===========================================================
+        // Constructors
+        // ===========================================================
 
-		public SmartPVRTexturePixelBufferStrategyBufferManager(final PVRTexture pPVRTexture) throws IOException {
-			this.mInputStream = pPVRTexture.getInputStream();
-		}
+        public SmartPVRTexturePixelBufferStrategyBufferManager(final PVRTexture pPVRTexture) throws IOException {
+            this.mInputStream = pPVRTexture.getInputStream();
+        }
 
-		// ===========================================================
-		// Getter & Setter
-		// ===========================================================
+        // ===========================================================
+        // Getter & Setter
+        // ===========================================================
 
-		// ===========================================================
-		// Methods for/from SuperClass/Interfaces
-		// ===========================================================
+        // ===========================================================
+        // Methods for/from SuperClass/Interfaces
+        // ===========================================================
 
-		@Override
-		public ByteBuffer getPixelBuffer(final int pStart, final int pByteCount) throws IOException {
-			if (pStart < this.mInputStreamPosition) {
-				throw new AndEngineRuntimeException("Cannot read data that has been read already. (pStart: '" + pStart + "', this.mInputStreamPosition: '" + this.mInputStreamPosition + "')");
-			}
+        @Override
+        public ByteBuffer getPixelBuffer(final int pStart, final int pByteCount) throws IOException {
+            if (pStart < this.mInputStreamPosition) {
+                throw new AndEngineRuntimeException("Cannot read data that has been read already. (pStart: '" + pStart + "', this.mInputStreamPosition: '" + this.mInputStreamPosition + "')");
+            }
 
-			/* Ensure data buffer is bug enough. */
-			if (this.mData == null || this.mData.length < pByteCount) {
-				this.mData = new byte[pByteCount];
-			}
+            /* Ensure data buffer is bug enough. */
+            if (this.mData == null || this.mData.length < pByteCount) {
+                this.mData = new byte[pByteCount];
+            }
 
-			/* If needed, skip bytes up to where the data was requested. */
-			if (this.mInputStreamPosition < pStart) {
-				final int bytesToSkip = pStart - this.mInputStreamPosition;
-				final long skipped = this.mInputStream.skip(bytesToSkip);
+            /* If needed, skip bytes up to where the data was requested. */
+            if (this.mInputStreamPosition < pStart) {
+                final int bytesToSkip = pStart - this.mInputStreamPosition;
+                final long skipped = this.mInputStream.skip(bytesToSkip);
 
-				this.mInputStreamPosition += skipped;
+                this.mInputStreamPosition += skipped;
 
-				if (bytesToSkip != skipped) {
-					throw new AndEngineRuntimeException("Skipped: '" + skipped + "' instead of '" + bytesToSkip + "'.");
-				}
-			}
+                if (bytesToSkip != skipped) {
+                    throw new AndEngineRuntimeException("Skipped: '" + skipped + "' instead of '" + bytesToSkip + "'.");
+                }
+            }
 
-			/* Read the requested data. */
-			final int bytesToRead = pStart + pByteCount - this.mInputStreamPosition;
-			StreamUtils.streamToBytes(this.mInputStream, bytesToRead, this.mData);
-			this.mInputStreamPosition += bytesToRead;
+            /* Read the requested data. */
+            final int bytesToRead = pStart + pByteCount - this.mInputStreamPosition;
+            StreamUtils.streamToBytes(this.mInputStream, bytesToRead, this.mData);
+            this.mInputStreamPosition += bytesToRead;
 
-			/* Return as a buffer. */
-			return ByteBuffer.wrap(this.mData, 0, pByteCount);
-		}
+            /* Return as a buffer. */
+            return ByteBuffer.wrap(this.mData, 0, pByteCount);
+        }
 
-		// ===========================================================
-		// Methods
-		// ===========================================================
+        // ===========================================================
+        // Methods
+        // ===========================================================
 
-		// ===========================================================
-		// Inner and Anonymous Classes
-		// ===========================================================
-	}
+        // ===========================================================
+        // Inner and Anonymous Classes
+        // ===========================================================
+    }
 }

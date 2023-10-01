@@ -5,6 +5,7 @@ import com.birdshel.Uciana.Messages.Message;
 import com.birdshel.Uciana.Overlays.MessageOverlay;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.StarSystems.Blackhole;
+
 import org.andengine.entity.modifier.LoopEntityModifier;
 import org.andengine.entity.modifier.RotationModifier;
 import org.andengine.entity.sprite.Sprite;
@@ -13,7 +14,6 @@ import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
-//import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.align.HorizontalAlign;
 
 /* compiled from: MyApplication */

@@ -10,14 +10,15 @@ import org.andengine.opengl.vbo.IVertexBufferObject;
  * @since 18:45:00 - 28.03.2012
  */
 public interface ILineVertexBufferObject extends IVertexBufferObject {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public void onUpdateColor(final Line pLine);
-	public void onUpdateVertices(final Line pLine);
+    public void onUpdateColor(final Line pLine);
+
+    public void onUpdateVertices(final Line pLine);
 }

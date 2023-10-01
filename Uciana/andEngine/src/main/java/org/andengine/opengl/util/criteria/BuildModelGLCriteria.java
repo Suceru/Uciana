@@ -1,9 +1,9 @@
 package org.andengine.opengl.util.criteria;
 
+import android.os.Build;
+
 import org.andengine.opengl.util.GLState;
 import org.andengine.util.adt.data.operator.StringOperator;
-
-import android.os.Build;
 
 /**
  * (c) 2011 Zynga Inc.
@@ -12,40 +12,40 @@ import android.os.Build;
  * @since 17:25:47 - 10.10.2011
  */
 public class BuildModelGLCriteria extends StringGLCriteria {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public BuildModelGLCriteria(final StringOperator pStringOperator, final String pBuildModel) {
-		super(pStringOperator, pBuildModel);
-	}
+    public BuildModelGLCriteria(final StringOperator pStringOperator, final String pBuildModel) {
+        super(pStringOperator, pBuildModel);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected String getActualCriteria(final GLState pGLState) {
-		return Build.MODEL;
-	}
+    @Override
+    protected String getActualCriteria(final GLState pGLState) {
+        return Build.MODEL;
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

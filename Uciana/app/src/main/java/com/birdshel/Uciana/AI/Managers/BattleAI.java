@@ -1,14 +1,17 @@
 package com.birdshel.Uciana.AI.Managers;
 
 import android.os.Build;
+
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.motion.utils.a;
+
 import com.birdshel.Uciana.Elements.Battle.BattleCallBack;
 import com.birdshel.Uciana.Elements.Battle.BattleGrid;
 import com.birdshel.Uciana.Math.Functions;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Ships.Ship;
 import com.birdshel.Uciana.Ships.ShipComponents.Weapon;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

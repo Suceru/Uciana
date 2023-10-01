@@ -12,44 +12,44 @@ import org.andengine.entity.particle.Particle;
  * @since 18:53:41 - 02.10.2010
  */
 public class AlphaParticleInitializer<T extends IEntity> extends BaseSingleValueParticleInitializer<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AlphaParticleInitializer(final float pAlpha) {
-		super(pAlpha, pAlpha);
-	}
+    public AlphaParticleInitializer(final float pAlpha) {
+        super(pAlpha, pAlpha);
+    }
 
-	public AlphaParticleInitializer(final float pMinAlpha, final float pMaxAlpha) {
-		super(pMinAlpha, pMaxAlpha);
-	}
+    public AlphaParticleInitializer(final float pMinAlpha, final float pMaxAlpha) {
+        super(pMinAlpha, pMaxAlpha);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void onInitializeParticle(final Particle<T> pParticle, final float pAlpha) {
-		pParticle.getEntity().setAlpha(pAlpha);
-	}
+    @Override
+    protected void onInitializeParticle(final Particle<T> pParticle, final float pAlpha) {
+        pParticle.getEntity().setAlpha(pAlpha);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

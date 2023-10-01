@@ -11,8 +11,7 @@ import com.birdshel.Uciana.Planets.ResourceType;
 import com.birdshel.Uciana.Planets.Resources;
 import com.birdshel.Uciana.R;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
-import java.nio.CharBuffer;
-import java.text.DecimalFormat;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
@@ -20,6 +19,9 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.nio.CharBuffer;
+import java.text.DecimalFormat;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

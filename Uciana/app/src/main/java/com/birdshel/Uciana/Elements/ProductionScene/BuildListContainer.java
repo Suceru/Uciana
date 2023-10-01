@@ -3,14 +3,16 @@ package com.birdshel.Uciana.Elements.ProductionScene;
 import com.birdshel.Uciana.Colonies.ProductionItem;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
+
+import org.andengine.entity.Entity;
+import org.andengine.entity.modifier.MoveModifier;
+import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import org.andengine.entity.Entity;
-import org.andengine.entity.modifier.MoveModifier;
-import org.andengine.opengl.vbo.VertexBufferObjectManager;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

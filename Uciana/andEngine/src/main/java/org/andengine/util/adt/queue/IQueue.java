@@ -9,16 +9,19 @@ import org.andengine.util.adt.list.IList;
  * @since 15:00:30 - 24.01.2012
  */
 public interface IQueue<T> extends IList<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public T peek();
-	public T poll();
-	public void enter(final T pItem);
-	public void enter(final int pIndex, final T pItem) throws IndexOutOfBoundsException;
+    public T peek();
+
+    public T poll();
+
+    public void enter(final T pItem);
+
+    public void enter(final int pIndex, final T pItem) throws IndexOutOfBoundsException;
 }

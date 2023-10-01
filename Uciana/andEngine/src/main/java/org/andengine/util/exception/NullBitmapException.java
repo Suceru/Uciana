@@ -7,49 +7,49 @@ package org.andengine.util.exception;
  * @since 14:52:38 - 16.09.2011
  */
 public class NullBitmapException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = -2183655622078988389L;
+    private static final long serialVersionUID = -2183655622078988389L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public NullBitmapException() {
+    public NullBitmapException() {
 
-	}
+    }
 
-	public NullBitmapException(final String pMessage) {
-		super(pMessage);
-	}
+    public NullBitmapException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public NullBitmapException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public NullBitmapException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public NullBitmapException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public NullBitmapException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

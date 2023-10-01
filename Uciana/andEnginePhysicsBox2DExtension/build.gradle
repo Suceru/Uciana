@@ -36,6 +36,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    namespace 'org.andengine.extension.physics.box2d'
 }
 
 dependencies {

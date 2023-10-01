@@ -26,13 +26,7 @@ import com.birdshel.Uciana.Ships.ShipSprite;
 import com.birdshel.Uciana.Ships.ShipType;
 import com.birdshel.Uciana.StarSystems.GalaxySize;
 import com.birdshel.Uciana.StarSystems.Nebulas;
-import java.nio.CharBuffer;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Stack;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.modifier.AlphaModifier;
@@ -50,6 +44,14 @@ import org.andengine.opengl.font.IFont;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
 import org.andengine.util.adt.color.Color;
+
+import java.nio.CharBuffer;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

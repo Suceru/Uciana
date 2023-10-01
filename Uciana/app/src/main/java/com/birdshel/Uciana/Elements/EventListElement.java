@@ -17,7 +17,7 @@ import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.StarSystems.StarSystem;
 import com.birdshel.Uciana.Technology.Tech;
 import com.birdshel.Uciana.Technology.TechID;
-import java.nio.CharBuffer;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.Sprite;
@@ -25,6 +25,8 @@ import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.nio.CharBuffer;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

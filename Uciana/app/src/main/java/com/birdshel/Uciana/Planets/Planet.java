@@ -7,7 +7,6 @@ import com.birdshel.Uciana.Colonies.Buildings.Buildings;
 import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.GameData;
 import com.birdshel.Uciana.Math.Functions;
-import com.birdshel.Uciana.Planets.SystemObject;
 import com.birdshel.Uciana.Players.EmpireType;
 import com.birdshel.Uciana.Players.RaceAttributeType;
 import com.birdshel.Uciana.Scenes.BuildingsScene;
@@ -18,6 +17,7 @@ import com.birdshel.Uciana.Scenes.GalaxyScene;
 import com.birdshel.Uciana.Scenes.PlanetScene;
 import com.birdshel.Uciana.Scenes.SystemScene;
 import com.birdshel.Uciana.StarSystems.StarType;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

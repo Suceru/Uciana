@@ -8,49 +8,49 @@ package org.andengine.entity.text.exception;
  * @since 17:53:31 - 01.11.2011
  */
 public class OutOfCharactersException extends TextException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = 3076821980884912905L;
+    private static final long serialVersionUID = 3076821980884912905L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public OutOfCharactersException() {
-		super();
-	}
+    public OutOfCharactersException() {
+        super();
+    }
 
-	public OutOfCharactersException(final String pMessage) {
-		super(pMessage);
-	}
+    public OutOfCharactersException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public OutOfCharactersException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public OutOfCharactersException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public OutOfCharactersException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public OutOfCharactersException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

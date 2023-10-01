@@ -6,10 +6,7 @@ import com.birdshel.Uciana.Colonies.Buildings.Buildings;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Overlays.BuildListOverlay;
 import com.birdshel.Uciana.Resources.GameIconEnum;
-import java.nio.CharBuffer;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
@@ -17,6 +14,11 @@ import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.nio.CharBuffer;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

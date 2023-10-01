@@ -9,49 +9,49 @@ import org.andengine.util.exception.AndEngineRuntimeException;
  * @since 11:59:45 AM - Feb 13, 2012
  */
 public class RenderTextureInitializationException extends AndEngineRuntimeException {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	private static final long serialVersionUID = -7219303294648252076L;
+    private static final long serialVersionUID = -7219303294648252076L;
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public RenderTextureInitializationException() {
-		super();
-	}
+    public RenderTextureInitializationException() {
+        super();
+    }
 
-	public RenderTextureInitializationException(final String pMessage) {
-		super(pMessage);
-	}
+    public RenderTextureInitializationException(final String pMessage) {
+        super(pMessage);
+    }
 
-	public RenderTextureInitializationException(final Throwable pThrowable) {
-		super(pThrowable);
-	}
+    public RenderTextureInitializationException(final Throwable pThrowable) {
+        super(pThrowable);
+    }
 
-	public RenderTextureInitializationException(final String pMessage, final Throwable pThrowable) {
-		super(pMessage, pThrowable);
-	}
+    public RenderTextureInitializationException(final String pMessage, final Throwable pThrowable) {
+        super(pMessage, pThrowable);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

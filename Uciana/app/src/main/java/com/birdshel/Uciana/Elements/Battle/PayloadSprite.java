@@ -4,6 +4,7 @@ import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Point;
 import com.birdshel.Uciana.Ships.ShipComponents.Weapon;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponType;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.LoopEntityModifier;
@@ -15,7 +16,6 @@ import org.andengine.entity.particle.initializer.ScaleParticleInitializer;
 import org.andengine.entity.particle.initializer.VelocityParticleInitializer;
 import org.andengine.entity.particle.modifier.AlphaParticleModifier;
 import org.andengine.entity.particle.modifier.ColorParticleModifier;
-//import org.andengine.entity.particle.modifier.ExpireParticleInitializer;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 

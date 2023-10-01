@@ -8,11 +8,13 @@ import com.birdshel.Uciana.Players.EmpireType;
 import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Scenes.ExtendedScene;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmpireSelectControl extends ExtendedScene {
     private final TiledSprite customEmpireBackground;

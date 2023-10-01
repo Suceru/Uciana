@@ -10,46 +10,46 @@ import org.andengine.util.adt.data.operator.StringOperator;
  * @since 16:59:32 - 10.10.2011
  */
 public abstract class StringGLCriteria implements IGLCriteria {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final String mCriteria;
-	private final StringOperator mStringOperator;
+    private final String mCriteria;
+    private final StringOperator mStringOperator;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public StringGLCriteria(final StringOperator pStringOperator, final String pCriteria) {
-		this.mCriteria = pCriteria;
-		this.mStringOperator = pStringOperator;
-	}
+    public StringGLCriteria(final StringOperator pStringOperator, final String pCriteria) {
+        this.mCriteria = pCriteria;
+        this.mStringOperator = pStringOperator;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	protected abstract String getActualCriteria(final GLState pGLState);
+    protected abstract String getActualCriteria(final GLState pGLState);
 
-	@Override
-	public boolean isMet(final GLState pGLState) {
-		return this.mStringOperator.check(this.getActualCriteria(pGLState), this.mCriteria);
-	}
+    @Override
+    public boolean isMet(final GLState pGLState) {
+        return this.mStringOperator.check(this.getActualCriteria(pGLState), this.mCriteria);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

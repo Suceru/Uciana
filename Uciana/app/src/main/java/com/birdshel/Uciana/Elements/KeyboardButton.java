@@ -2,6 +2,7 @@ package com.birdshel.Uciana.Elements;
 
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Resources.SupportedLocales;
+
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.entity.text.TextOptions;

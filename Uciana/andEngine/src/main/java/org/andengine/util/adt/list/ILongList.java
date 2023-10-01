@@ -7,20 +7,27 @@ package org.andengine.util.adt.list;
  * @since 19:36:57 - 03.05.2012
  */
 public interface ILongList {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public boolean isEmpty();
-	public long get(final int pIndex) throws ArrayIndexOutOfBoundsException;
-	public void add(final long pItem);
-	public void add(final int pIndex, final long pItem) throws ArrayIndexOutOfBoundsException;
-	public long remove(final int pIndex) throws ArrayIndexOutOfBoundsException;
-	public int size();
-	public void clear();
-	public long[] toArray();
+    public boolean isEmpty();
+
+    public long get(final int pIndex) throws ArrayIndexOutOfBoundsException;
+
+    public void add(final long pItem);
+
+    public void add(final int pIndex, final long pItem) throws ArrayIndexOutOfBoundsException;
+
+    public long remove(final int pIndex) throws ArrayIndexOutOfBoundsException;
+
+    public int size();
+
+    public void clear();
+
+    public long[] toArray();
 }

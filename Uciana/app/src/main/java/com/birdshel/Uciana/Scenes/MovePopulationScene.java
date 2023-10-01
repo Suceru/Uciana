@@ -20,8 +20,7 @@ import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.StarSystems.Blackhole;
 import com.birdshel.Uciana.StarSystems.Nebulas;
 import com.birdshel.Uciana.StarSystems.StarSystem;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.sprite.Sprite;
@@ -29,6 +28,9 @@ import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.texture.region.ITiledTextureRegion;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

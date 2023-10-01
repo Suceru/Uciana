@@ -9,43 +9,43 @@ import java.util.HashMap;
  * @since 17:29:37 - 03.05.2012
  */
 public class TexturePackLibrary {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final HashMap<String, TexturePack> mTexturePackMapping = new HashMap<String, TexturePack>();
-	private final HashMap<String, TexturePackTextureRegion> mTexturePackTextureRegionSourceMapping = new HashMap<String, TexturePackTextureRegion>();
+    private final HashMap<String, TexturePack> mTexturePackMapping = new HashMap<String, TexturePack>();
+    private final HashMap<String, TexturePackTextureRegion> mTexturePackTextureRegionSourceMapping = new HashMap<String, TexturePackTextureRegion>();
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public void put(final String pID, final TexturePack pTexturePack) {
-		this.mTexturePackMapping.put(pID, pTexturePack);
-		this.mTexturePackTextureRegionSourceMapping.putAll(pTexturePack.getTexturePackTextureRegionLibrary().getSourceMapping());
-	}
+    public void put(final String pID, final TexturePack pTexturePack) {
+        this.mTexturePackMapping.put(pID, pTexturePack);
+        this.mTexturePackTextureRegionSourceMapping.putAll(pTexturePack.getTexturePackTextureRegionLibrary().getSourceMapping());
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public TexturePackTextureRegion getTexturePackTextureRegion(final String pTexturePackTextureRegionSource) {
-		return this.mTexturePackTextureRegionSourceMapping.get(pTexturePackTextureRegionSource);
-	}
+    public TexturePackTextureRegion getTexturePackTextureRegion(final String pTexturePackTextureRegionSource) {
+        return this.mTexturePackTextureRegionSourceMapping.get(pTexturePackTextureRegionSource);
+    }
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

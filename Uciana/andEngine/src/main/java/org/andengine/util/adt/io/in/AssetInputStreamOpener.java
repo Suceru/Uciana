@@ -1,9 +1,9 @@
 package org.andengine.util.adt.io.in;
 
+import android.content.res.AssetManager;
+
 import java.io.IOException;
 import java.io.InputStream;
-
-import android.content.res.AssetManager;
 
 /**
  * (c) 2012 Zynga Inc.
@@ -12,44 +12,44 @@ import android.content.res.AssetManager;
  * @since 12:05:38 - 02.03.2012
  */
 public class AssetInputStreamOpener implements IInputStreamOpener {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final AssetManager mAssetManager;
-	private final String mAssetPath;
+    private final AssetManager mAssetManager;
+    private final String mAssetPath;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public AssetInputStreamOpener(final AssetManager pAssetManager, final String pAssetPath) {
-		this.mAssetManager = pAssetManager;
-		this.mAssetPath = pAssetPath;
-	}
+    public AssetInputStreamOpener(final AssetManager pAssetManager, final String pAssetPath) {
+        this.mAssetManager = pAssetManager;
+        this.mAssetPath = pAssetPath;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	public InputStream open() throws IOException {
-		return this.mAssetManager.open(this.mAssetPath);
-	}
+    @Override
+    public InputStream open() throws IOException {
+        return this.mAssetManager.open(this.mAssetPath);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

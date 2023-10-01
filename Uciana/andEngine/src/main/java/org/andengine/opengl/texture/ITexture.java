@@ -1,10 +1,10 @@
 package org.andengine.opengl.texture;
 
-import java.io.IOException;
+import android.opengl.GLES20;
 
 import org.andengine.opengl.util.GLState;
 
-import android.opengl.GLES20;
+import java.io.IOException;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -14,65 +14,77 @@ import android.opengl.GLES20;
  * @since 15:01:03 - 11.07.2011
  */
 public interface ITexture {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	public int getWidth();
-	public int getHeight();
+    public int getWidth();
 
-	public int getHardwareTextureID();
+    public int getHeight();
 
-	public boolean isLoadedToHardware();
-	public void setNotLoadedToHardware();
+    public int getHardwareTextureID();
 
-	public boolean isUpdateOnHardwareNeeded();
-	public void setUpdateOnHardwareNeeded(final boolean pUpdateOnHardwareNeeded);
+    public boolean isLoadedToHardware();
 
-	/**
-	 * @see {@link TextureManager#loadTexture(ITexture)}.
-	 */
-	public void load();
-	/**
-	 * @see {@link TextureManager#loadTexture(GLState, ITexture)}.
-	 */
-	public void load(final GLState pGLState) throws IOException;
-	/**
-	 * @see {@link TextureManager#unloadTexture(ITexture)}.
-	 */
-	public void unload();
-	/**
-	 * @see {@link TextureManager#unloadTexture(GLState, ITexture)}.
-	 */
-	public void unload(final GLState pGLState);
+    public void setNotLoadedToHardware();
 
-	public void loadToHardware(final GLState pGLState) throws IOException;
-	public void unloadFromHardware(final GLState pGLState);
-	public void reloadToHardware(final GLState pGLState) throws IOException;
+    public boolean isUpdateOnHardwareNeeded();
 
-	public void bind(final GLState pGLState);
-	/**
-	 * @param pGLActiveTexture from {@link GLES20#GL_TEXTURE0} to {@link GLES20#GL_TEXTURE31}.
-	 */
-	public void bind(final GLState pGLState, final int pGLActiveTexture);
+    public void setUpdateOnHardwareNeeded(final boolean pUpdateOnHardwareNeeded);
 
-	public PixelFormat getPixelFormat();
-	public TextureOptions getTextureOptions();
+    /**
+     * @see {@link TextureManager#loadTexture(ITexture)}.
+     */
+    public void load();
 
-	/**
-	 * @return in kiloBytes.
-	 */
-	public int getTextureMemorySize();
+    /**
+     * @see {@link TextureManager#loadTexture(GLState, ITexture)}.
+     */
+    public void load(final GLState pGLState) throws IOException;
 
-	public boolean hasTextureStateListener();
-	public ITextureStateListener getTextureStateListener();
-	public void setTextureStateListener(final ITextureStateListener pTextureStateListener);
+    /**
+     * @see {@link TextureManager#unloadTexture(ITexture)}.
+     */
+    public void unload();
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    /**
+     * @see {@link TextureManager#unloadTexture(GLState, ITexture)}.
+     */
+    public void unload(final GLState pGLState);
+
+    public void loadToHardware(final GLState pGLState) throws IOException;
+
+    public void unloadFromHardware(final GLState pGLState);
+
+    public void reloadToHardware(final GLState pGLState) throws IOException;
+
+    public void bind(final GLState pGLState);
+
+    /**
+     * @param pGLActiveTexture from {@link GLES20#GL_TEXTURE0} to {@link GLES20#GL_TEXTURE31}.
+     */
+    public void bind(final GLState pGLState, final int pGLActiveTexture);
+
+    public PixelFormat getPixelFormat();
+
+    public TextureOptions getTextureOptions();
+
+    /**
+     * @return in kiloBytes.
+     */
+    public int getTextureMemorySize();
+
+    public boolean hasTextureStateListener();
+
+    public ITextureStateListener getTextureStateListener();
+
+    public void setTextureStateListener(final ITextureStateListener pTextureStateListener);
+
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 }

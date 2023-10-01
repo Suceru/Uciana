@@ -2,6 +2,7 @@ package com.birdshel.Uciana.RandomEvents;
 
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Overlays.MessageOverlay;
+
 import org.andengine.entity.Entity;
 
 /* compiled from: MyApplication */

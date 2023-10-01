@@ -19,10 +19,7 @@ import com.birdshel.Uciana.Ships.ShipComponents.TargetingComputer;
 import com.birdshel.Uciana.Ships.ShipComponents.Weapon;
 import com.birdshel.Uciana.Ships.ShipComponents.WeaponType;
 import com.birdshel.Uciana.Utility.Log;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
@@ -30,6 +27,11 @@ import org.andengine.entity.text.TextOptions;
 import org.andengine.opengl.font.Font;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.util.adt.align.HorizontalAlign;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

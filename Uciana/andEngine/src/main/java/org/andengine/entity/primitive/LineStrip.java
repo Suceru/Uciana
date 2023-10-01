@@ -1,12 +1,12 @@
 package org.andengine.entity.primitive;
 
+import android.opengl.GLES20;
+
 import org.andengine.engine.camera.Camera;
 import org.andengine.entity.primitive.vbo.ILineChainVertexBufferObject;
 import org.andengine.opengl.util.GLState;
 import org.andengine.opengl.vbo.DrawType;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
-
-import android.opengl.GLES20;
 
 /**
  * (c) 2013 Nicolas Gramlich
@@ -15,56 +15,56 @@ import android.opengl.GLES20;
  * @since 13:51:36 - 01.06.2013
  */
 public class LineStrip extends LineChain {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public LineStrip(final float pX, final float pY, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager) {
-		super(pX, pY, pCapacity, pVertexBufferObjectManager);
-	}
+    public LineStrip(final float pX, final float pY, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager) {
+        super(pX, pY, pCapacity, pVertexBufferObjectManager);
+    }
 
-	public LineStrip(final float pX, final float pY, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
-		super(pX, pY, pCapacity, pVertexBufferObjectManager, pDrawType);
-	}
+    public LineStrip(final float pX, final float pY, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
+        super(pX, pY, pCapacity, pVertexBufferObjectManager, pDrawType);
+    }
 
-	public LineStrip(final float pX, final float pY, final float pLineWidth, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager) {
-		super(pX, pY, pLineWidth, pCapacity, pVertexBufferObjectManager);
-	}
+    public LineStrip(final float pX, final float pY, final float pLineWidth, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager) {
+        super(pX, pY, pLineWidth, pCapacity, pVertexBufferObjectManager);
+    }
 
-	public LineStrip(final float pX, final float pY, final float pLineWidth, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
-		super(pX, pY, pLineWidth, pCapacity, pVertexBufferObjectManager, pDrawType);
-	}
+    public LineStrip(final float pX, final float pY, final float pLineWidth, final int pCapacity, final VertexBufferObjectManager pVertexBufferObjectManager, final DrawType pDrawType) {
+        super(pX, pY, pLineWidth, pCapacity, pVertexBufferObjectManager, pDrawType);
+    }
 
-	public LineStrip(final float pX, final float pY, final float pLineWidth, final int pCapacity, final ILineChainVertexBufferObject pLineChainVertexBufferObject) {
-		super(pX, pY, pLineWidth, pCapacity, pLineChainVertexBufferObject);
-	}
+    public LineStrip(final float pX, final float pY, final float pLineWidth, final int pCapacity, final ILineChainVertexBufferObject pLineChainVertexBufferObject) {
+        super(pX, pY, pLineWidth, pCapacity, pLineChainVertexBufferObject);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void draw(final GLState pGLState, final Camera pCamera) {
-		this.mLineChainVertexBufferObject.draw(GLES20.GL_LINE_STRIP, this.mIndex);
-	}
+    @Override
+    protected void draw(final GLState pGLState, final Camera pCamera) {
+        this.mLineChainVertexBufferObject.draw(GLES20.GL_LINE_STRIP, this.mIndex);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

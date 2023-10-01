@@ -11,15 +11,17 @@ import com.birdshel.Uciana.Resources.ButtonsEnum;
 import com.birdshel.Uciana.Resources.GameIconEnum;
 import com.birdshel.Uciana.Resources.InfoIconEnum;
 import com.birdshel.Uciana.Technology.TechID;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+
 import org.andengine.entity.Entity;
 import org.andengine.entity.sprite.AnimatedSprite;
 import org.andengine.entity.sprite.Sprite;
 import org.andengine.entity.sprite.TiledSprite;
 import org.andengine.entity.text.Text;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 /* compiled from: MyApplication */
 /* loaded from: classes.dex */

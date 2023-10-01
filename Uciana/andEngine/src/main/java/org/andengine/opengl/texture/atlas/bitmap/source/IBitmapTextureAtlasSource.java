@@ -1,9 +1,9 @@
 package org.andengine.opengl.texture.atlas.bitmap.source;
 
-import org.andengine.opengl.texture.atlas.source.ITextureAtlasSource;
-
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
+
+import org.andengine.opengl.texture.atlas.source.ITextureAtlasSource;
 
 /**
  * (c) 2010 Nicolas Gramlich
@@ -13,17 +13,18 @@ import android.graphics.Bitmap.Config;
  * @since 12:08:52 - 09.03.2010
  */
 public interface IBitmapTextureAtlasSource extends ITextureAtlasSource {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	@Override
-	public IBitmapTextureAtlasSource deepCopy();
+    @Override
+    public IBitmapTextureAtlasSource deepCopy();
 
-	public Bitmap onLoadBitmap(final Config pBitmapConfig);
-	public Bitmap onLoadBitmap(final Config pBitmapConfig, final boolean pMutable);
+    public Bitmap onLoadBitmap(final Config pBitmapConfig);
+
+    public Bitmap onLoadBitmap(final Config pBitmapConfig, final boolean pMutable);
 }

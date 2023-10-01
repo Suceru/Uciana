@@ -13,49 +13,49 @@ import org.andengine.util.modifier.ease.IEaseFunction;
  * @since 10:36:18 - 29.06.2010
  */
 public class RotationParticleModifier<T extends IEntity> extends BaseSingleValueSpanParticleModifier<T> {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public RotationParticleModifier(final float pFromTime, final float pToTime, final float pFromRotation, final float pToRotation) {
-		this(pFromTime, pToTime, pFromRotation, pToRotation, EaseLinear.getInstance());
-	}
+    public RotationParticleModifier(final float pFromTime, final float pToTime, final float pFromRotation, final float pToRotation) {
+        this(pFromTime, pToTime, pFromRotation, pToRotation, EaseLinear.getInstance());
+    }
 
-	public RotationParticleModifier(final float pFromTime, final float pToTime, final float pFromRotation, final float pToRotation, final IEaseFunction pEaseFunction) {
-		super(pFromTime, pToTime, pFromRotation, pToRotation, pEaseFunction);
-	}
+    public RotationParticleModifier(final float pFromTime, final float pToTime, final float pFromRotation, final float pToRotation, final IEaseFunction pEaseFunction) {
+        super(pFromTime, pToTime, pFromRotation, pToRotation, pEaseFunction);
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	@Override
-	protected void onSetInitialValue(final Particle<T> pParticle, final float pRotation) {
-		pParticle.getEntity().setRotation(pRotation);
-	}
+    @Override
+    protected void onSetInitialValue(final Particle<T> pParticle, final float pRotation) {
+        pParticle.getEntity().setRotation(pRotation);
+    }
 
-	@Override
-	protected void onSetValue(final Particle<T> pParticle, final float pPercentageDone, final float pRotation) {
-		pParticle.getEntity().setRotation(pRotation);
-	}
+    @Override
+    protected void onSetValue(final Particle<T> pParticle, final float pPercentageDone, final float pRotation) {
+        pParticle.getEntity().setRotation(pRotation);
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

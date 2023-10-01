@@ -9,55 +9,55 @@ import org.andengine.opengl.texture.ITexture;
  * @since 23:23:47 - 30.07.2011
  */
 public class TexturePack {
-	// ===========================================================
-	// Constants
-	// ===========================================================
+    // ===========================================================
+    // Constants
+    // ===========================================================
 
-	// ===========================================================
-	// Fields
-	// ===========================================================
+    // ===========================================================
+    // Fields
+    // ===========================================================
 
-	private final ITexture mTexture;
-	private final TexturePackTextureRegionLibrary mTexturePackTextureRegionLibrary;
+    private final ITexture mTexture;
+    private final TexturePackTextureRegionLibrary mTexturePackTextureRegionLibrary;
 
-	// ===========================================================
-	// Constructors
-	// ===========================================================
+    // ===========================================================
+    // Constructors
+    // ===========================================================
 
-	public TexturePack(final ITexture pTexture, final TexturePackTextureRegionLibrary pTexturePackTextureRegionLibrary) {
-		this.mTexture = pTexture;
-		this.mTexturePackTextureRegionLibrary = pTexturePackTextureRegionLibrary;
-	}
+    public TexturePack(final ITexture pTexture, final TexturePackTextureRegionLibrary pTexturePackTextureRegionLibrary) {
+        this.mTexture = pTexture;
+        this.mTexturePackTextureRegionLibrary = pTexturePackTextureRegionLibrary;
+    }
 
-	// ===========================================================
-	// Getter & Setter
-	// ===========================================================
+    // ===========================================================
+    // Getter & Setter
+    // ===========================================================
 
-	public ITexture getTexture() {
-		return this.mTexture;
-	}
+    public ITexture getTexture() {
+        return this.mTexture;
+    }
 
-	public TexturePackTextureRegionLibrary getTexturePackTextureRegionLibrary() {
-		return this.mTexturePackTextureRegionLibrary;
-	}
+    public TexturePackTextureRegionLibrary getTexturePackTextureRegionLibrary() {
+        return this.mTexturePackTextureRegionLibrary;
+    }
 
-	// ===========================================================
-	// Methods for/from SuperClass/Interfaces
-	// ===========================================================
+    // ===========================================================
+    // Methods for/from SuperClass/Interfaces
+    // ===========================================================
 
-	public void loadTexture() {
-		this.mTexture.load();
-	}
+    public void loadTexture() {
+        this.mTexture.load();
+    }
 
-	public void unloadTexture() {
-		this.mTexture.unload();
-	}
+    public void unloadTexture() {
+        this.mTexture.unload();
+    }
 
-	// ===========================================================
-	// Methods
-	// ===========================================================
+    // ===========================================================
+    // Methods
+    // ===========================================================
 
-	// ===========================================================
-	// Inner and Anonymous Classes
-	// ===========================================================
+    // ===========================================================
+    // Inner and Anonymous Classes
+    // ===========================================================
 }

@@ -1,8 +1,8 @@
 package com.birdshel.Uciana.Colonies;
 
 import android.util.SparseArray;
+
 import com.birdshel.Uciana.Colonies.Buildings.BuildingID;
-import com.birdshel.Uciana.Colonies.Colony;
 import com.birdshel.Uciana.Events.EventType;
 import com.birdshel.Uciana.Game;
 import com.birdshel.Uciana.Math.Functions;
@@ -16,6 +16,7 @@ import com.birdshel.Uciana.Scenes.PlanetScene;
 import com.birdshel.Uciana.Scenes.SystemScene;
 import com.birdshel.Uciana.Ships.Fleet;
 import com.birdshel.Uciana.Ships.ShipType;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

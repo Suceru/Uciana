@@ -110,17 +110,16 @@ public class HWEncorder {
         return mInputSurface;
     }
 
-    public void recordImage()throws Exception{
+    public void recordImage() throws Exception {
 
         drainEncoder(mVideoEncoder, mVBufferInfo);
     }
 
 
-
     @SuppressWarnings("WeakerAccess")
     public void recordSample(byte[] sample) throws Exception {
 
-        Log.v("abcde:time","pts"+getPTSUs());
+        Log.v("abcde:time", "pts" + getPTSUs());
 
         doRecord(mAudioEncoder, mABufferInfo, sample, getPTSUs());
     }
@@ -129,8 +128,10 @@ public class HWEncorder {
      * previous presentationTimeUs for writing
      */
     private long prevOutputPTSUs = 0;
+
     /**
      * get next encoding presentationTimeUs
+     *
      * @return
      */
     protected long getPTSUs() {
@@ -199,7 +200,7 @@ public class HWEncorder {
                     outputBuffer.position(bufferInfo.offset);
                     outputBuffer.limit(bufferInfo.offset + bufferInfo.size);
 
-                    Log.v("abcde",trackIndex+"//"+bufferInfo.size);
+                    Log.v("abcde", trackIndex + "//" + bufferInfo.size);
 
                     mMuxer.writeSampleData(trackIndex, outputBuffer, bufferInfo);
                 }
